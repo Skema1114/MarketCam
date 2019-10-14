@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oitava"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aluno.marketcam.setimaActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_oitava2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="@string/btnUsuariosT8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnUsuariosT8"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp" />
+
+                <Button
+                    android:text="@string/btnProdutosT8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnProdutosT8"
+                    android:layout_weight="1"
+                    android:textStyle="normal|bold" />
+
+                <Button
+                    android:text="@string/btnEnderecosT8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnEnderecosT8"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnComprasT8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnComprasT8"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnListasComprasT8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnListasComprasT8"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnCartõesCreditoT8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCartõesCreditoT8"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbarT8" />
+
+        <TextView
+            android:text="@string/textProdutosT8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textProdutosT8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="5dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/listProdutosT8" />
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_decima_segunda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aluno.marketcam.decimaSegundaActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_decima_segunda2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="@string/btnUsuariosT12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnUsuariosT12"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp" />
+
+                <Button
+                    android:text="@string/btnProdutosT12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnProdutosT12"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnEnderecosT12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/btnEnderecosT12" />
+
+                <Button
+                    android:text="@string/btnComprasT12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnComprasT12"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnListasComprasT12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnListasComprasT12"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnCartõesCreditoT12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCartõesCreditoT12"
+                    android:layout_weight="1"
+                    android:textStyle="normal|bold" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbarT12" />
+
+        <TextView
+            android:text="@string/textCartoesCreditoT12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCartoesCreditoT12"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="5dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/listCartoesCreditoT12" />
+    </LinearLayout>
+</ScrollView>
+

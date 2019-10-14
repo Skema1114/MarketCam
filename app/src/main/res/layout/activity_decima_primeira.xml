@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_decima_primeira"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aluno.marketcam.decimaPrimeiraActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_decima_primeira2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="@string/btnUsuariosT11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnUsuariosT11"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp" />
+
+                <Button
+                    android:text="@string/btnProdutosT11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnProdutosT11"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnEnderecosT11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/btnEnderecosT11" />
+
+                <Button
+                    android:text="@string/btnComprasT11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnComprasT11"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/btnListasComprasT11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnListasComprasT11"
+                    android:layout_weight="1"
+                    android:textStyle="normal|bold" />
+
+                <Button
+                    android:text="@string/btnCartõesCreditoT11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCartõesCreditoT11"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbarT11" />
+
+        <TextView
+            android:text="@string/textListasComprasT11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textListasComprasT11"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="5dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/listListasComprasT11" />
+    </LinearLayout>
+</ScrollView>
+
