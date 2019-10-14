@@ -154,12 +154,14 @@
             android:layout_weight="1" />
 
         <DatePicker
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/datePicker"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
-            android:contentDescription="dfgdfgdf" />
+            android:contentDescription="dfgdfgdf"
+            style="@android:style/Widget.DatePicker"
+            android:layout_weight="10.76" />
 
         <TextView
             android:layout_width="match_parent"

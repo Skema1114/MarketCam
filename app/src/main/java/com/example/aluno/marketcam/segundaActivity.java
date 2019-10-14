@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,7 +21,6 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
     private TextView textEstadoT2;
     private EditText editConfirmarSenhaT2;
     private EditText editEmailT2;
-    //private EditText editDataT2;
     private EditText editSenhaT2;
     private EditText editNomeT2;
     private RadioGroup radioTipoContaT2;
@@ -31,6 +31,7 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
     private RadioButton radioFemininoT2;
     private Spinner spinCidadeT2;
     private Spinner spinEstadoT2;
+    private DatePicker dateDataT2;
     private Button btnCadastrarseT2;
 
 
@@ -51,7 +52,6 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         /*findViewById dos EditText*/
         editConfirmarSenhaT2 = (EditText) findViewById(R.id.editConfirmarSenhaT2);
         editEmailT2 = (EditText) findViewById(R.id.editEmailT2);
-        //editDataT2 = (EditText) findViewById(R.id.editDataT2);
         editSenhaT2 = (EditText) findViewById(R.id.editSenhaT2);
         editNomeT2 = (EditText) findViewById(R.id.editNomeT2);
 
@@ -70,6 +70,9 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         /*findViewById do Button*/
         btnCadastrarseT2 = (Button) findViewById(R.id.btnCadastrarseT2);
 
+        /*findViewById do DatePicker*/
+        dateDataT2  = (DatePicker) findViewById(R.id.dateDataT2);
+
 
         /*setOnClickListener*/
         /*setOnClickListener dos RadioButton*/
@@ -80,6 +83,9 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
 
         /*setOnClickListener do Button*/
         btnCadastrarseT2.setOnClickListener(this);
+
+        /*setOnClickListener do DatePicker*/
+        dateDataT2.setOnClickListener(this);
 
 
          /*SETANDO O CONTEUDO DO ESTADO QUE APARECERÁ DENTRO DO SPINNER*/

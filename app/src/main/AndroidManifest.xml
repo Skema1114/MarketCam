@@ -13,23 +13,26 @@
         <activity android:name=".segundaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".primeiraActivity"></meta-data>
-        </activity>
+                android:value=".primeiraActivity">
+            </meta-data>
 
-        <activity android:name=".terceiraActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".primeiraActivity"></meta-data>
-        </activity>
-
-        <activity android:name=".quartaActivity"></activity>
-
-        <activity android:name=".quintaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".terceiraActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".primeiraActivity">
+            </meta-data>
+        </activity>
+
+        <activity android:name=".quartaActivity"></activity>
+
+        <activity android:name=".quintaActivity">
+
         </activity>
 
         <activity android:name=".sextaActivity">
