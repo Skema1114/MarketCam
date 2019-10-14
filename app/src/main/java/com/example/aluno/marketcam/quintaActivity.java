@@ -187,6 +187,9 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         editSenhaAntigaT5.setEnabled(false);
         editNovaSenhaT5.setEnabled(false);
         editConfirmarNovaSenhaT5.setEnabled(false);
+
+        /*Bloqueando o campo do Email*/
+        editEmailT5.setEnabled(false);
     }
 
     @Override
@@ -203,6 +206,8 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
                 editCodigoT5.setEnabled(true);
             }else{
                 editCodigoT5.setEnabled(false);
+
+                editCodigoT5.setText(null);
             }
         }else{
             editNumeroCartaoT5.setEnabled(false);

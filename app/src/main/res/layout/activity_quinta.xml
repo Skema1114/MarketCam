@@ -179,10 +179,7 @@
             android:layout_weight="1"
             android:hint="fulano@hotmail.com"
             android:textIsSelectable="false"
-            android:textStyle="normal|italic"
-            android:text="@string/editEmailT5"
-            android:editable="false"
-            android:fontFamily="sans-serif-condensed" />
+            android:text="@string/editEmailT5" />
 
         <TextView
             android:text="@string/textEnderecoT5"
