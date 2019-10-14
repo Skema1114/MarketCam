@@ -67,14 +67,14 @@ public class UsuarioBD {
         Cursor cursor = getDataBase().query(Conecta.Usuario.TABELA,
                 Conecta.Usuario.COLUNAS, null, null, null, null, null);
 
-        List<Usuario> usuarios = new ArrayList<Usuario>();
+        List<Usuario> usuario = new ArrayList<Usuario>();
 
         while (cursor.moveToNext()) {
             Usuario modelo = criarUsuario(cursor);
-            usuarios.add(modelo);
+            usuario.add(modelo);
         }
         cursor.close();
-        return usuarios;
+        return usuario;
     }
 
 
@@ -113,11 +113,11 @@ public class UsuarioBD {
     public Usuario buscarUsuario(int id) {
         Cursor cursor = getDataBase().query(Conecta.Usuario.TABELA, Conecta.Usuario.COLUNAS, "id_usuario = ?", new String[]{Integer.toString(id)}, null, null, null);
 
-        List<Usuario> usuarios = new ArrayList<Usuario>() ;
+        List<Usuario> usuario = new ArrayList<Usuario>() ;
 
         while(cursor.moveToNext()){
             Usuario modelo = criarUsuario(cursor) ;
-            usuarios.add(modelo);
+            usuario.add(modelo);
             cursor.close();
             return modelo ;
         }

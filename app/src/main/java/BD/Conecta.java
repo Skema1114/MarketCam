@@ -48,7 +48,7 @@ public class Conecta extends SQLiteOpenHelper{
                     "id_endereco INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
                     "rua TEXT(45) NULL," +
                     "numero TEXT(10) NULL," +
-                    "bairro TEXT(25) NOT NULL," +
+                    "bairro TEXT(25) NULL," +
                     "cidade TEXT(40) NOT NULL," +
                     "estado TEXT(25) NOT NULL," +
                     "cep TEXT(10) NULL" +

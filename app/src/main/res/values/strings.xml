@@ -17,7 +17,7 @@
     <string name="editSenhaT2" />
     <string name="textTipoContaT2">Tipo de Conta</string>
     <string name="textSexoT2">Sexo</string>
-    <string name="textInformeDadosT2">INFORME OS SEUS DADOS ABAIXO:</string>
+    <string name="textInformeDadosT2">INFORME OS SEUS DADOS ABAIXO</string>
     <string name="textDataNascimentoT2">Data de Nascimento</string>
     <string name="textCidadeT2">Cidade</string>
     <string name="textEstadoT2">Estado</string>
@@ -46,7 +46,15 @@
     <string name="btnEntrarT3">ENTRAR</string>
     <string name="checkManterConectadoT3">Mantenha-me Conectado</string>
     <string name="btnEsqueciSenhaT3">Esqueci Minha Senha</string>
-    <string name="textEfetuarLoginT3">EFETUE O SEU LOGIN:</string>
+    <string name="textEfetuarLoginT3">EFETUE O SEU LOGIN</string>
+
+    <!-- STRINGS REFERENTES A "activity_quarta / quartaActivity" -->
+    <string name="textAdicionarProdutoT4">ADICIONAR UM PRODUTO A LISTA DE COMPRAS</string>
+    <string name="textProdutoT4">Produto</string>
+    <string name="textQuantidadeT4">Quantidade</string>
+    <string name="editQuantidadeT4" />
+    <string name="btnAdicionarProdutoT4">ADICIONAR PRODUTO</string>
+    <string name="btnAdicionarCodigoBarrasT4">ADICIONAR PRODUTO PELO CODIGO DE BARRAS</string>
 
 
 </resources>
