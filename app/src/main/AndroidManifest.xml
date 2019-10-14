@@ -8,36 +8,46 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".primeiraActivity"></activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".primeiraActivity"
+            android:screenOrientation="portrait">
 
-        <activity android:name=".segundaActivity">
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".segundaActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".primeiraActivity">
             </meta-data>
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".terceiraActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".primeiraActivity">
+            </meta-data>
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".quartaActivity"
+            android:screenOrientation="portrait">
 
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".quintaActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".sextaActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".terceiraActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".primeiraActivity">
-            </meta-data>
-        </activity>
-
-        <activity android:name=".quartaActivity"></activity>
-
-        <activity android:name=".quintaActivity">
-
-        </activity>
-
-        <activity android:name=".sextaActivity">
-
-        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </application>
 
 </manifest>

@@ -24,47 +24,31 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Espaço01T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço01T5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/textUsuarioT5"
             android:layout_weight="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textStyle="normal|bold"
             android:textAlignment="center"
-            android:text="@string/textUsuarioT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço02T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço02T5" />
+            android:text="@string/textUsuarioT5"
+            android:layout_marginTop="11dp" />
 
         <TextView
             android:text="PARTE PARA COLOCAR FOTO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView7"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço03T5"
             android:layout_weight="1"
-            android:text="@string/Espaço03T5" />
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textNomeT5"
             android:layout_weight="1"
-            android:text="@string/textNomeT5" />
+            android:text="@string/textNomeT5"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -75,21 +59,17 @@
             android:layout_weight="1"
             android:textStyle="normal|italic"
             android:hint="Informe Seu Nome"
-            android:text="@string/editNomeT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço04T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço04T5" />
+            android:text="@string/editNomeT5"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp" />
 
         <TextView
             android:text="@string/textTelefoneT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textTelefoneT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -100,21 +80,16 @@
             android:layout_weight="1"
             android:hint="Informe Seu Telefone"
             android:textStyle="normal|italic"
-            android:text="@string/editTelefoneT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço05T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço05T5" />
+            android:text="@string/editTelefoneT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textSexoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textSexoT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -140,42 +115,29 @@
         </RadioGroup>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço06T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço06T5" />
-
-        <TextView
             android:text="@string/textDataNascimentoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textDataNascimentoT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <DatePicker
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/datePicker"
+            android:id="@+id/dateDataNascimentoT5"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
-            android:contentDescription="dfgdfgdf"
             style="@android:style/Widget.DatePicker"
             android:layout_weight="10.76" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço07T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço07T5" />
 
         <TextView
             android:text="@string/textTipoUsuarioT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textTipoUsuarioT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -196,22 +158,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioMercadoT5"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_marginLeft="3dp" />
         </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço08T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço08T5" />
 
         <TextView
             android:text="@string/textEmailT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textEmailT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -223,21 +180,8 @@
             android:hint="fulano@hotmail.com"
             android:textIsSelectable="false"
             android:textStyle="normal|italic"
-            android:text="@string/editEmailT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço09T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço09T5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço10T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço10T5" />
+            android:text="@string/editEmailT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textEnderecoT5"
@@ -247,21 +191,16 @@
             android:layout_weight="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textStyle="normal|bold"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço11T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço11T5" />
+            android:textAlignment="center"
+            android:layout_marginTop="30dp" />
 
         <TextView
             android:text="@string/textCidadeT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textCidadeT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="11dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -270,18 +209,12 @@
             android:layout_weight="1" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço12T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço12T5" />
-
-        <TextView
             android:text="@string/textEstadoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textEstadoT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -290,18 +223,12 @@
             android:layout_weight="1" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço13T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço13T5" />
-
-        <TextView
             android:text="@string/textCepT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textCepT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -311,21 +238,16 @@
             android:id="@+id/editCepT5"
             android:layout_weight="1"
             android:textStyle="normal|italic"
-            android:hint="@string/editCepT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço14T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço14T5" />
+            android:hint="@string/editCepT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textRuaT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textRuaT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -336,21 +258,16 @@
             android:layout_weight="1"
             android:hint="Informe a Sua Rua"
             android:textStyle="normal|italic"
-            android:text="@string/editRuaT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço15T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço15T5" />
+            android:text="@string/editRuaT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textNumeroRuaT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textNumeroRuaT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -361,21 +278,16 @@
             android:layout_weight="1"
             android:hint="Informe o Numero da Rua"
             android:textStyle="normal|italic"
-            android:text="@string/editNumeroRuaT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço16T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço16T5" />
+            android:text="@string/editNumeroRuaT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textBairroT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textBairroT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -385,21 +297,9 @@
             android:id="@+id/editBairroT5"
             android:layout_weight="1"
             android:hint="Informe o Seu Bairro"
-            android:text="@string/editBairroT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço17T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço17T5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço18T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço18T5" />
+            android:text="@string/editBairroT5"
+            android:textStyle="normal|italic"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:layout_width="match_parent"
@@ -409,35 +309,24 @@
             android:text="@string/textCartaoCreditoT5"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textStyle="normal|bold"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço19T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço19T5" />
+            android:textAlignment="center"
+            android:layout_marginTop="30dp" />
 
         <CheckBox
             android:text="@string/checkAtivaCartaoCreditoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/checkAtivaCartaoCreditoT5"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço20T5"
             android:layout_weight="1"
-            android:text="@string/Espaço20T5" />
+            android:layout_marginTop="11dp" />
 
         <TextView
             android:text="@string/textNumeroCartaoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textNumeroCartaoT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -449,21 +338,18 @@
             android:hint="Informe o Numero do Cartão de Crédito"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textStyle="normal|italic"
-            android:text="@string/editNumeroCartaoT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço21T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço21T5" />
+            android:text="@string/editNumeroCartaoT5"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp" />
 
         <TextView
             android:text="@string/textTitularT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textTitularT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -475,21 +361,18 @@
             android:hint="Informe o Nome do Titular do Cartão de Crédito"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textStyle="normal|italic"
-            android:text="@string/editTitularT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço22T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço22T5" />
+            android:text="@string/editTitularT5"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp" />
 
         <TextView
             android:text="@string/textValidadeT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textValidadeT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -500,21 +383,17 @@
             android:layout_weight="1"
             android:hint="Informe a Data de Validade do Cartão de Crédito"
             android:textStyle="normal|italic"
-            android:text="@string/editValidadetT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço23T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço23T5" />
+            android:text="@string/editValidadetT5"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp" />
 
         <TextView
             android:text="@string/textCodigoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textCodigoT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <CheckBox
             android:text="@string/checkCodigoCartaoT5"
@@ -532,21 +411,8 @@
             android:layout_weight="1"
             android:hint="Informe o Código do Cartão de Crédito"
             android:textStyle="normal|italic"
-            android:text="@string/editCodigoT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço24T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço24T5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço25T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço25T5" />
+            android:text="@string/editCodigoT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textSenhaT5"
@@ -556,35 +422,24 @@
             android:layout_weight="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textAlignment="center"
-            android:textStyle="normal|bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço26T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço26T5" />
+            android:textStyle="normal|bold"
+            android:layout_marginTop="30dp" />
 
         <CheckBox
             android:text="@string/checkAtivaMudarSenhaT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/checkAtivaMudarSenhaT5"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço27T5"
             android:layout_weight="1"
-            android:text="@string/Espaço27T5" />
+            android:layout_marginTop="11dp" />
 
         <TextView
             android:text="@string/textSenhaAntigaT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textSenhaAntigaT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -595,21 +450,16 @@
             android:layout_weight="1"
             android:hint="Informe a Sua Senha Antiga"
             android:textStyle="normal|italic"
-            android:text="@string/editSenhaAntigaT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço28T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço28T5" />
+            android:text="@string/editSenhaAntigaT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textNovaSenhaT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textNovaSenhaT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -620,21 +470,16 @@
             android:layout_weight="1"
             android:hint="Informe a Sua Nova Senha"
             android:textStyle="normal|italic"
-            android:text="@string/editNovaSenhaT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço29T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço29T5" />
+            android:text="@string/editNovaSenhaT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:text="@string/textConfirmarNovaSenhaT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textConfirmarNovaSenhaT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -645,21 +490,17 @@
             android:layout_weight="1"
             android:hint="Confirme a Sua Nova Senha"
             android:textStyle="normal|italic"
-            android:text="@string/editConfirmarNovaSenhaT5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Espaço30T5"
-            android:layout_weight="1"
-            android:text="@string/Espaço30T5" />
+            android:text="@string/editConfirmarNovaSenhaT5"
+            android:fontFamily="sans-serif-condensed" />
 
         <Button
             android:text="@string/btnSalvarT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnSalvarT5"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="20dp" />
 
     </LinearLayout>
 </ScrollView>

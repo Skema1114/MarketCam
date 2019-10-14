@@ -38,7 +38,8 @@
         android:layout_above="@+id/textQuantidadeT4"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:hint="Escolha um Produto" />
+        android:hint="Escolha um Produto"
+        android:fontFamily="sans-serif-condensed" />
 
     <TextView
         android:text="@string/textProdutoT4"
@@ -68,7 +69,8 @@
         android:layout_marginBottom="32dp"
         android:layout_alignStart="@+id/textQuantidadeT4"
         android:textStyle="normal|italic"
-        android:text="@string/editQuantidadeT4" />
+        android:text="@string/editQuantidadeT4"
+        android:fontFamily="sans-serif-condensed" />
 
     <TextView
         android:text="@string/textQuantidadeT4"

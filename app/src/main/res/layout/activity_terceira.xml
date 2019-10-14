@@ -31,7 +31,8 @@
         android:layout_alignParentEnd="true"
         android:hint="Senha"
         android:text="@string/editSenhaT3"
-        android:textStyle="normal|italic" />
+        android:textStyle="normal|italic"
+        android:fontFamily="sans-serif-condensed" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -44,7 +45,8 @@
         android:layout_alignParentEnd="true"
         android:hint="E-mail"
         android:text="@string/editEmailT3"
-        android:textStyle="normal|italic" />
+        android:textStyle="normal|italic"
+        android:fontFamily="sans-serif-condensed" />
 
     <CheckBox
         android:text="@string/checkManterConectadoT3"

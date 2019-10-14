@@ -37,7 +37,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:textStyle="normal|italic"
-            android:text="@string/editNomeT2" />
+            android:text="@string/editNomeT2"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
                 android:text="@string/textTipoContaT2"
@@ -46,20 +47,20 @@
                 android:id="@+id/textTipoContaT2"
                 android:layout_below="@+id/editNomeT2"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="13dp"
-            android:textStyle="normal|bold"
-            android:paddingTop="15dp" />
+                android:layout_marginTop="15dp"
+            android:textStyle="normal|bold" />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textTipoContaT2"
             android:layout_alignParentStart="true"
-            android:id="@+id/radioTipoContaT2">
+            android:id="@+id/radioTipoContaT2"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:text="@string/radioClienteT2"
-                android:layout_width="354dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioClienteT2"
                 android:layout_below="@+id/textTipoContaT2"
@@ -68,11 +69,12 @@
 
             <RadioButton
                 android:text="@string/radioMercadoT2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/radioClienteT2"
                 android:layout_toEndOf="@+id/radioClienteT2"
-                android:id="@+id/radioMercadoT2" />
+                android:id="@+id/radioMercadoT2"
+                android:layout_marginLeft="60dp" />
         </RadioGroup>
 
         <TextView
@@ -83,14 +85,15 @@
             android:layout_alignParentStart="true"
             android:id="@+id/textSexoT2"
             android:textStyle="normal|bold"
-            android:paddingTop="15dp" />
+            android:layout_marginTop="15dp" />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textSexoT2"
             android:layout_alignStart="@+id/textSexoT2"
-            android:id="@+id/radioSexoT2">
+            android:id="@+id/radioSexoT2"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:text="@string/radioMasculinoT2"
@@ -106,7 +109,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/radioFemininoT2"
                 android:layout_below="@+id/textSexoT2"
-                android:layout_alignStart="@+id/textSexoT2" />
+                android:layout_alignStart="@+id/textSexoT2"
+                android:layout_marginLeft="39dp" />
         </RadioGroup>
 
         <TextView
@@ -117,8 +121,7 @@
             android:textStyle="normal|bold"
             android:layout_below="@+id/radioTipoContaT2"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp" />
+            android:layout_marginTop="15dp" />
 
         <DatePicker
             android:layout_width="match_parent"
@@ -137,7 +140,7 @@
             android:layout_alignBottom="@+id/spinCidadeT2"
             android:layout_alignParentStart="true"
             android:textStyle="normal|bold"
-            android:paddingTop="20dp" />
+            android:layout_marginTop="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -154,7 +157,7 @@
             android:textStyle="normal|bold"
             android:layout_alignBottom="@+id/spinEstadoT2"
             android:layout_toEndOf="@+id/textSexoT2"
-            android:paddingTop="15dp" />
+            android:layout_marginTop="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -175,7 +178,8 @@
             android:layout_above="@+id/editSenhaT2"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:paddingTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-condensed" />
 
         <EditText
             android:layout_width="match_parent"
@@ -188,7 +192,8 @@
             android:text="@string/editSenhaT2"
             android:layout_above="@+id/editConfirmarSenhaT2"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:fontFamily="sans-serif-condensed" />
 
         <EditText
             android:layout_width="match_parent"
@@ -201,7 +206,8 @@
             android:text="@string/editConfirmarSenhaT2"
             android:layout_above="@+id/btnCadastrarseT2"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:fontFamily="sans-serif-condensed" />
 
         <Button
             android:text="@string/btnCadastrarseT2"
@@ -212,7 +218,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:paddingTop="15dp" />
+            android:layout_marginTop="15dp" />
 
     </LinearLayout>
 </ScrollView>

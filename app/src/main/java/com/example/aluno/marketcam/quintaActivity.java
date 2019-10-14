@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -13,9 +14,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class quintaActivity extends AppCompatActivity implements View.OnClickListener{
-    private TextView Espaço01T5, Espaço02T5, Espaço03T5, Espaço04T5, Espaço05T5, Espaço06T5, Espaço07T5, Espaço08T5, Espaço09T5, Espaço10T5;
-    private TextView Espaço11T5, Espaço12T5, Espaço13T5, Espaço14T5, Espaço15T5, Espaço16T5, Espaço17T5, Espaço18T5, Espaço19T5, Espaço20T5;
-    private TextView Espaço21T5, Espaço22T5, Espaço23T5, Espaço24T5, Espaço25T5, Espaço26T5, Espaço27T5, Espaço28T5, Espaço29T5, Espaço30T5;
     private TextView textEditarCadastroT5;
     private TextView textUsuarioT5;
     private TextView textNomeT5;
@@ -42,7 +40,6 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
     private TextView textTipoUsuarioT5;
     private EditText editNomeT5;
     private EditText editTelefoneT5;
-    //private EditText editDataNascimentoT5;
     private EditText editEmailT5;
     private EditText editCepT5;
     private EditText editRuaT5;
@@ -66,6 +63,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
     private RadioGroup radioTipoUsuarioT5;
     private Spinner spinCidadeT5;
     private Spinner spinEstadoT5;
+    private DatePicker dateDataNascimentoT5;
     private Button btnSalvarT5;
 
     @Override
@@ -74,38 +72,6 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_quinta);
 
         /*findViewById*/
-        /*findViewById dos TextView*/
-        Espaço01T5 = (TextView) findViewById(R.id.Espaço01T5);
-        Espaço02T5 = (TextView) findViewById(R.id.Espaço02T5);
-        Espaço03T5 = (TextView) findViewById(R.id.Espaço03T5);
-        Espaço04T5 = (TextView) findViewById(R.id.Espaço04T5);
-        Espaço05T5 = (TextView) findViewById(R.id.Espaço05T5);
-        Espaço06T5 = (TextView) findViewById(R.id.Espaço06T5);
-        Espaço07T5 = (TextView) findViewById(R.id.Espaço07T5);
-        Espaço08T5 = (TextView) findViewById(R.id.Espaço08T5);
-        Espaço09T5 = (TextView) findViewById(R.id.Espaço09T5);
-        Espaço10T5 = (TextView) findViewById(R.id.Espaço10T5);
-        Espaço11T5 = (TextView) findViewById(R.id.Espaço11T5);
-        Espaço12T5 = (TextView) findViewById(R.id.Espaço12T5);
-        Espaço13T5 = (TextView) findViewById(R.id.Espaço13T5);
-        Espaço14T5 = (TextView) findViewById(R.id.Espaço14T5);
-        Espaço15T5 = (TextView) findViewById(R.id.Espaço15T5);
-        Espaço16T5 = (TextView) findViewById(R.id.Espaço16T5);
-        Espaço17T5 = (TextView) findViewById(R.id.Espaço17T5);
-        Espaço18T5 = (TextView) findViewById(R.id.Espaço18T5);
-        Espaço19T5 = (TextView) findViewById(R.id.Espaço19T5);
-        Espaço20T5 = (TextView) findViewById(R.id.Espaço20T5);
-        Espaço21T5 = (TextView) findViewById(R.id.Espaço21T5);
-        Espaço22T5 = (TextView) findViewById(R.id.Espaço22T5);
-        Espaço23T5 = (TextView) findViewById(R.id.Espaço23T5);
-        Espaço24T5 = (TextView) findViewById(R.id.Espaço24T5);
-        Espaço25T5 = (TextView) findViewById(R.id.Espaço25T5);
-        Espaço26T5 = (TextView) findViewById(R.id.Espaço26T5);
-        Espaço27T5 = (TextView) findViewById(R.id.Espaço27T5);
-        Espaço28T5 = (TextView) findViewById(R.id.Espaço28T5);
-        Espaço29T5 = (TextView) findViewById(R.id.Espaço29T5);
-        Espaço30T5 = (TextView) findViewById(R.id.Espaço30T5);
-
         /*findViewById dos TextView*/
         textEditarCadastroT5 = (TextView) findViewById(R.id.textEditarCadastroT5);
         textUsuarioT5 = (TextView) findViewById(R.id.textUsuarioT5);
@@ -135,7 +101,6 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         /*findViewById dos EditText*/
         editNomeT5 = (EditText) findViewById(R.id.editNomeT5);
         editTelefoneT5 = (EditText) findViewById(R.id.editTelefoneT5);
-        //editDataNascimentoT5 = (EditText) findViewById(R.id.editDataNascimentoT5);
         editEmailT5 = (EditText) findViewById(R.id.editEmailT5);
         editCepT5 = (EditText) findViewById(R.id.editCepT5);
         editRuaT5 = (EditText) findViewById(R.id.editRuaT5);
@@ -171,6 +136,10 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         /*findViewById dos Button*/
         btnSalvarT5 = (Button) findViewById(R.id.btnSalvarT5);
 
+        /*findViewById dos DatePicker*/
+        dateDataNascimentoT5 = (DatePicker) findViewById(R.id.dateDataNascimentoT5);
+
+
 
 
         /*setOnClickListener*/
@@ -191,6 +160,9 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
         /*setOnClickListener dos Button*/
         btnSalvarT5.setOnClickListener(this);
+
+        /*setOnClickListener dos DatePicker*/
+        dateDataNascimentoT5.setOnClickListener(this);
 
 
 
