@@ -21,6 +21,7 @@ public class terceiraActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terceira);
 
+        /*findViewById*/
         /*findViewById do TextView*/
         textEfetuarLoginT3 = (TextView) findViewById(R.id.textEfetuarLoginT3);
 
@@ -35,6 +36,7 @@ public class terceiraActivity extends AppCompatActivity implements View.OnClickL
         /*findViewById do CheckBox*/
         checkManterConectadoT3 = (CheckBox) findViewById(R.id.checkManterConectadoT3);
 
+        /*setOnClickListener*/
         /*setOnClickListener dos Button*/
         btnEntrarT3.setOnClickListener(this);
         btnEsqueciSenhaT3.setOnClickListener(this);

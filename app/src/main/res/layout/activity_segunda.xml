@@ -114,27 +114,20 @@
         android:layout_below="@+id/editDataT2"
         android:layout_alignParentEnd="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinCidadeT2"
-        android:layout_alignTop="@+id/spinEstadoT2"
-        android:layout_alignEnd="@+id/editDataNascimentoT2" />
-
     <TextView
-        android:text="@string/editCidadeT2"
+        android:text="@string/textCidadeT2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editCidadeT2"
+        android:id="@+id/textCidadeT2"
         android:layout_alignBottom="@+id/spinCidadeT2"
         android:layout_alignParentStart="true"
         android:textStyle="normal|bold" />
 
     <TextView
-        android:text="@string/editEstadoT2"
+        android:text="@string/textEstadoT2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editEstadoT2"
+        android:id="@+id/textEstadoT2"
         android:textStyle="normal|bold"
         android:layout_alignBottom="@+id/spinEstadoT2"
         android:layout_toEndOf="@+id/textSexoT2" />
@@ -179,10 +172,10 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="@string/editDataNascimentoT2"
+        android:text="@string/textDataNascimentoT2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editDataNascimentoT2"
+        android:id="@+id/textDataNascimentoT2"
         android:textStyle="normal|bold"
         android:layout_below="@+id/radioTipoContaT2"
         android:layout_alignParentStart="true"
@@ -197,7 +190,7 @@
         android:hint="YYYY-DD-MM"
         android:textStyle="normal|italic"
         android:text="@string/editDataT2"
-        android:layout_below="@+id/editDataNascimentoT2"
+        android:layout_below="@+id/textDataNascimentoT2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -210,5 +203,12 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinCidadeT2"
+        android:layout_below="@+id/editDataT2"
+        android:layout_alignEnd="@+id/textDataNascimentoT2" />
 
 </RelativeLayout>

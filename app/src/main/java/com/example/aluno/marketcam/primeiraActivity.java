@@ -15,11 +15,13 @@ public class primeiraActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primeira);
 
-        /*findViewById dos Button*/
+         /*findViewById*/
+         /*findViewById dos Button*/
          btnJCadastroT1 = (Button) findViewById(R.id.btnJCadastroT1);
          btnNCadastroT1 = (Button) findViewById(R.id.btnNCadastroT1);
 
-        /*setOnClickListener dos Button*/
+         /*setOnClickListener*/
+         /*setOnClickListener dos Button*/
          btnJCadastroT1.setOnClickListener(this);
          btnNCadastroT1.setOnClickListener(this);
 

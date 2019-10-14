@@ -18,10 +18,27 @@
     <string name="textTipoContaT2">Tipo de Conta</string>
     <string name="textSexoT2">Sexo</string>
     <string name="textInformeDadosT2">INFORME OS SEUS DADOS ABAIXO:</string>
-    <string name="editDataNascimentoT2">Data de Nascimento</string>
-    <string name="editCidadeT2">Cidade</string>
-    <string name="editEstadoT2">Estado</string>
+    <string name="textDataNascimentoT2">Data de Nascimento</string>
+    <string name="textCidadeT2">Cidade</string>
+    <string name="textEstadoT2">Estado</string>
     <string name="btnCadastrarseT2">CADASTRAR-SE</string>
+    <!-- SPINNER CIDADE-->
+    <string-array name="cidadeSpinT2">
+        <item>São Borja</item>
+        <item>Bagé</item>
+        <item>Porto Alegre</item>
+        <item>Torres</item>
+        <item>Gramado</item>
+    </string-array>
+    <!-- SPINNER ESTADO-->
+    <string-array name="estadoSpinT2">
+        <item>RS</item>
+        <item>RJ</item>
+        <item>AC</item>
+        <item>MG</item>
+        <item>SP</item>
+    </string-array>
+
 
     <!-- STRINGS REFERENTES A "activity_terceira / terceiraActivity" -->
     <string name="editSenhaT3" />
@@ -30,4 +47,6 @@
     <string name="checkManterConectadoT3">Mantenha-me Conectado</string>
     <string name="btnEsqueciSenhaT3">Esqueci Minha Senha</string>
     <string name="textEfetuarLoginT3">EFETUE O SEU LOGIN:</string>
+
+
 </resources>
