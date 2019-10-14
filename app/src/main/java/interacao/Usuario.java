@@ -168,4 +168,6 @@ public class Usuario {
     public void setStatus_usuario(String status_usuario) {
         this.status_usuario = status_usuario;
     }
+
+
 }

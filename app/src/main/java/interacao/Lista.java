@@ -9,7 +9,7 @@ import java.util.Date;
 public class Lista {
     private Integer id_lista;
     private String nome;
-    private Date data_hora;
+    private String data_hora;     //esse era string
     private double valor_total;
 
 
@@ -18,7 +18,7 @@ public class Lista {
     }
 
 
-    public Lista(Integer id_lista, String nome, Date data_hora, double valor_total){
+    public Lista(Integer id_lista, String nome, String data_hora, double valor_total){
         this.id_lista = id_lista;
         this.nome = nome;
         this.data_hora = data_hora;
@@ -42,11 +42,9 @@ public class Lista {
         this.valor_total = valor_total;
     }
 
-    public Date getData_hora() {
-        return data_hora;
-    }
+    public String getData_hora() {return data_hora;}
 
-    public void setData_hora(Date data_hora) {
+    public void setData_hora(String data_hora) {
         this.data_hora = data_hora;
     }
 

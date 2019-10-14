@@ -39,7 +39,7 @@ public class UsuarioBD {
     }
 
 
-    private Usuario criarUsuario(Cursor cursor) {
+    private Usuario criarUsuario(Cursor cursor){
         Usuario usuario = new Usuario(
                 cursor.getInt(cursor.getColumnIndex(Conecta.Usuario.ID_USUARIO)),
                 cursor.getInt(cursor.getColumnIndex(Conecta.Usuario.FOTO_USUARIO_ID)),
@@ -52,15 +52,85 @@ public class UsuarioBD {
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.SEXO)),
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.EMAIL)),
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.SENHA)),
-                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.CRIADO)),
-                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.MODIFICADO)),
-                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.PERFIL_USUARIO)),
+                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.CRIADO)),         //ESSES ERA DO TIPO DATE
+                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.MODIFICADO)),     //ESSES ERA DO TIPO DATE
+                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.PERFIL_USUARIO)), //ESSES ERA DO TIPO DATE
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.STATUS_USUARIO)));
-        //ESSES DOIS SÃO DO TIPO DATE
 
 
         return usuario;
     }
-}
 
-//AQUI FOI PARADA A EDIÇÃO
+
+    /*INICIO DA EDIÇÃO 02/12/2016 08:56*/
+    public List<Usuario> ListaUsuario(){
+        Cursor cursor = getDataBase().query(Conecta.Usuario.TABELA,
+                Conecta.Usuario.COLUNAS, null, null, null, null, null);
+
+        List<Usuario> usuarios = new ArrayList<Usuario>();
+
+        while (cursor.moveToNext()) {
+            Usuario modelo = criarUsuario(cursor);
+            usuarios.add(modelo);
+        }
+        cursor.close();
+        return usuarios;
+    }
+
+
+    public long salvarUsuario(Usuario usuario) {
+        ContentValues valores = new ContentValues();
+
+        valores.put(Conecta.Usuario.FOTO_USUARIO_ID, usuario.getFoto_usuario_id());
+        valores.put(Conecta.Usuario.CARTAO_ID, usuario.getCartao_id());
+        valores.put(Conecta.Usuario.ENDERECO_ID, usuario.getEndereco_id());
+        valores.put(Conecta.Usuario.NIVEL_ACESSO_ID, usuario.getNivel_acesso_id());
+        valores.put(Conecta.Usuario.NOME, usuario.getNome());
+        valores.put(Conecta.Usuario.DATA_NASCIMENTO, usuario.getData_nascimento());
+        valores.put(Conecta.Usuario.TELEFONE, usuario.getTelefone());
+        valores.put(Conecta.Usuario.SEXO, usuario.getSexo());
+        valores.put(Conecta.Usuario.EMAIL, usuario.getEmail());
+        valores.put(Conecta.Usuario.SENHA, usuario.getSenha());
+        valores.put(Conecta.Usuario.CRIADO, usuario.getCriado());
+        valores.put(Conecta.Usuario.MODIFICADO, usuario.getModificado());
+        valores.put(Conecta.Usuario.PERFIL_USUARIO, usuario.getPerfil_usuario());
+        valores.put(Conecta.Usuario.STATUS_USUARIO, usuario.getStatus_usuario());
+
+        if (usuario.getId_usuario() != null) {
+            return sqLiteDatabase.update(Conecta.Usuario.TABELA, valores, "id_usuario = ?",
+                    new String[]{usuario.getId_usuario().toString()}
+            );
+        }
+        return getDataBase().insert(Conecta.Usuario.TABELA, null, valores);
+    }
+
+
+    public boolean removerUsuario(int id) {
+        return getDataBase().delete(Conecta.Usuario.TABELA, "id_usuario = ?", new String[]{(Integer.toString(id))})>0;
+    }
+
+
+    public Usuario buscarUsuario(int id) {
+        Cursor cursor = getDataBase().query(Conecta.Usuario.TABELA, Conecta.Usuario.COLUNAS, "id_usuario = ?", new String[]{Integer.toString(id)}, null, null, null);
+
+        List<Usuario> usuarios = new ArrayList<Usuario>() ;
+
+        while(cursor.moveToNext()){
+            Usuario modelo = criarUsuario(cursor) ;
+            usuarios.add(modelo);
+            cursor.close();
+            return modelo ;
+        }
+        return null;
+    }
+
+    public boolean logar (String usuario , String senha) {
+        Cursor cursor = getDataBase().query(Conecta.Usuario.TABELA, null, "EMAIL = ? AND SENHA = ?", new String[]{usuario, senha}, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

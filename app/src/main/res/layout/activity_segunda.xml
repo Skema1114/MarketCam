@@ -209,6 +209,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinCidadeT2"
         android:layout_below="@+id/editDataT2"
-        android:layout_alignEnd="@+id/textDataNascimentoT2" />
+        android:layout_toStartOf="@+id/radioSexoT2" />
 
 </RelativeLayout>

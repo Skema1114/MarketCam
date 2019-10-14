@@ -9,8 +9,8 @@ import java.util.Date;
 public class Compra {
     private Integer id_compra;
     private Integer carrinho_id;
-    private Date data;
-    private Date hora;
+    private String data;             //esse era data
+    private String hora;             //esse era data
     private String tag;
     private double valor_total;
 
@@ -20,7 +20,7 @@ public class Compra {
     }
 
 
-    public Compra(Integer id_compra, Integer carrinho_id, Date data, Date hora, String tag, double valor_total){
+    public Compra(Integer id_compra, Integer carrinho_id, String data, String hora, String tag, double valor_total){
         this.id_compra = id_compra;
         this.carrinho_id = carrinho_id;
         this.data = data;
@@ -46,19 +46,19 @@ public class Compra {
         this.tag = tag;
     }
 
-    public Date getHora() {
+    public String getHora() {
         return hora;
     }
 
-    public void setHora(Date hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
