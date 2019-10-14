@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class quintaActivity extends AppCompatActivity implements View.OnClickListener{
+public class quintaActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView textEditarCadastroT5;
     private TextView textUsuarioT5;
     private TextView textNomeT5;
@@ -175,10 +175,63 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         ArrayAdapter<CharSequence> adapter_cidade = ArrayAdapter.createFromResource(this, R.array.cidadeSpinT2, android.R.layout.simple_spinner_item);
         adapter_cidade.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinCidadeT5.setAdapter(adapter_cidade);
+
+        /*Bloqueando a "DIV" Cartão de Crédito*/
+        editNumeroCartaoT5.setEnabled(false);
+        editTitularT5.setEnabled(false);
+        editValidadetT5.setEnabled(false);
+        checkCodigoCartaoT5.setEnabled(false);
+        editCodigoT5.setEnabled(false);
+
+        /*Bloqueando a "DIV" Senha*/
+        editSenhaAntigaT5.setEnabled(false);
+        editNovaSenhaT5.setEnabled(false);
+        editConfirmarNovaSenhaT5.setEnabled(false);
     }
 
     @Override
     public void onClick(View v) {
+        /*Desloqueando a "DIV" Cartão de Crédito caso Checkado*/
+        if (checkAtivaCartaoCreditoT5.isChecked()) {
+            editNumeroCartaoT5.setEnabled(true);
+            editTitularT5.setEnabled(true);
+            editValidadetT5.setEnabled(true);
+            checkCodigoCartaoT5.setEnabled(true);
+            editCodigoT5.setEnabled(true);
 
+            if (checkCodigoCartaoT5.isChecked()) {
+                editCodigoT5.setEnabled(true);
+            }else{
+                editCodigoT5.setEnabled(false);
+            }
+        }else{
+            editNumeroCartaoT5.setEnabled(false);
+            editTitularT5.setEnabled(false);
+            editValidadetT5.setEnabled(false);
+            checkCodigoCartaoT5.setEnabled(false);
+            editCodigoT5.setEnabled(false);
+
+            editNumeroCartaoT5.setText(null);
+            editTitularT5.setText(null);
+            editValidadetT5.setText(null);
+            editCodigoT5.setText(null);
+            checkCodigoCartaoT5.setChecked(false);
+
+        }
+
+        /*Desloqueando a "DIV" Senha*/
+        if (checkAtivaMudarSenhaT5.isChecked()) {
+            editSenhaAntigaT5.setEnabled(true);
+            editNovaSenhaT5.setEnabled(true);
+            editConfirmarNovaSenhaT5.setEnabled(true);
+        }else{
+            editSenhaAntigaT5.setEnabled(false);
+            editNovaSenhaT5.setEnabled(false);
+            editConfirmarNovaSenhaT5.setEnabled(false);
+
+            editSenhaAntigaT5.setText(null);
+            editNovaSenhaT5.setText(null);
+            editConfirmarNovaSenhaT5.setText(null);
+        }
     }
 }
