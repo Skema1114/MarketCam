@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">MarketCam</string>
+
+    <!-- STRINGS REFERENTES A "activity_primeira / primeiraActivity" -->
+    <string name="btnNCadastroT1">Ainda Não Possui Cadastro?</string>
+    <string name="btnJCadastroT1">Já Possui um Cadastro?</string>
+
+    <!-- STRINGS REFERENTES A "activity_segunda / segundaActivity" -->
+    <string name="editNomeT2"></string>
+    <string name="radioClienteT2">Cliente</string>
+    <string name="radioMercadoT2">Mercado</string>
+    <string name="radioMasculinoT2">Masculino</string>
+    <string name="radioFemininoT2">Feminino</string>
+    <string name="editConfirmarSenhaT2"></string>
+    <string name="editEmailT2" />
+    <string name="editDataT2" />
+    <string name="editSenhaT2" />
+    <string name="textTipoContaT2">Tipo de Conta</string>
+    <string name="textSexoT2">Sexo</string>
+    <string name="textInformeDadosT2">INFORME OS SEUS DADOS ABAIXO:</string>
+    <string name="editDataNascimentoT2">Data de Nascimento</string>
+    <string name="editCidadeT2">Cidade</string>
+    <string name="editEstadoT2">Estado</string>
+    <string name="btnCadastrarseT2">CADASTRAR-SE</string>
+
+    <!-- STRINGS REFERENTES A "activity_terceira / terceiraActivity" -->
+    <string name="editSenhaT3" />
+    <string name="editEmailT3" />
+    <string name="btnEntrarT3">ENTRAR</string>
+    <string name="checkManterConectadoT3">Mantenha-me Conectado</string>
+    <string name="btnEsqueciSenhaT3">Esqueci Minha Senha</string>
+    <string name="textEfetuarLoginT3">EFETUE O SEU LOGIN:</string>
 </resources>

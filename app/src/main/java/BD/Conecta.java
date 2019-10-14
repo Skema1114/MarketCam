@@ -3,12 +3,17 @@ package BD;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
+import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 
 /**
  * Created by Rafael Martins on 29/11/2016 14:54.
  */
 
 /*PRIMEIRO PASSO FOI CRIAR O BANCO DE DADOS, CRIAR AS TABELAS E JÁ INSERIR DADOS DE ADMINISTRADOR*/
+/*SEGUNDO PASSO FOI DEFINIR O METODO PARA PEGAR A HORA DO CELULAR E ADICIONAR NO CAMPO "criado" DOS PERFIS QUE JÁ SERÃ CRIADOS*/
 /* ---------------- COMEÇO DA EDIÇÃO DA AULA DIA 29/11/2016 14:54 ---------------- */
 public class Conecta extends SQLiteOpenHelper{
     private final static String BANCO_DE_DADOS = "MarketCam";
@@ -19,6 +24,7 @@ public class Conecta extends SQLiteOpenHelper{
         super(context, BANCO_DE_DADOS, null, VERSAO);
 
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onCreate(SQLiteDatabase db) {
         /*CODIGO DE CRIAÇÃO DA TABELA "Cartao_Credito" NO SQLite*/
@@ -192,6 +198,14 @@ public class Conecta extends SQLiteOpenHelper{
         db.execSQL(sql);
 
 
+        /* ---------------- INICIO DA EDIÇÃO DA AULA DIA 30/11/2016 13:42 ---------------- */
+        /* CODIGO PARA INSERIR A DATA ATUAL DO TELEFONE EM ALGUM CAMPO PRÉ-DEFINIDO DO BANCO DE DADOSA*/
+        long date = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateString = sdf.format(date);
+        /* FOI ADICIONADO A STRING "dateString" EM TODOS OS CAMPOS "criado" ABAIXO, PARA QUE QUANDO ESES PERFIS FOREM CRIADOS PEGUEM A DATA ATUAL DO CELULAR*/
+        /* ---------------- FIM DA EDIÇÃO -_-DESSA PAGINA-_- DA AULA DIA 30/11/2016 13:42 ---------------- */
+
 
         /*-----------------------------------------------------------------------------------------*/
 
@@ -218,7 +232,7 @@ public class Conecta extends SQLiteOpenHelper{
 
         /*CODIGO DE INSERÇÃO PARAA TABELA "Nivel_Acesso"*/
         sql = "INSERT INTO Nivel_Acesso (id_nivel_acesso, nome, criado, modificado)" +
-                "VALUES  (1, 'administrador', '2016-11-11 16:08:13', NULL)";
+                "VALUES  (1, 'administrador', '"+dateString+"', NULL)";
 
         /*ENVIANDO DADOS PARA A TABELA "Nivel_Acesso" NO SQLite*/
         db.execSQL(sql);
@@ -227,7 +241,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*-----------------------------------------------------------------------------------------*/
 
         sql = "INSERT INTO Nivel_Acesso (id_nivel_acesso, nome, criado, modificado)" +
-                "VALUES  (2, 'mercado', '2016-11-11 16:08:24', NULL)";
+                "VALUES  (2, 'mercado', '"+dateString+"', NULL)";
 
         /*ENVIANDO DADOS PARA A TABELA "Nivel_Acesso" NO SQLite*/
         db.execSQL(sql);
@@ -236,7 +250,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*-----------------------------------------------------------------------------------------*/
 
         sql = "INSERT INTO Nivel_Acesso (id_nivel_acesso, nome, criado, modificado)" +
-                "VALUES  (3, 'cliente', '2016-11-11 16:08:38', NULL)";
+                "VALUES  (3, 'cliente', '"+dateString+"', NULL)";
 
         /*ENVIANDO DADOS PARA A TABELA "Nivel_Acesso" NO SQLite*/
         db.execSQL(sql);
@@ -246,7 +260,7 @@ public class Conecta extends SQLiteOpenHelper{
 
         /*CODIGO DE INSERÇÃO PARAA TABELA "Usuario"*/
         sql = "INSERT INTO Usuario (id_usuario, foto_usuario_id, cartao_id, endereco_id, nivel_acesso_id, nome, data_nascimento, telefone, sexo, email, senha, criado, modificado, perfil_usuario, status_usuario)" +
-                "VALUES (1, 1, null, 1, 1, 'Rafael Aranda Martins', '1997-04-10', '5591711114', 'M', 'skema1114@hotmail.com', '$ystem@dmin1114', '2016-11-11 16:20:13', null, 'administrador', 'ativo')";
+                "VALUES (1, 1, null, 1, 1, 'Rafael Aranda Martins', '1997-04-10', '5591711114', 'M', 'skema1114@hotmail.com', '$ystem@dmin1114', '"+dateString+"', null, 'administrador', 'ativo')";
 
         /*ENVIANDO DADOS PARA A TABELA "Usuario" NO SQLite*/
         db.execSQL(sql);

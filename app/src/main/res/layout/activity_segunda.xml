@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_segunda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.aluno.marketcam.segundaActivity">
+
+    <TextView
+            android:text="@string/textTipoContaT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTipoContaT2"
+            android:layout_below="@+id/editNomeT2"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+        android:textStyle="normal|bold" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTipoContaT2"
+            android:layout_alignParentStart="true"
+            android:id="@+id/radioTipoContaT2">
+
+            <RadioButton
+                android:text="@string/radioClienteT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioClienteT2"
+                android:layout_below="@+id/textTipoContaT2"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:checked="true" />
+
+            <RadioButton
+                android:text="@string/radioMercadoT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/radioClienteT2"
+                android:layout_toEndOf="@+id/radioClienteT2"
+                android:id="@+id/radioMercadoT2" />
+        </RadioGroup>
+
+    <TextView
+        android:text="@string/textSexoT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textTipoContaT2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="190dp"
+        android:id="@+id/textSexoT2"
+        android:textStyle="normal|bold" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textSexoT2"
+        android:layout_alignStart="@+id/textSexoT2"
+        android:id="@+id/radioSexoT2">
+
+        <RadioButton
+            android:text="@string/radioMasculinoT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMasculinoT2"
+            android:layout_weight="1"
+            android:layout_below="@+id/radioFemininoT2"
+            android:layout_alignStart="@+id/radioGroup5" />
+
+        <RadioButton
+            android:text="@string/radioFemininoT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioFemininoT2"
+            android:layout_weight="1"
+            android:layout_below="@+id/textSexoT2"
+            android:layout_alignStart="@+id/textSexoT2" />
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/textInformeDadosT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textInformeDadosT2"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editNomeT2"
+        android:hint="Nome"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textInformeDadosT2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|italic"
+        android:text="@string/editNomeT2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinEstadoT2"
+        android:layout_below="@+id/editDataT2"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinCidadeT2"
+        android:layout_alignTop="@+id/spinEstadoT2"
+        android:layout_alignEnd="@+id/editDataNascimentoT2" />
+
+    <TextView
+        android:text="@string/editCidadeT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCidadeT2"
+        android:layout_alignBottom="@+id/spinCidadeT2"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="@string/editEstadoT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editEstadoT2"
+        android:textStyle="normal|bold"
+        android:layout_alignBottom="@+id/spinEstadoT2"
+        android:layout_toEndOf="@+id/textSexoT2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editConfirmarSenhaT2"
+        android:hint="Confirmar Senha"
+        android:textStyle="normal|italic"
+        android:text="@string/editConfirmarSenhaT2"
+        android:layout_above="@+id/btnCadastrarseT2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editSenhaT2"
+        android:hint="Senha"
+        android:textStyle="normal|italic"
+        android:text="@string/editSenhaT2"
+        android:layout_above="@+id/editConfirmarSenhaT2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editEmailT2"
+        android:hint="E-mail"
+        android:textStyle="normal|italic"
+        android:text="@string/editEmailT2"
+        android:layout_above="@+id/editSenhaT2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/editDataNascimentoT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editDataNascimentoT2"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/radioTipoContaT2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editDataT2"
+        android:hint="YYYY-DD-MM"
+        android:textStyle="normal|italic"
+        android:text="@string/editDataT2"
+        android:layout_below="@+id/editDataNascimentoT2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/btnCadastrarseT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCadastrarseT2"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
