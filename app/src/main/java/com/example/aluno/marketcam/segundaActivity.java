@@ -20,7 +20,7 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
     private TextView textEstadoT2;
     private EditText editConfirmarSenhaT2;
     private EditText editEmailT2;
-    private EditText editDataT2;
+    //private EditText editDataT2;
     private EditText editSenhaT2;
     private EditText editNomeT2;
     private RadioGroup radioTipoContaT2;
@@ -51,7 +51,7 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         /*findViewById dos EditText*/
         editConfirmarSenhaT2 = (EditText) findViewById(R.id.editConfirmarSenhaT2);
         editEmailT2 = (EditText) findViewById(R.id.editEmailT2);
-        editDataT2 = (EditText) findViewById(R.id.editDataT2);
+        //editDataT2 = (EditText) findViewById(R.id.editDataT2);
         editSenhaT2 = (EditText) findViewById(R.id.editSenhaT2);
         editNomeT2 = (EditText) findViewById(R.id.editNomeT2);
 

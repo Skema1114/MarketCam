@@ -42,7 +42,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
     private TextView textTipoUsuarioT5;
     private EditText editNomeT5;
     private EditText editTelefoneT5;
-    private EditText editDataNascimentoT5;
+    //private EditText editDataNascimentoT5;
     private EditText editEmailT5;
     private EditText editCepT5;
     private EditText editRuaT5;
@@ -135,7 +135,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         /*findViewById dos EditText*/
         editNomeT5 = (EditText) findViewById(R.id.editNomeT5);
         editTelefoneT5 = (EditText) findViewById(R.id.editTelefoneT5);
-        editDataNascimentoT5 = (EditText) findViewById(R.id.editDataNascimentoT5);
+        //editDataNascimentoT5 = (EditText) findViewById(R.id.editDataNascimentoT5);
         editEmailT5 = (EditText) findViewById(R.id.editEmailT5);
         editCepT5 = (EditText) findViewById(R.id.editCepT5);
         editRuaT5 = (EditText) findViewById(R.id.editRuaT5);
