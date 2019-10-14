@@ -1,0 +1,9 @@
+  compile 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0'
+
+
+
+COMO FAZER ESSA BOSTA
+//FORMATANDO O NUMERO NO CRIAR EVENTO
+        SimpleMaskFormatter maskDataNumero = new SimpleMaskFormatter("NNNNNN");
+        MaskTextWatcher maskTextWatcher = new MaskTextWatcher(criarevento_edittext_Numero, maskDataNumero);
+        criarevento_edittext_Numero.addTextChangedListener(maskTextWatcher);

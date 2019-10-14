@@ -1,0 +1,5 @@
+microsoft azure, da pra criar uma conta gratis e pedir uma maquina virtual de graça para usar por ftp
+
+
+AutoCompleteTextView no Android, Entendendo e Utilizando
+https://www.youtube.com/watch?v=cZVuqxkJGrg

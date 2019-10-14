@@ -1,0 +1,307 @@
+PRIMEIRA_ACTIVITY (ACTIVITY DE ESCOLHA, CASO O USUARIO JÁ POSSUA UMA CONTA OU NÃO)
+-btnJCadastroT1 = segundo botao [já possui cadastro?]
+-btnNCadastroT1 = primeiro botão [Ainda Não Possui Cadastro]
+-activity_primeira_scroll = scroll view
+-activity_primeira_linear = linear layout
+-imageLogoT1 = image view
+
+
+SEGUNDA_ACTIVITY (ACTIVITY DE CADASTRO)
+-editNomeT2 = edittext do tipo "textPersonName", de nome [nome]
+-radioTipoContaT2 = radio group [cliente e mercado]
+-radioClienteT2 = radio buton [cliente]
+-radioMercadoT2 = radio buton [mercado]
+-radioSexoT2 = radio group [masculino e feminino]
+-radioMasculinoT2 = radio buton [masculino]
+-radioFemininoT2 = radio buton [feminino]
+-editConfirmarSenhaT2 = do tipo "textPassword", edit text de confirmação de senha [confirmar senha]
+-editEmailT2 = edit text do tipo "textEmailAdress", de email [email]
+-editSenhaT2 = edit text do tipo "textPassword", de senha [senha]
+-spinCidadeT2 = spinner (dropdown) para cidade
+-spinEstadoT2 = spinner (dropdown) para estado
+-textTipoContaT2 = text view [Tipo de conta]
+-textSexoT2 = text view [sexo]
+-textInformeDadosT2 = text view [INFORME SEUS DADOS ABAIXO:]
+-textDataNascimentoT2 = text view [Data de Nascimento]
+-textCidadeT2 = text view [cidade]
+-textEstadoT2 = text view [estado]
+-btnCadastrarseT2 = button cadastro [CADASTRAR-SE]
+-dateDataT2 - date picker
+-activity_quinta_scroll = scroll view
+-activity_quinta_linear = linear layout
+
+
+TERCEIRA_ACTIVITY (ACTIVITY DE LOGIN)
+-editEmailT3 = edit text do "textEmailAdress", para email [E-mail] 
+-editSenhaT3 = edit text ddo tipo "textPassword", de senha [Senha]
+-btnEntrarT3 = button [ENTRAR]
+-checkManterConectadoT3 = check box para manter ou não o usuario conectado [Mantenhame-se Conectado!]
+-btnEsqueciSenhaT3 = button para caso o usuario esqueça a sua senha [Esqueci Minha Senha]
+-textEfetuarLoginT3 = text view [EFETUE O SEU LOGIN]
+-activity_terceira_scroll = scroll view
+-activity_terceira_linear = linear layout
+-imageLogoT3 = image view
+
+
+QUARTA_ACTIVITY (ACTIVITY DE CRIAÇÃO DE LISTA COM TEXT AUTOCOMPLETE)
+-textAdicionarProdutoT4 = text view de cabeçalho [ADICIONAR UM PRODUTO A LISTA DE COMPRAS]
+-textProdutoT4 = text view [produto]
+-textQuantidadeT4 = text view [quantidade]
+-textautocompleteProdutoT4 = autocomplete text view [escolha um produto]
+-editQuantidadeT4 = edit text para a quantidade de produtos [quantidade]
+-btnAdicionarProdutoT4 = button [adicionar produto]
+-btnAdicionarCodigoBarrasT4 = button [adicionar produto pelo codigo de barras]
+-activity_quarta_scroll = scroll view
+-activity_quarta_linear = linear layout
+-imageLogoT4 = image view
+
+
+QUINTA_ACTIVITY (ACTIVITY DE CADASTRO COMPLETO COM TODAS AS OPÇÕES)
+-textEditarCadastroT5 = text view [editar cadastro]
+-textUsuarioT5 = text view [Usuario]
+-textNomeT5 = text view [nome]
+-editNomeT5 = edit text [informe seu nome]
+-textTelefoneT5 = text view [telefone]
+-editTelefoneT5 = edit text [informe seu telefone]
+-textSexoT5 = text view [sexo]
+-radioSexoT5 = Radio group para a seleção [sexo]
+-radioMasculinoT5 = radio button [masculino]
+-radioFemininoT5 = radio button [feminino]
+-textDataNascimentoT5 = text view [data de nascimento]
+-dataDataNascimentoT5 = datepicker 
+-textTipoUsuarioT5 = text view [tipo de usuario]
+-radioTipoUsuarioT5 = radio group para a seleção [tipo de usuario]
+-radioClienteT5 = radio buton [cliente]
+-radioMercadoT5 = radio buton [mercado]
+-textEmailT5 = text view [email]
+-editEmailT5 = edit text [irá conter o email da pessoa]
+-textEnderecoT5 = text view [endereço]
+-textCidadeT5 = text view [cidade]
+-spinCidadeT5 = spinner para as cidades
+-textEstadoT5 = text view [estado]
+-spinEstadoT5 = spinner para os estados
+-textCepT5 = text view [cep]
+-editCepT5 = edit text [informe o seu cep]
+-textRuaT5 = text view [Rua]
+-editRuaT5 = edit text [Informe a Sua Rua]
+-textNumeroRuaT5 = text view [Numero da rua]
+-editNumeroRuaT5 = edit text [Informe o Numero da Rua]
+-textBairroT5 = text view [bairro]
+-editBairroT5 = edit text [Informe o Seu Bairro]
+-textCartaoCreditoT5 = text view [cartao de credito]
+-checkAtivaCartaoCreditoT5 = check box para ativar a sessão do cartao de crédito [Desejo Inserir um Cartão de Crédito]
+-textNumeroCartaoT5 = text view [numero]
+-editNumeroCartaoT5 = edit text [Informe o Numero do Cartão de Crédito]
+-textTitularT5 = text view [titular]
+-editTitularT5 = edit text [Informe o Nome do Titular do Cartão de Crédito]
+-textValidadeT5 = text view [validade]
+-editValidadetT5 = edit text validade [Informe a Data de Validade do Cartão de Crédito]
+-textCodigoT5 = text view [codigo]
+-checkCodigoCartaoT5 = check box para ativar o campo codigo do cartao [Salvar o Código do Cartão de Crédito?]
+-editCodigoT5 = edit text [Informe o Código do Cartão de Crédito]
+-textSenhaT5 = text view [senha]
+-checkAtivaMudarSenhaT5 = check box para ativar a sessão mudar senha [Desejo Mudar a Minha Senha]
+-textSenhaAntigaT5 = text view = [senha antiga]
+-editSenhaAntigaT5 = edit text [Informe a Sua Senha Antiga]
+-textNovaSenhaT5 = text view [nova senha]
+-editNovaSenhaT5 = edit text [Informe a Sua Nova Senha]
+-textConfirmarNovaSenhaT5 = text view [Confirmar Nova senha]
+-editConfirmarNovaSenhaT5 = edit text [Confirme a Sua Nova Senha]
+-btnSalvarT5 = buton [salvar]
+-activity_quinta_scroll = scroll view
+-activity_quinta_linear = linear layout
+
+
+ACTIVITY_SEXTA (ACTIVITY DE CRIAÇÃO DE LISTAS DE COMPRAS)
+-textCriarListaT6 = text view [criar uma lista de compras]
+-textNomeListaT6 = text view [nome da lista]
+-editNomeListaT6 = edit text [informe o nome da lista]
+-switchFavoritoT6 = switch [favorito]
+-btnCriarT6 = buton [criar]
+-activity_sexta_relative = relative layout
+-imageLogoT6 = image view
+
+
+ACTIVITY_SETIMA (ACTIVITY DE LISTAGEM PARA VISUALÇIZAÇÃO DO "USUARIO")
+-btnUsuarioT7 = buton [usuarios]
+-btnProdutosT7 = button [produtos]
+-btnEnderecosT7 = buton [endereços]
+-btnListasComprasT7 = buton [Listas de Compras]
+-btnComprasT7 = buton [compras]
+-btnCartõesCreditoT7 = button [cartões de creditos]
+-toolbarT7 = toolbar 
+-textUsuariosT7 = text view [Usuarios]
+-listUsuariosT7 = list view
+-activity_setima_scroll = scroll view
+-activity_setima_linear = linear layout
+-activity_setima_horizontal_scroll
+-activity_oitava_linear_linear 
+
+
+ACTIVITY_OITAVA (ACTIVITY DE LISTAGEM PARA VISUALÇIZAÇÃO DOS "PRODUTOS")
+-btnUsuariosT8 = buton [usuarios]
+-btnProdutosT8 = buton [produtos]
+-btnEnderecosT8 = buton [endereços]
+-btnComprasT8 = buton [compras]
+-btnListasComprasT8 = buton [Listas de Compras]
+-btnCartõesCreditoT8 = button [cartões de creditos]
+-toolbarT8 = toolbar 
+-textProdutosT8 = text view [Produtos]
+-listProdutosT8 = list view
+-activity_oitava_scroll = scroll view
+-activity_oitava_linear = linear layout
+-activity_oitava_horizontal_scroll = horizontal scroll view
+-activity_oitava_linear_linear = linear layout
+
+
+ACTIVITY_NONA (ACTIVITY DE LISTAGEM PARA VISUALÇIZAÇÃO DOS "ENDERECOS")
+-btnUsuariosT9 = buton [usuarios]
+-btnProdutosT9 = buton [produtos]
+-btnEnderecosT9 = buton [endereços]
+-btnComprasT9 = buton [compras]
+-btnListasComprasT9 = buton [Listas de Compras]
+-btnCartõesCreditoT9 = button [cartões de creditos]
+-toolbarT9 = toolbar 
+-textEnderecosT9 = text view [Enderecos]
+-listEnderecosT9 = list view
+-activity_nona_scroll = scroll view
+-activity_nona_linear = linear layout
+-activity_nona_horizontal_scroll = horizontal scroll view
+-activity_nona_linear_linear = linear layout
+
+
+ACTIVITY_DECIMA (ACTIVITY DE LISTAGEM PARA VISUALÇIZAÇÃO DAS "COMPRAS")
+-btnUsuariosT10 = buton [usuarios]
+-btnProdutosT10 = buton [produtos]
+-btnEnderecosT10 = buton [endereços]
+-btnComprasT10 = buton [compras]
+-btnListasComprasT10 = buton [Listas de Compras]
+-btnCartõesCreditoT10 = button [cartões de creditos]
+-toolbarT10 = toolbar 
+-textComprasT10 = text view [Compras]
+-listComprasT10 = list view
+-activity_decima_scroll = scroll view
+-activity_decima_linear = linear layout
+-activity_decima_horizontal_scroll = horizontal scroll view 
+-activity_decima_linear_linear = linear layout
+
+
+ACTIVITY_DECIMA_PRIMEIRA (ACTIVITY DE LISTAGEM PARA VISUALÇIZAÇÃO DAS "LISTAS DE COMPRAS")
+-btnUsuariosT11 = buton [usuarios]
+-btnProdutosT11 = buton [produtos]
+-btnEnderecosT11 = buton [endereços]
+-btnComprasT11 = buton [compras]
+-btnListasComprasT11 = buton [Listas de Compras]
+-btnCartõesCreditoT11 = button [cartões de creditos]
+-toolbarT11 = toolbar 
+-textListasComprasT11 = text view [Listas de Compras]
+-listListasComprasT11 = list view
+-activity_decima_primeira_scroll = scroll view
+-activity_decima_primeira_linear = linear layout
+-activity_decima_primeira_horizontal_scroll = horizontal scroll view
+-activity_decima_primeira_linear_linear = linear layout
+
+
+ACTIVITY_DECIMA_SEGUNDA (ACTIVITY DE LISTAGEM PARA VISUALÇIZAÇÃO DAS "CARTOES DE CREDITOS")
+-btnUsuariosT12 = buton [usuarios]
+-btnProdutosT12 = buton [produtos]
+-btnEnderecosT12 = buton [endereços]
+-btnComprasT12 = buton [compras]
+-btnListasComprasT12 = buton [Listas de Compras]
+-btnCartõesCreditoT12 = button [cartões de creditos]
+-toolbarT12 = toolbar 
+-textCartoesCreditoT12 = text view [Cartoes de Credito]
+-listCartoesCreditoT12 = list view
+-activity_decima_segunda_scroll = scroll view
+-activity_decima_segunda_linear = linear layout
+-activity_decima_segunda_horizontal_scroll = horizontal scroll view
+-activity_decima_segunda_linear_linear = linear layout
+
+
+usuario.xml ("ACTIVITY" DE COMO LISTARÁ CADA USUARIO)
+-textListarUsuariosEsquerda = text view
+-textListarUsuariosDireita = text view
+-activity_XML_usuarios_linear = linear layout
+
+
+produto.xml ("ACTIVITY" DE COMO LISTARÁ CADA PRODUTO)
+-textListarProdutosEsquerda = text view
+-textListarProdutosDireita = text view
+-activity_XML_produtos_linear = linear layout
+
+
+
+endereco.xml ("ACTIVITY" DE COMO LISTARÁ CADA ENDERECO)
+-textListarEnderecosEsquerda = text view
+-textListarEnderecosDireita = text view
+-activity_XML_enderecos_linear = linear layout
+
+
+
+compra.xml ("ACTIVITY" DE COMO LISTARÁ CADA COMPRA)
+-textListarComprasEsquerda = text view
+-textListarComprasDireita = text view
+-activity_XML_compras_linear = linear layout
+
+
+
+lista.xml ("ACTIVITY" DE COMO LISTARÁ CADA LISTA)
+-textListarListasEsquerda = text view
+-textListarListasDireita = text view
+-activity_XML_listas_linear = linear layout
+
+
+
+
+cartao_credito.xml ("ACTIVITY" DE COMO LISTARÁ CADA CARTAO DE CREDITO)
+-textListarCartao_CreditosEsquerda = text view
+-textListarCartao_CreditosDireita = text view
+-activity_XML_cartao_creditos_linear = linear layout
+
+
+
+ACTIVITY_DECIMA_TERCEIRA (ACTIVITY NUCLEO, OU O MENU DESLIZANTE LATERAL)
+-textNomeT13 = text view
+-textEmailT13 = text view
+	CONTENT_DECIMA_TERCEIRA (<INCLUDE>, DA ACTIVITY ACIMA)
+	-btnCapturaCodigoT13 = buton [capturar codigo]
+	-imageLogoT13 = imagem view
+	-btnLimparT13 = buton [limpar]
+	
+
+
+ACTIVITY_DECIMA_QUARTA (ACTIVITY DE CARRINHO DE COMPRAS)
+-textMeuCarrinhoT14 = text view [meu carrinho]
+-btnAdicionarT14 = buton [adicionar mais produtos]
+-btnRemoverT14 = buton [remover]
+-listCarrinhoT14 = list view
+-textValorTotalT14 = text view [valor total]
+-textRecebeValorTotalT14 = text view
+-btnFinalizarPedidoT14 = btn [finalizar pedido]
+-activity_decima_quarta_scroll = scroll view
+-activity_decima_quarta_linear = linear layout
+-activity_decima_quarta_linear_layout = linear layout
+-activity_decima_quarta_linear_layout_layout = linear layout
+
+
+
+ACTIVITY_DECIMA_QUINTA (ACTIVITY DE REPORTAE ERRO)
+-textContatoT15 = text view [contato com o desenvolvedor]
+-editMeuEmailT15 = edit text
+-textEscolhaAcaoT15 = text view [escolha uma ação]
+-radioAcaoT15 = radio group
+-radioReclamacaoT15 = radio buton [reclamacao]
+-radioReportarErroT15 = radio buton [reportar erro]
+-radioDuvidaT15 = radio buton [duvida]
+-radioMelhoriaT15 = radio buton [melhoria]
+-textDescricaoT15 = text view [descrição]
+-editMultiDescricaoT15 = edit text multi
+-btnEnviarT15 = buton [enviar]
+-activity_decima_quinta_scroll = scroll view
+-activity_decima_quinta_linear = linear layout
+-activity_decima_quinta_horizontal_scroll = horizontal scroll view
+-activity_decima_quinta_linear_layout = linear layout
+
+
+
+

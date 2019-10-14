@@ -1,0 +1,14 @@
+<!-- COR "MARKET" = 25DA7D -->
+    <!-- COR BOTAO = 02AE56 -->
+    <!-- AZUL MAIS ESCURA = 131B2E -->
+    <!-- AZUL MEDIO ESCURA = 19243C -->
+    <!-- AZUL MAIS CLARA ESCURA = 1E2C4B -->
+
+    <!-- CORES PADRAO DO APLICATIVO -->
+    <!-- <color name="colorPrimary">#3F51B5</color>
+         <color name="colorPrimaryDark">#303F9F</color>
+         <color name="colorAccent">#FF4081</color> -->
+
+    <color name="colorPrimary">#131B2E</color>
+    <color name="colorPrimaryDark">#19243C</color>
+    <color name="colorAccent">#25da7d</color>
