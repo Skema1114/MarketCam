@@ -13,19 +13,37 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="EDITAR CADASTRO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5"
+            android:id="@+id/textEditarCadastroT5"
             android:layout_weight="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:text="@string/textEditarCadastroT5" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço01T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço01T5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textUsuarioT5"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:text="@string/textUsuarioT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço02T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço02T5" />
 
         <TextView
             android:text="PARTE PARA COLOCAR FOTO"
@@ -37,37 +55,40 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço03T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço03T5" />
 
         <TextView
-            android:text="Nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView10"
-            android:layout_weight="1" />
+            android:id="@+id/textNomeT5"
+            android:layout_weight="1"
+            android:text="@string/textNomeT5" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/editNomeT5"
             android:layout_weight="1"
             android:textStyle="normal|italic"
-            android:hint="Informe Seu Nome" />
+            android:hint="Informe Seu Nome"
+            android:text="@string/editNomeT5" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView11"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço04T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço04T5" />
 
         <TextView
-            android:text="Telefone"
+            android:text="@string/textTelefoneT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView12"
+            android:id="@+id/textTelefoneT5"
             android:layout_weight="1" />
 
         <EditText
@@ -75,42 +96,45 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/editTelefoneT5"
             android:layout_weight="1"
             android:hint="Informe Seu Telefone"
-            android:textStyle="normal|italic" />
+            android:textStyle="normal|italic"
+            android:text="@string/editTelefoneT5" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView13"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço05T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço05T5" />
 
         <TextView
-            android:text="Sexo"
+            android:text="@string/textSexoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView14"
+            android:id="@+id/textSexoT5"
             android:layout_weight="1" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radioSexoT5">
 
             <RadioButton
-                android:text="Masculino"
+                android:text="@string/radioMasculinoT5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioMasculinoT5"
                 android:layout_weight="1" />
 
             <RadioButton
-                android:text="Feminino"
+                android:text="@string/radioFemininoT5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton"
+                android:id="@+id/radioFemininoT5"
                 android:layout_weight="1" />
 
         </RadioGroup>
@@ -118,14 +142,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView15"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço06T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço06T5" />
 
         <TextView
-            android:text="Data de Nascimento"
+            android:text="@string/textDataNascimentoT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView16"
+            android:id="@+id/textDataNascimentoT5"
             android:layout_weight="1" />
 
         <EditText
@@ -133,56 +158,59 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/editDataNascimentoT5"
             android:layout_weight="1"
-            android:hint="Informe Sua Data de Nascimento"
+            android:hint="@string/editDataNascimentoT5"
             android:textStyle="normal|italic" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView17"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço07T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço07T5" />
 
         <TextView
-            android:text="Tipo de Usuario"
+            android:text="@string/editTipoUsuarioT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView18"
+            android:id="@+id/editTipoUsuarioT5"
             android:layout_weight="1" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radioTipoUsuarioT5">
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/radioClienteT5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton4"
+                android:id="@+id/radioClienteT5"
                 android:layout_weight="1" />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/radioMercadoT5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioMercadoT5"
                 android:layout_weight="1" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView19"
-            android:layout_weight="1" />
+            android:id="@+id/Espaço08T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço08T5" />
 
         <TextView
-            android:text="E-mail"
+            android:text="@string/textEmailT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView20"
+            android:id="@+id/textEmailT5"
             android:layout_weight="1" />
 
         <EditText
@@ -190,9 +218,448 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText4"
+            android:id="@+id/editEmailT5"
             android:layout_weight="1"
-            android:hint="O EMAIL NÃO PODERA SER ALTERADO" />
+            android:hint="fulano@hotmail.com"
+            android:textIsSelectable="false"
+            android:textStyle="normal|italic"
+            android:text="@string/editEmailT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço09T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço09T5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço10T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço10T5" />
+
+        <TextView
+            android:text="@string/textEnderecoT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEnderecoT5"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço11T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço11T5" />
+
+        <TextView
+            android:text="@string/textCidadeT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCidadeT5"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinCidadeT5"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço12T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço12T5" />
+
+        <TextView
+            android:text="@string/textEstadoT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEstadoT5"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinEstadoT5"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço13T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço13T5" />
+
+        <TextView
+            android:text="@string/textCepT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCepT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editCepT5"
+            android:layout_weight="1"
+            android:textStyle="normal|italic"
+            android:hint="@string/editCepT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço14T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço14T5" />
+
+        <TextView
+            android:text="@string/textRuaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textRuaT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editRuaT5"
+            android:layout_weight="1"
+            android:hint="Informe a Sua Rua"
+            android:textStyle="normal|italic"
+            android:text="@string/editRuaT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço15T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço15T5" />
+
+        <TextView
+            android:text="@string/textNumeroRuaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNumeroRuaT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editNumeroRuaT5"
+            android:layout_weight="1"
+            android:hint="Informe o Numero da Rua"
+            android:textStyle="normal|italic"
+            android:text="@string/editNumeroRuaT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço16T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço16T5" />
+
+        <TextView
+            android:text="@string/textBairroT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textBairroT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editBairroT5"
+            android:layout_weight="1"
+            android:hint="Informe o Seu Bairro"
+            android:text="@string/editBairroT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço17T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço17T5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço18T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço18T5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCartaoCreditoT5"
+            android:layout_weight="1"
+            android:text="@string/textCartaoCreditoT5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço19T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço19T5" />
+
+        <CheckBox
+            android:text="@string/checkAtivaCartaoCreditoT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkAtivaCartaoCreditoT5"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço20T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço20T5" />
+
+        <TextView
+            android:text="@string/textNumeroCartaoT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNumeroCartaoT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editNumeroCartaoT5"
+            android:layout_weight="1"
+            android:hint="Informe o Numero do Cartão de Crédito"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textStyle="normal|italic"
+            android:text="@string/editNumeroCartaoT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço21T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço21T5" />
+
+        <TextView
+            android:text="@string/textTitularT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTitularT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTitularT5"
+            android:layout_weight="1"
+            android:hint="Informe o Nome do Titular do Cartão de Crédito"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textStyle="normal|italic"
+            android:text="@string/editTitularT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço22T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço22T5" />
+
+        <TextView
+            android:text="@string/textValidadeT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textValidadeT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editValidadetT5"
+            android:layout_weight="1"
+            android:hint="Informe a Data de Validade do Cartão de Crédito"
+            android:textStyle="normal|italic"
+            android:text="@string/editValidadetT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço23T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço23T5" />
+
+        <TextView
+            android:text="@string/textCodigoT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCodigoT5"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:text="@string/checkCodigoCartaoT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkCodigoCartaoT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editCodigoT5"
+            android:layout_weight="1"
+            android:hint="Informe o Código do Cartão de Crédito"
+            android:textStyle="normal|italic"
+            android:text="@string/editCodigoT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço24T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço24T5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço25T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço25T5" />
+
+        <TextView
+            android:text="@string/textSenhaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSenhaT5"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço26T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço26T5" />
+
+        <CheckBox
+            android:text="@string/checkAtivaMudarSenhaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkAtivaMudarSenhaT5"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço27T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço27T5" />
+
+        <TextView
+            android:text="@string/textSenhaAntigaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSenhaAntigaT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editSenhaAntigaT5"
+            android:layout_weight="1"
+            android:hint="Informe a Sua Senha Antiga"
+            android:textStyle="normal|italic"
+            android:text="@string/editSenhaAntigaT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço28T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço28T5" />
+
+        <TextView
+            android:text="@string/textNovaSenhaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNovaSenhaT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editNovaSenhaT5"
+            android:layout_weight="1"
+            android:hint="Informe a Sua Nova Senha"
+            android:textStyle="normal|italic"
+            android:text="@string/editNovaSenhaT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço29T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço29T5" />
+
+        <TextView
+            android:text="@string/textConfirmarNovaSenhaT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textConfirmarNovaSenhaT5"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editConfirmarNovaSenhaT5"
+            android:layout_weight="1"
+            android:hint="Confirme a Sua Nova Senha"
+            android:textStyle="normal|italic"
+            android:text="@string/editConfirmarNovaSenhaT5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Espaço30T5"
+            android:layout_weight="1"
+            android:text="@string/Espaço30T5" />
+
+        <Button
+            android:text="@string/btnSalvarT5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSalvarT5"
+            android:layout_weight="1" />
 
     </LinearLayout>
 </ScrollView>
