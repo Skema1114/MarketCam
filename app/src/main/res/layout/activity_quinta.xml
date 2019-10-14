@@ -171,10 +171,10 @@
             android:text="@string/Espaço07T5" />
 
         <TextView
-            android:text="@string/editTipoUsuarioT5"
+            android:text="@string/textTipoUsuarioT5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editTipoUsuarioT5"
+            android:id="@+id/textTipoUsuarioT5"
             android:layout_weight="1" />
 
         <RadioGroup

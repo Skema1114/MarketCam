@@ -5,6 +5,7 @@
     <string name="btnNCadastroT1">Ainda Não Possui Cadastro?</string>
     <string name="btnJCadastroT1">Já Possui um Cadastro?</string>
 
+
     <!-- STRINGS REFERENTES A "activity_segunda / segundaActivity" -->
     <string name="editNomeT2"></string>
     <string name="radioClienteT2">Cliente</string>
@@ -48,6 +49,7 @@
     <string name="btnEsqueciSenhaT3">Esqueci Minha Senha</string>
     <string name="textEfetuarLoginT3">EFETUE O SEU LOGIN</string>
 
+
     <!-- STRINGS REFERENTES A "activity_quarta / quartaActivity" -->
     <string name="textAdicionarProdutoT4">ADICIONAR UM PRODUTO A LISTA DE COMPRAS</string>
     <string name="textProdutoT4">Produto</string>
@@ -55,6 +57,9 @@
     <string name="editQuantidadeT4" />
     <string name="btnAdicionarProdutoT4">ADICIONAR PRODUTO</string>
     <string name="btnAdicionarCodigoBarrasT4">ADICIONAR PRODUTO PELO CODIGO DE BARRAS</string>
+
+
+    <!-- STRINGS REFERENTES A "activity_quinta / quintaActivity" -->
     <string name="textEditarCadastroT5">EDITAR CADASTRO</string>
     <string name="Espaço01T5" />
     <string name="textUsuarioT5">USUARIO</string>
@@ -73,7 +78,7 @@
     <string name="textDataNascimentoT5">Data de Nascimento</string>
     <string name="editDataNascimentoT5">Informe Sua Data de Nascimento</string>
     <string name="Espaço07T5" />
-    <string name="editTipoUsuarioT5">Tipo de Usuario</string>
+    <string name="textTipoUsuarioT5">Tipo de Usuario</string>
     <string name="radioClienteT5">Cliente</string>
     <string name="radioMercadoT5">Mercado</string>
     <string name="Espaço08T5" />
@@ -132,6 +137,5 @@
     <string name="editConfirmarNovaSenhaT5" />
     <string name="Espaço30T5" />
     <string name="btnSalvarT5">SALVAR</string>
-
 
 </resources>
