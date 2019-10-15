@@ -1,92 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_quarta_relative"
+    android:id="@+id/activity_quarta_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.aluno.marketcam.quartaActivity">
+    android:padding="15dp">
 
-    <TextView
-        android:text="@string/textAdicionarProdutoT4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textAdicionarProdutoT4"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textStyle="normal|bold" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_quarta_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.aluno.marketcam.quartaActivity">
 
-    <Button
-        android:text="@string/btnAdicionarProdutoT4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAdicionarProdutoT4"
-        android:layout_above="@+id/btnAdicionarCodigoBarrasT4"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+            <TextView
+                android:text="@string/textAdicionarProdutoT4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textAdicionarProdutoT4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textStyle="normal|bold" />
 
-    <AutoCompleteTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textautocompleteProdutoT4"
-        android:textStyle="normal|italic"
-        android:layout_marginBottom="17dp"
-        android:layout_above="@+id/textQuantidadeT4"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Escolha um Produto"
-        android:fontFamily="sans-serif-condensed" />
+        <TextView
+            android:text="AQUI VAI UM LOGO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textAdicionarProdutoT4"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView6"
+            android:layout_marginTop="105dp"
+            android:layout_marginLeft="111dp" />
 
-    <TextView
-        android:text="@string/textProdutoT4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textProdutoT4"
-        android:layout_above="@+id/textautocompleteProdutoT4"
-        android:layout_alignParentStart="true" />
+        <TextView
+                android:text="@string/textProdutoT4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textProdutoT4"
+                android:layout_above="@+id/textautocompleteProdutoT4"
+                android:layout_alignParentStart="true"
+            android:layout_marginTop="111dp" />
 
-    <Button
-        android:text="@string/btnAdicionarCodigoBarrasT4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAdicionarCodigoBarrasT4"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textautocompleteProdutoT4"
+            android:textStyle="normal|italic"
+            android:layout_above="@+id/textQuantidadeT4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:hint="Escolha um Produto"
+            android:fontFamily="sans-serif-condensed" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editQuantidadeT4"
-        android:layout_above="@+id/btnAdicionarProdutoT4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="32dp"
-        android:layout_alignStart="@+id/textQuantidadeT4"
-        android:textStyle="normal|italic"
-        android:text="@string/editQuantidadeT4"
-        android:fontFamily="sans-serif-condensed" />
+        <TextView
+            android:text="@string/textQuantidadeT4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textQuantidadeT4"
+            android:layout_alignBottom="@+id/editQuantidadeT4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:textAlignment="viewStart" />
 
-    <TextView
-        android:text="@string/textQuantidadeT4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textQuantidadeT4"
-        android:layout_alignBottom="@+id/editQuantidadeT4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="45dp" />
+        <EditText
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editQuantidadeT4"
+            android:layout_above="@+id/btnAdicionarProdutoT4"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/textQuantidadeT4"
+            android:textStyle="normal|italic"
+            android:text="@string/editQuantidadeT4"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="viewStart" />
 
-    <TextView
-        android:text="AQUI VAI UM LOGO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textAdicionarProdutoT4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:id="@+id/textView6" />
-</RelativeLayout>
+        <Button
+                android:text="@string/btnAdicionarProdutoT4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAdicionarProdutoT4"
+                android:layout_above="@+id/btnAdicionarCodigoBarrasT4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp" />
+
+        <Button
+                android:text="@string/btnAdicionarCodigoBarrasT4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAdicionarCodigoBarrasT4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+    </LinearLayout>>
+</ScrollView>
