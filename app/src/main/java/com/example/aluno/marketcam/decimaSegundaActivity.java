@@ -86,31 +86,37 @@ public class decimaSegundaActivity extends AppCompatActivity implements View.OnC
         if (btnUsuariosT12.isPressed()) {
             Intent intent = new Intent(this, setimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnProdutosT12.isPressed()) {
             Intent intent = new Intent(this, oitavaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnEnderecosT12.isPressed()) {
             Intent intent = new Intent(this, nonaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnComprasT12.isPressed()) {
             Intent intent = new Intent(this, decimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnListasComprasT12.isPressed()) {
             Intent intent = new Intent(this, decimaPrimeiraActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnCartõesCreditoT12.isPressed()) {
             Intent intent = new Intent(this, decimaSegundaActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

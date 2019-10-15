@@ -1,5 +1,6 @@
 package com.example.aluno.marketcam;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,13 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import BD.EnderecoBD;
+import BD.UsuarioBD;
+import interacao.Endereco;
+import interacao.Usuario;
+import util.Mensagem;
 
 public class quintaActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView textEditarCadastroT5;
@@ -66,10 +74,22 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
     private DatePicker dateDataNascimentoT5;
     private Button btnSalvarT5;
 
+    private Usuario usuario;
+    private UsuarioBD usuarioBD;
+    private int idUsuario;
+
+    private Endereco endereco;
+    EnderecoBD enderecoBD;
+    private int idEndereco;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quinta);
+
+        enderecoBD = new EnderecoBD(this);
+        usuarioBD = new UsuarioBD(this);
 
         /*findViewById*/
         /*findViewById dos TextView*/
@@ -144,10 +164,10 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
         /*setOnClickListener*/
         /*setOnClickListener dos RadioButton*/
-        radioMasculinoT5.setOnClickListener(this);
-        radioFemininoT5.setOnClickListener(this);
-        radioClienteT5.setOnClickListener(this);
-        radioMercadoT5.setOnClickListener(this);
+        //radioMasculinoT5.setOnClickListener(this);
+        //radioFemininoT5.setOnClickListener(this);
+        //radioClienteT5.setOnClickListener(this);
+        //radioMercadoT5.setOnClickListener(this);
 
         /*setOnClickListener dos CheckBox*/
         checkAtivaCartaoCreditoT5.setOnClickListener(this);
@@ -189,8 +209,212 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         editConfirmarNovaSenhaT5.setEnabled(false);
 
         /*Bloqueando o campo do Email*/
-        editEmailT5.setEnabled(false);
+        //editEmailT5.setEnabled(false);
+
+
+
+        /* -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- */
+        /*Cadastro Usuario*/
+        /*idUsuario = getIntent().getIntExtra("ID_USUARIO", 0);
+
+        if (idUsuario > 0) {
+            Usuario model = usuarioBD.buscarUsuario(idUsuario);
+
+            editNomeT5.setText(model.getNome());
+
+            editTelefoneT5.setText(model.getEmail());
+
+            radioMasculinoT5.setText(model.getSexo());
+
+            radioFemininoT5.setText(model.getSexo());
+
+            dateDataNascimentoT5
+
+            if (radioClienteT2.isChecked()) {
+                radioClienteT2.setText("Cliente");
+                radioClienteT2.setText(model.getPerfil_usuario());
+            } else if (radioMercadoT2.isChecked()) {
+                radioMercadoT2.setText("Mercado");
+                radioMercadoT2.setText(model.getPerfil_usuario());
+            }
+
+            editEmailT5
+
+            if ((editSenhaT2 == editConfirmarSenhaT2) && (editConfirmarSenhaT2 == editSenhaT2)) {
+                editSenhaT2.setText(model.getSenha());
+            } else {
+                //editSenhaT2.setError("Não deu");
+            }
+
+            setTitle(R.string.atualizar_usuario);*/
+        }
+
+
+
+        protected void onDestoyUsuario() {
+            usuarioBD.fechar();
+            super.onDestroy();
+        }
+
+
+
+        public void cadastrarUsuario() {
+
+            boolean validacao = true;
+            String radioSexo = null;
+            String radioTipo = null;
+            int nivelAcesso = 0;
+
+            String nome = editNomeT5.getText().toString();
+            String telefone = editTelefoneT5.getText().toString();
+            if (radioMasculinoT5.isChecked()) {
+                radioSexo = "M";
+            }else if (radioFemininoT5.isChecked()){
+                radioSexo = "F";
+            }
+            //dateDataNascimentoT5.
+            if (radioClienteT5.isChecked()) {
+                radioTipo = "cliente";
+                nivelAcesso = 3;
+            } else if (radioMercadoT5.isChecked()) {
+                radioTipo = "mercado";
+                nivelAcesso = 2;
+            }
+            String email = editEmailT5.getText().toString();
+            String senha = editSenhaAntigaT5.getText().toString();
+
+
+
+            if ((nome == null) || (nome.equals(""))) {
+                validacao = false;
+                editNomeT5.setError(getString(R.string.obrigatorio));
+            }
+
+            if ((email == null) || (email.equals(""))) {
+                validacao = false;
+                editEmailT5.setError(getString(R.string.obrigatorio));
+            }
+
+            if ((senha == null) || (senha.equals(""))) {
+                validacao = false;
+                editSenhaAntigaT5.setError(getString(R.string.obrigatorio));
+
+            }
+
+            if (validacao) {
+                usuario = new Usuario();
+
+                usuario.setNome(nome);
+                usuario.setTelefone(telefone);
+                usuario.setSexo(radioSexo);
+                //usuario.setData_nascimento();
+                usuario.setPerfil_usuario(radioTipo);
+                usuario.setEmail(email);
+                usuario.setSenha(senha);
+                usuario.setNivel_acesso_id(nivelAcesso);
+
+                if (idUsuario > 0) {
+                    usuario.setId_usuario(idUsuario);
+                }
+
+                // long resultado = usuarioBD.salvarUsuario(usuario) ;
+                long resultado = usuarioBD.salvarUsuario(usuario);
+
+                if (resultado != -1) {
+                    if (idUsuario > 0) {
+                        Mensagem.Msg(this, getString(R.string.mensagem_atualizar));
+                    } else {
+                        Mensagem.Msg(this, getString(R.string.mensagem_cadastrar));
+                    }
+                    finish();
+                    startActivity(new Intent(this, quintaActivity.class));
+                } else {
+                    Mensagem.Msg(this, getString(R.string.mensagem_erro));
+                }
+            }
+        }
+
+
+
+        /* -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- */
+        /*Cadastro Endereço*/
+        /*idEndereco = getIntent().getIntExtra("ID_ENDERECO", 0);
+
+        if (idEndereco > 0) {
+            Endereco model = enderecoBD.buscarEndereco(idEndereco);
+
+
+            /*dateDataT2.setText(model.getData_nascimento());
+            String en= spinCidadeT2.getSelectedItem().toString();
+
+            spinEstadoT2.getSelectedItem().toString();
+
+            cep
+
+            rua
+
+            numero da rua
+
+            bairero
+
+            setTitle(R.string.atualizar_usuario);
+
+        }
+    }*/
+
+
+
+    protected void onDestoyEndereco() {
+        enderecoBD.fechar();
+        super.onDestroy();
     }
+
+
+
+    public void cadastrarEndereco() {
+
+        boolean validacao = true;
+
+        String cidade = spinCidadeT5.getSelectedItem().toString();
+        String estado = spinEstadoT5.getSelectedItem().toString();
+        String cep = editCepT5.getText().toString();
+        String rua = editRuaT5.getText().toString();
+        String numeroRua = editNumeroRuaT5.getText().toString();
+        String bairro = editBairroT5.getText().toString();
+
+
+        if (validacao) {
+            endereco = new Endereco();
+
+            endereco.setCidade(cidade);
+            endereco.setEstado(estado);
+            endereco.setCep(cep);
+            endereco.setRua(rua);
+            endereco.setNumero(numeroRua);
+            endereco.setBairro(bairro);
+
+
+            if (idEndereco > 0) {
+                endereco.setId_endereco(idEndereco);
+            }
+
+            long resultado = enderecoBD.salvarEndereco(endereco);
+
+            if (resultado != -1) {
+                if (idEndereco > 0) {
+                    Mensagem.Msg(this, getString(R.string.mensagem_atualizar));
+                } else {
+                  this.cadastrarUsuario();
+                }
+                finish();
+                startActivity(new Intent(this, quintaActivity.class));
+            } else {
+                Mensagem.Msg(this, getString(R.string.mensagem_erro));
+            }
+        }
+    }
+
+
 
     @Override
     public void onClick(View v) {
@@ -237,6 +461,14 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
             editSenhaAntigaT5.setText(null);
             editNovaSenhaT5.setText(null);
             editConfirmarNovaSenhaT5.setText(null);
+        }
+
+        /*Ação do Botão*/
+        if(btnSalvarT5.isPressed()){
+            this.cadastrarEndereco();
+
+            Intent intent = new Intent(this, nonaActivity.class);
+            startActivity(intent);
         }
     }
 }

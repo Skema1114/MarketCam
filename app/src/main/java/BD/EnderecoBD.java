@@ -4,6 +4,10 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
+import android.widget.Toast;
+
+import com.example.aluno.marketcam.quintaActivity;
 
 import java.util.ArrayList;
 import java.util.List;

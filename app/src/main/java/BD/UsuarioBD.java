@@ -80,21 +80,20 @@ public class UsuarioBD {
 
     public long salvarUsuario(Usuario usuario) {
         ContentValues valores = new ContentValues();
-
-        valores.put(Conecta.Usuario.FOTO_USUARIO_ID, usuario.getFoto_usuario_id());
-        valores.put(Conecta.Usuario.CARTAO_ID, usuario.getCartao_id());
-        valores.put(Conecta.Usuario.ENDERECO_ID, usuario.getEndereco_id());
+        valores.put(Conecta.Usuario.FOTO_USUARIO_ID, "1");
+        valores.put(Conecta.Usuario.CARTAO_ID, "1");
+        valores.put(Conecta.Usuario.ENDERECO_ID, "1");
         valores.put(Conecta.Usuario.NIVEL_ACESSO_ID, usuario.getNivel_acesso_id());
         valores.put(Conecta.Usuario.NOME, usuario.getNome());
-        valores.put(Conecta.Usuario.DATA_NASCIMENTO, usuario.getData_nascimento());
+        valores.put(Conecta.Usuario.DATA_NASCIMENTO, "2016-11-11 16:08:38");
         valores.put(Conecta.Usuario.TELEFONE, usuario.getTelefone());
         valores.put(Conecta.Usuario.SEXO, usuario.getSexo());
         valores.put(Conecta.Usuario.EMAIL, usuario.getEmail());
         valores.put(Conecta.Usuario.SENHA, usuario.getSenha());
-        valores.put(Conecta.Usuario.CRIADO, usuario.getCriado());
-        valores.put(Conecta.Usuario.MODIFICADO, usuario.getModificado());
+        valores.put(Conecta.Usuario.CRIADO, "2016-11-11 16:08:38");
+        valores.put(Conecta.Usuario.MODIFICADO, "2016-11-11 16:08:38");
         valores.put(Conecta.Usuario.PERFIL_USUARIO, usuario.getPerfil_usuario());
-        valores.put(Conecta.Usuario.STATUS_USUARIO, usuario.getStatus_usuario());
+        valores.put(Conecta.Usuario.STATUS_USUARIO, "ativo");
 
         if (usuario.getId_usuario() != null) {
             return sqLiteDatabase.update(Conecta.Usuario.TABELA, valores, "id_usuario = ?",

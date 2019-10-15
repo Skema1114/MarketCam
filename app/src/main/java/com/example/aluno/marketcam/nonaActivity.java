@@ -88,31 +88,37 @@ public class nonaActivity extends AppCompatActivity implements View.OnClickListe
         if (btnUsuariosT9.isPressed()) {
             Intent intent = new Intent(this, setimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnProdutosT9.isPressed()) {
             Intent intent = new Intent(this, oitavaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnEnderecosT9.isPressed()) {
             Intent intent = new Intent(this, nonaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnComprasT9.isPressed()) {
             Intent intent = new Intent(this, decimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnListasComprasT9.isPressed()) {
             Intent intent = new Intent(this, decimaPrimeiraActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnCartõesCreditoT9.isPressed()) {
             Intent intent = new Intent(this, decimaSegundaActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

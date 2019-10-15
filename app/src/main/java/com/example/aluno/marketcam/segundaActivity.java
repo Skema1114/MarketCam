@@ -13,7 +13,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import BD.EnderecoBD;
 import BD.UsuarioBD;
+import interacao.Endereco;
 import interacao.Usuario;
 import util.Mensagem;
 
@@ -40,7 +42,9 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
     private Button btnCadastrarseT2;
 
     private Usuario usuario ;
+    private Endereco endereco;
     private UsuarioBD usuarioBD ;
+    private EnderecoBD enderecoBD;
     private int idUsuario ;
 
 
@@ -51,6 +55,7 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
 
         /*Cadastro Usuario*/
         usuarioBD = new UsuarioBD(this);
+        enderecoBD = new EnderecoBD(this);
 
         /*findViewById*/
         /*findViewById dos TextView*/
@@ -204,7 +209,8 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
                 usuario.setId_usuario(idUsuario);
             }
 
-            long resultado = usuarioBD.salvarUsuario(usuario) ;
+           // long resultado = usuarioBD.salvarUsuario(usuario) ;
+            long resultado = enderecoBD.salvarEndereco(endereco);
 
             if(resultado != -1){
                 if(idUsuario >0){

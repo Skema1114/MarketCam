@@ -87,31 +87,37 @@ public class decimaPrimeiraActivity extends AppCompatActivity implements View.On
         if (btnUsuariosT11.isPressed()) {
             Intent intent = new Intent(this, setimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnProdutosT11.isPressed()) {
             Intent intent = new Intent(this, oitavaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnEnderecosT11.isPressed()) {
             Intent intent = new Intent(this, nonaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnComprasT11.isPressed()) {
             Intent intent = new Intent(this, decimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnListasComprasT11.isPressed()) {
             Intent intent = new Intent(this, decimaPrimeiraActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnCartõesCreditoT11.isPressed()) {
             Intent intent = new Intent(this, decimaSegundaActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

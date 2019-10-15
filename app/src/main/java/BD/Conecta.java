@@ -211,9 +211,9 @@ public class Conecta extends SQLiteOpenHelper{
 
         /* ---------------- INICIO DA EDIÇÃO DA AULA DIA 30/11/2016 13:42 ---------------- */
         /* CODIGO PARA INSERIR A DATA ATUAL DO TELEFONE EM ALGUM CAMPO PRÉ-DEFINIDO DO BANCO DE DADOSA*/
-        long date = System.currentTimeMillis();
+        /*long date = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String dateString = sdf.format(date);
+        String dateString = sdf.format(date);*/
         /* FOI ADICIONADO A STRING "dateString" EM TODOS OS CAMPOS "criado" ABAIXO, PARA QUE QUANDO ESES PERFIS FOREM CRIADOS PEGUEM A DATA ATUAL DO CELULAR*/
         /* ---------------- FIM DA EDIÇÃO -_-DESSA PAGINA-_- DA AULA DIA 30/11/2016 13:42 ---------------- */
 
@@ -243,7 +243,7 @@ public class Conecta extends SQLiteOpenHelper{
 
         /*CODIGO DE INSERÇÃO PARAA TABELA "Nivel_Acesso"*/
         sql = "INSERT INTO Nivel_Acesso (id_nivel_acesso, nome, criado, modificado)" +
-                "VALUES  (1, 'administrador', '"+dateString+"', NULL)";
+                "VALUES  (1, 'administrador', '2016-11-11 16:20:13', NULL)";
 
         /*ENVIANDO DADOS PARA A TABELA "Nivel_Acesso" NO SQLite*/
         db.execSQL(sql);
@@ -252,7 +252,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*-----------------------------------------------------------------------------------------*/
 
         sql = "INSERT INTO Nivel_Acesso (id_nivel_acesso, nome, criado, modificado)" +
-                "VALUES  (2, 'mercado', '"+dateString+"', NULL)";
+                "VALUES  (2, 'mercado', '2016-11-11 16:20:13', NULL)";
 
         /*ENVIANDO DADOS PARA A TABELA "Nivel_Acesso" NO SQLite*/
         db.execSQL(sql);
@@ -261,7 +261,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*-----------------------------------------------------------------------------------------*/
 
         sql = "INSERT INTO Nivel_Acesso (id_nivel_acesso, nome, criado, modificado)" +
-                "VALUES  (3, 'cliente', '"+dateString+"', NULL)";
+                "VALUES  (3, 'cliente', '2016-11-11 16:20:13', NULL)";
 
         /*ENVIANDO DADOS PARA A TABELA "Nivel_Acesso" NO SQLite*/
         db.execSQL(sql);
@@ -271,7 +271,7 @@ public class Conecta extends SQLiteOpenHelper{
 
         /*CODIGO DE INSERÇÃO PARAA TABELA "Usuario"*/
         sql = "INSERT INTO Usuario (id_usuario, foto_usuario_id, cartao_id, endereco_id, nivel_acesso_id, nome, data_nascimento, telefone, sexo, email, senha, criado, modificado, perfil_usuario, status_usuario)" +
-                "VALUES (1, 1, null, 1, 1, 'Rafael Aranda Martins', '1997-04-10', '5591711114', 'M', 'skema1114@hotmail.com', '$ystem@dmin1114', '"+dateString+"', null, 'administrador', 'ativo')";
+                "VALUES (1, 1, null, 1, 1, 'Rafael Aranda Martins', '1997-04-10', '5591711114', 'M', 'skema1114@hotmail.com', '$ystem@dmin1114', '2016-11-11 16:20:13', null, 'administrador', 'ativo')";
 
         /*ENVIANDO DADOS PARA A TABELA "Usuario" NO SQLite*/
         db.execSQL(sql);

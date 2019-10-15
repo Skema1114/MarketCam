@@ -88,31 +88,37 @@ public class decimaActivity extends AppCompatActivity implements View.OnClickLis
         if (btnUsuariosT10.isPressed()) {
             Intent intent = new Intent(this, setimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnProdutosT10.isPressed()) {
             Intent intent = new Intent(this, oitavaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnEnderecosT10.isPressed()) {
             Intent intent = new Intent(this, nonaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnComprasT10.isPressed()) {
             Intent intent = new Intent(this, decimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnListasComprasT10.isPressed()) {
             Intent intent = new Intent(this, decimaPrimeiraActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnCartõesCreditoT10.isPressed()) {
             Intent intent = new Intent(this, decimaSegundaActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

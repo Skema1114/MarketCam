@@ -84,31 +84,37 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
         if (btnUsuariosT7.isPressed()) {
             Intent intent = new Intent(this, setimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnProdutosT7.isPressed()) {
             Intent intent = new Intent(this, oitavaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnEnderecosT7.isPressed()) {
             Intent intent = new Intent(this, nonaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnComprasT7.isPressed()) {
             Intent intent = new Intent(this, decimaActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnListasComprasT7.isPressed()) {
             Intent intent = new Intent(this, decimaPrimeiraActivity.class);
             startActivity(intent);
+            finish();
         }
 
         if (btnCartõesCreditoT7.isPressed()) {
             Intent intent = new Intent(this, decimaSegundaActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }
