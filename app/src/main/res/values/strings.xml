@@ -182,4 +182,10 @@
     <string name="textListarCompras" />
     <string name="textListarListas" />
     <string name="textListarCartao_Creditos" />
+    <string name="title_activity_decima_terceira">decimaTerceiraActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
