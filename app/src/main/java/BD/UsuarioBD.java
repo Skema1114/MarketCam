@@ -80,9 +80,9 @@ public class UsuarioBD {
 
     public long salvarUsuario(Usuario usuario) {
         ContentValues valores = new ContentValues();
-        valores.put(Conecta.Usuario.FOTO_USUARIO_ID, "1");
-        valores.put(Conecta.Usuario.CARTAO_ID, "1");
-        valores.put(Conecta.Usuario.ENDERECO_ID, "1");
+        valores.put(Conecta.Usuario.FOTO_USUARIO_ID, "2");
+        valores.put(Conecta.Usuario.CARTAO_ID, "2");
+        valores.put(Conecta.Usuario.ENDERECO_ID, "2");
         valores.put(Conecta.Usuario.NIVEL_ACESSO_ID, usuario.getNivel_acesso_id());
         valores.put(Conecta.Usuario.NOME, usuario.getNome());
         valores.put(Conecta.Usuario.DATA_NASCIMENTO, "2016-11-11 16:08:38");

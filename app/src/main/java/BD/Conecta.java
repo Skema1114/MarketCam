@@ -30,11 +30,11 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Cartao_Credito" NO SQLite*/
         String sql = "CREATE TABLE IF NOT EXISTS Cartao_Credito (" +
                         "id_cartao INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                        "titular_cartao TEXT(40) NOT NULL," +
-                        "numero_cartao TEXT(16) NOT NULL UNIQUE," +
-                        "validade_cartao TEXT(8) NOT NULL," +
+                        "titular_cartao TEXT(40) NULL," +
+                        "numero_cartao TEXT(16) NULL," +
+                        "validade_cartao TEXT(8) NULL," +
                         "codigo_cartao TEXT(3) NULL," +
-                        "salvar_codigo_cartao TEXT(3) NOT NULL DEFAULT 'nao'" +
+                        "salvar_codigo_cartao TEXT(3) NULL DEFAULT 'nao'" +
                     ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Cartao_Credito" NO SQLite*/
@@ -49,8 +49,8 @@ public class Conecta extends SQLiteOpenHelper{
                     "rua TEXT(45) NULL," +
                     "numero TEXT(10) NULL," +
                     "bairro TEXT(25) NULL," +
-                    "cidade TEXT(40) NOT NULL," +
-                    "estado TEXT(25) NOT NULL," +
+                    "cidade TEXT(40) NULL," +
+                    "estado TEXT(25) NULL," +
                     "cep TEXT(10) NULL" +
                 ")";
 
@@ -63,7 +63,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Foto_Usuario" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Foto_Usuario (" +
                     "id_foto_usuario INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "foto MEDIUMBLOB NOT NULL" +
+                    "foto MEDIUMBLOB NULL" +
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Foto_Usuario" NO SQLite*/
@@ -75,8 +75,8 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Nivel_Acesso" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Nivel_Acesso (" +
                     "id_nivel_acesso INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "nome TEXT(50) NOT NULL," +
-                    "criado DATETIME NOT NULL," +
+                    "nome TEXT(50) NULL," +
+                    "criado DATETIME NULL," +
                     "modificado DATETIME NULL" +
                 ")";
 
@@ -90,19 +90,19 @@ public class Conecta extends SQLiteOpenHelper{
         sql = "CREATE TABLE IF NOT EXISTS Usuario (" +
                     "id_usuario INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
                     "foto_usuario_id INTEGER NULL," +
-                    "cartao_id INTEGER NULL UNIQUE," +
-                    "endereco_id INTEGER NOT NULL," +
-                    "nivel_acesso_id INTEGER NOT NULL," +
-                    "nome TEXT(50) NOT NULL," +
-                    "data_nascimento DATE NOT NULL," +
+                    "cartao_id INTEGER NULL," +
+                    "endereco_id INTEGER NULL," +
+                    "nivel_acesso_id INTEGER NULL," +
+                    "nome TEXT(50) NULL," +
+                    "data_nascimento DATE NULL," +
                     "telefone TEXT(15) NULL," +
-                    "sexo TEXT(1) NOT NULL," +
-                    "email TEXT(64) NOT NULL UNIQUE," +
-                    "senha TEXT(64) NOT NULL," +
-                    "criado DATETIME NOT NULL," +
+                    "sexo TEXT(1) NULL," +
+                    "email TEXT(64) NULL," +
+                    "senha TEXT(64) NULL," +
+                    "criado DATETIME NULL," +
                     "modificado DATETIME NULL," +
-                    "perfil_usuario TEXT(13) NOT NULL DEFAULT 'cliente'," +
-                    "status_usuario TEXT(7) NOT NULL DEFAULT 'ativo'," +
+                    "perfil_usuario TEXT(13) NULL DEFAULT 'cliente'," +
+                    "status_usuario TEXT(7) NULL DEFAULT 'ativo'," +
                     "FOREIGN KEY (foto_usuario_id) REFERENCES Foto_Usuario(id_foto_usuario),"+
                     "FOREIGN KEY (cartao_id) REFERENCES Cartao_Credito(id_cartao),"+
                     "FOREIGN KEY (endereco_id) REFERENCES Endereco(id_endereco),"+
@@ -118,7 +118,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Foto_Produto" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Foto_Produto (" +
                     "id_foto_produto INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "foto MEDIUMBLOB NOT NULL" +
+                    "foto MEDIUMBLOB NULL" +
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Foto_Produto" NO SQLite*/
@@ -130,10 +130,10 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Produto" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Produto (" +
                     "id_produto INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "foto_produto_id INTEGER NOT NULL," +
-                    "codigo_barras INTEGER NOT NULL," +
-                    "nome TEXT(40) NOT NULL," +
-                    "valor DOUBLE NOT NULL," +
+                    "foto_produto_id INTEGER NULL," +
+                    "codigo_barras INTEGER NULL," +
+                    "nome TEXT(40) NULL," +
+                    "valor DOUBLE NULL," +
                     "lote TEXT(10) NULL," +
                     "descricao TEXT(500) NULL," +
                     "FOREIGN KEY (foto_produto_id) REFERENCES Foto_Produto(id_foto_produto)"+
@@ -148,9 +148,9 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Carrinho" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Carrinho (" +
                     "id_carrinho INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "usuario_id INTEGER NOT NULL," +
-                    "produto_id INTEGER NOT NULL," +
-                    "quantidade INTEGER NOT NULL," +
+                    "usuario_id INTEGER NULL," +
+                    "produto_id INTEGER NULL," +
+                    "quantidade INTEGER NULL," +
                     "valor_total DOUBLE NULL," +
                     "FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),"+
                     "FOREIGN KEY (produto_id) REFERENCES Produto(id_produto)"+
@@ -165,10 +165,10 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Foto_Produto" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Compra (" +
                     "id_compra INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "carrinho_id INTEGER NOT NULL," +
-                    "data DATE NOT NULL,hora TIME NOT NULL," +
+                    "carrinho_id INTEGER NULL," +
+                    "data DATE NOT NULL,hora TIME NULL," +
                     "tag TEXT(20) NULL," +
-                    "valor_total DOUBLE NOT NULL," +
+                    "valor_total DOUBLE NULL," +
                     "FOREIGN KEY (carrinho_id) REFERENCES Carrinho(id_carrinho)"+
                 ")";
 
@@ -181,7 +181,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Lista" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Lista (" +
                     "id_lista INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "nome TEXT(45) NOT NULL," +
+                    "nome TEXT(45) NULL," +
                     "data_hora DATETIME(6) NULL," +
                     "valor_total DOUBLE NULL" +
                 ")";
@@ -195,10 +195,10 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Usuario_Lista_Produto" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Usuario_Lista_Produto (" +
                     "id_usuario_lista_produto INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "produto_id INTEGER NOT NULL," +
-                    "usuario_id INTEGER NOT NULL," +
-                    "lista_id INTEGER NOT NULL," +
-                    "quantidade INTEGER NOT NULL," +
+                    "produto_id INTEGER NULL," +
+                    "usuario_id INTEGER NULL," +
+                    "lista_id INTEGER NULL," +
+                    "quantidade INTEGER NULL," +
                     "valor_total DOUBLE NULL," +
                     "FOREIGN KEY (produto_id) REFERENCES Produto(id_produto),"+
                     "FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),"+

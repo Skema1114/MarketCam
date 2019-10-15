@@ -251,10 +251,10 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-        protected void onDestoyUsuario() {
+        /*protected void onDestoyUsuario() {
             usuarioBD.fechar();
             super.onDestroy();
-        }
+        }*/
 
 
 
@@ -285,33 +285,18 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-            if ((nome == null) || (nome.equals(""))) {
-                validacao = false;
-                editNomeT5.setError(getString(R.string.obrigatorio));
-            }
-
-            if ((email == null) || (email.equals(""))) {
-                validacao = false;
-                editEmailT5.setError(getString(R.string.obrigatorio));
-            }
-
-            if ((senha == null) || (senha.equals(""))) {
-                validacao = false;
-                editSenhaAntigaT5.setError(getString(R.string.obrigatorio));
-
-            }
-
             if (validacao) {
                 usuario = new Usuario();
 
+                usuario.setNivel_acesso_id(nivelAcesso);
                 usuario.setNome(nome);
+                //usuario.setData_nascimento();
                 usuario.setTelefone(telefone);
                 usuario.setSexo(radioSexo);
-                //usuario.setData_nascimento();
-                usuario.setPerfil_usuario(radioTipo);
                 usuario.setEmail(email);
                 usuario.setSenha(senha);
-                usuario.setNivel_acesso_id(nivelAcesso);
+                usuario.setPerfil_usuario(radioTipo);
+
 
                 if (idUsuario > 0) {
                     usuario.setId_usuario(idUsuario);
@@ -364,10 +349,10 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-    protected void onDestoyEndereco() {
+   /* protected void onDestoyEndereco() {
         enderecoBD.fechar();
         super.onDestroy();
-    }
+    }*/
 
 
 
@@ -466,6 +451,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         /*Ação do Botão*/
         if(btnSalvarT5.isPressed()){
             this.cadastrarEndereco();
+            this.cadastrarUsuario();
 
             Intent intent = new Intent(this, nonaActivity.class);
             startActivity(intent);
