@@ -108,12 +108,14 @@
     <string name="editConfirmarNovaSenhaT5" />
     <string name="btnSalvarT5">SALVAR</string>
 
+
     <!-- STRINGS REFERENTES A "activity_sexta / sextaActivity" -->
     <string name="textCriarListaT6">CRIAR UMA LISTA DE COMPRAS</string>
     <string name="textNomeListaT6">Nome</string>
     <string name="editNomeListaT6" />
     <string name="switchFavoritoT6">Favorito</string>
     <string name="btnCriarT6">CRIAR</string>
+
 
     <!-- STRINGS REFERENTES A "activity_setima / setimaActivity" -->
     <string name="btnUsuariosT7">Usuários</string>
@@ -124,6 +126,7 @@
     <string name="btnCartõesCreditoT7">Cartões de Crédito</string>
     <string name="textUsuariosT7">Usuários</string>
 
+
     <!-- STRINGS REFERENTES A "activity_oitava / oitavaActivity" -->
     <string name="btnUsuariosT8">Usuários</string>
     <string name="btnProdutosT8">Produtos</string>
@@ -132,6 +135,7 @@
     <string name="btnComprasT8">Compras</string>
     <string name="btnCartõesCreditoT8">Cartões de Crédito</string>
     <string name="textProdutosT8">Produtos</string>
+
 
     <!-- STRINGS REFERENTES A "activity_nona / nonaActivity" -->
     <string name="btnUsuariosT9">Usuários</string>
@@ -142,6 +146,7 @@
     <string name="btnCartõesCreditoT9">Cartões de Crédito</string>
     <string name="textEnderecosT9">Endereços</string>
 
+
     <!-- STRINGS REFERENTES A "activity_decima / decimaActivity" -->
     <string name="btnUsuariosT10">Usuários</string>
     <string name="btnProdutosT10">Produtos</string>
@@ -150,6 +155,7 @@
     <string name="btnComprasT10">Compras</string>
     <string name="btnCartõesCreditoT10">Cartões de Crédito</string>
     <string name="textComprasT10">Compras</string>
+
 
     <!-- STRINGS REFERENTES A "activity_decima_primeira / decimaPrimeiraActivity" -->
     <string name="btnUsuariosT11">Usuários</string>
@@ -160,7 +166,8 @@
     <string name="btnCartõesCreditoT11">Cartões de Crédito</string>
     <string name="textListasComprasT11">Listas de Compras</string>
 
-    <!-- STRINGS REFERENTES A "activity_qdecima_segunda / decimaSegundaActivity" -->
+
+    <!-- STRINGS REFERENTES A "activity_decima_segunda / decimaSegundaActivity" -->
     <string name="btnUsuariosT12">Usuários</string>
     <string name="btnProdutosT12">Produtos</string>
     <string name="btnEnderecosT12">Enderecos</string>
@@ -169,12 +176,18 @@
     <string name="btnCartõesCreditoT12">Cartões de Crédito</string>
     <string name="textCartoesCreditoT12">Cartões de Créditos</string>
 
+
     <!-- STRINGS REFERENTES AO "C_R_U_D" -->
     <string name="atualizar_usuario">Usuario Attualizado</string>
     <string name="obrigatorio">Obrigatório</string>
     <string name="mensagem_cadastrar">Resgistro Cadastro com Sucesso!</string>
     <string name="mensagem_atualizar">Resgistro Atualizado com Sucesso!</string>
     <string name="mensagem_erro">Erro ao Salvar</string>
+    <!-- STRINGS PARA MENSAGENS DE ERRO -->
+    <string name="emailObrigatorioT3">O campo EMAIL não pode ser vazio!</string>
+    <string name="senhaObrigatoriaT3">O campo SENHA não pode estar vazio</string>
+    <string name="loginincorretoT3">Login Incorreto</string>
+
 
     <!-- STRINGS REFERENTES AS XML's -->
     <string name="textListarProdutosEsquerda" />
@@ -182,25 +195,32 @@
     <string name="textListarComprasEsquerda" />
     <string name="textListarListasEsquerda" />
     <string name="textListarCartao_CreditosEsquerda" />
-    <string name="title_activity_decima_terceira">decimaTerceiraActivity</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
+    <string name="textListarEnderecosEsquerda" />
     <string name="textListarUsuariosDireita" />
     <string name="textListarProdutosDireita" />
-    <string name="textListarEnderecosEsquerda" />
     <string name="textListarEnderecosDireita" />
     <string name="textListarComprasDireita" />
     <string name="textListarListasDireita" />
     <string name="textListarCartao_CreditosDireita" />
+
+
+    <!-- STRINGS CRIADAS AUTOMATICAS REFERENTES A "activity_decima_terceita / decimaTerceiraActivity" -->
+    <string name="title_activity_decima_terceira">decimaTerceiraActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- STRINGS REFERENTES A "activity_decima_quarta / decimaQuartaActivity" -->
     <string name="textMeuCarrinhoT14">MEU CARRINHO</string>
     <string name="btnAdicionarT14">ADICIONAR MAIS PRODUTOS</string>
     <string name="btnRemoverT14">REMOVER</string>
     <string name="textValorTotalT14">VALOR TOTAL:</string>
     <string name="textRecebeValorTotalT14" />
     <string name="btnFinalizarPedidoT14">FINALIZAR PEDIDO</string>
+
+
+    <!-- STRINGS REFERENTES A "activity_decima_quinta / decimaQuintaActivity" -->
     <string name="textContatoT15">CONTATO COM O DESENVOLVEDOR</string>
     <string name="editMeuEmailT15" />
     <string name="textEscolhaAcaoT15">ESCOLHA UMA AÇÃO</string>
@@ -211,4 +231,5 @@
     <string name="textDescricaoT15">DESCRIÇÃO</string>
     <string name="editMultiDescricaoT15" />
     <string name="btnEnviarT15">Enviar</string>
+
 </resources>

@@ -1,11 +1,13 @@
 package com.example.aluno.marketcam;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -41,11 +43,14 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
     private DatePicker dateDataT2;
     private Button btnCadastrarseT2;
 
-    private Usuario usuario ;
+    private Usuario usuario;
+    private UsuarioBD usuarioBD;
+    private int idUsuario;
+
     private Endereco endereco;
-    private UsuarioBD usuarioBD ;
-    private EnderecoBD enderecoBD;
-    private int idUsuario ;
+    EnderecoBD enderecoBD;
+    private int idEndereco;
+
 
 
     @Override
@@ -88,7 +93,7 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         btnCadastrarseT2 = (Button) findViewById(R.id.btnCadastrarseT2);
 
         /*findViewById do DatePicker*/
-        dateDataT2  = (DatePicker) findViewById(R.id.dateDataT2);
+        dateDataT2 = (DatePicker) findViewById(R.id.dateDataT2);
 
 
         /*setOnClickListener*/
@@ -115,120 +120,109 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         adapter_cidade.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinCidadeT2.setAdapter(adapter_cidade);
 
-
-        /*Cadastro Usuario*/
-        idUsuario = getIntent().getIntExtra("ID_USUARIO", 0);
-
-        if(idUsuario > 0){
-            Usuario model = usuarioBD.buscarUsuario(idUsuario);
-
-            editNomeT2.setText(model.getNome());
-            if(radioClienteT2.isChecked()){
-                radioClienteT2.setText("Cliente");
-                radioClienteT2.setText(model.getPerfil_usuario());
-            }else if(radioMercadoT2.isChecked()){
-                radioMercadoT2.setText("Mercado");
-                radioMercadoT2.setText(model.getPerfil_usuario());
-            }
-            if(radioMasculinoT2.isChecked()){
-                radioMasculinoT2.setText("M");
-                radioMasculinoT2.setText(model.getSexo());
-            }else if(radioFemininoT2.isChecked()){
-                radioFemininoT2.setText("F");
-                radioFemininoT2.setText(model.getSexo());
-            }
-            /*dateDataT2.setText(model.getData_nascimento());*/
-            spinCidadeT2.getSelectedItem().toString();
-            spinEstadoT2.getSelectedItem().toString();
-            editEmailT2.setText(model.getEmail());
-            if((editSenhaT2==editConfirmarSenhaT2)&&(editConfirmarSenhaT2==editSenhaT2)){
-                editSenhaT2.setText(model.getSenha());
-            }else{
-                //editSenhaT2.setError("Não deu");
-            }
-            setTitle(R.string.atualizar_usuario);
-        }
     }
 
 
-
-    protected void onDestoy(){
-        usuarioBD.fechar();
-        super.onDestroy();
-    }
-
-    public void cadastrarUsuario(){
-
-        boolean validacao = true ;
-
-        String nome = editNomeT2.getText().toString();
-        if(radioClienteT2.isChecked()){
-            radioClienteT2.setText("Cliente");
-            String tipo_usuario = radioClienteT2.getText().toString();
-        }else if (radioMercadoT2.isChecked()){
-            radioMercadoT2.setText("Mercado");
-            String tipo_usuario = radioMercadoT2.getText().toString();
-        }
-        if(radioMasculinoT2.isChecked()){
-            radioMasculinoT2.setText("M");
-            String tipo_usuario = radioMasculinoT2.getText().toString();
-        }else if (radioFemininoT2.isChecked()){
-            radioFemininoT2.setText("F");
-            String tipo_usuario = radioFemininoT2.getText().toString();
-        }
-        spinCidadeT2.getSelectedItem().toString();
-        spinEstadoT2.getSelectedItem().toString();
-        String email = editEmailT2.getText().toString();
-        String senha = editSenhaT2.getText().toString();
+        public void cadastrarUsuario() {
+            boolean validacao = true;
+            String radioSexo = null;
+            String radioTipo = null;
+            int nivelAcesso = 0;
 
 
-        if((nome == null) || (nome.equals(""))){
-            validacao = false ;
-            editNomeT2.setError(getString(R.string.obrigatorio));
-        }
-
-        if((email == null) || (email.equals(""))){
-            validacao = false ;
-            editEmailT2.setError(getString(R.string.obrigatorio));
-        }
-
-        if((senha == null) || (senha.equals(""))){
-            validacao = false ;
-            editSenhaT2.setError(getString(R.string.obrigatorio));
-
-        }
-
-        if(validacao){
-            usuario = new Usuario();
-            usuario.setNome(nome);
-            usuario.setEmail(email);
-            usuario.setSenha(senha);
-
-
-            if(idUsuario >0){
-                usuario.setId_usuario(idUsuario);
+            String nome = editNomeT2.getText().toString();
+            if (radioClienteT2.isChecked()) {
+                radioTipo = "cliente";
+                nivelAcesso = 3;
+            } else if (radioMercadoT2.isChecked()) {
+                radioTipo = "mercado";
+                nivelAcesso = 2;
             }
+            if (radioMasculinoT2.isChecked()) {
+                radioSexo = "M";
+            } else if (radioFemininoT2.isChecked()) {
+                radioSexo = "F";
+            }
+            //String data = textDataNascimentoT2.;
+            String email = editEmailT2.getText().toString();
+            String senha = editSenhaT2.getText().toString();
+            //String conf_senha = editConfirmarSenhaT2.getText().toString();
 
-           // long resultado = usuarioBD.salvarUsuario(usuario) ;
-            long resultado = enderecoBD.salvarEndereco(endereco);
 
-            if(resultado != -1){
-                if(idUsuario >0){
-                    Mensagem.Msg(this ,getString(R.string.mensagem_atualizar));
-                }else{
-                    Mensagem.Msg(this , getString(R.string.mensagem_cadastrar));
+            if (validacao) {
+                usuario = new Usuario();
+
+                usuario.setNome(nome);
+                usuario.setPerfil_usuario(radioTipo);
+                usuario.setNivel_acesso_id(nivelAcesso);
+                usuario.setSexo(radioSexo);
+                //usuario.setData_nascimento();
+                usuario.setEmail(email);
+                usuario.setSenha(senha);
+
+
+                if (idUsuario > 0) {
+                    usuario.setId_usuario(idUsuario);
                 }
-                finish();
-                startActivity(new Intent(this , quintaActivity.class));
-            }else{
-                Mensagem.Msg(this , getString(R.string.mensagem_erro));
+
+                // long resultado = usuarioBD.salvarUsuario(usuario) ;
+                long resultado = usuarioBD.salvarUsuario(usuario);
+
+                if (resultado != -1) {
+                    if (idUsuario > 0) {
+                        Mensagem.Msg(this, getString(R.string.mensagem_atualizar));
+                    } else {
+                        Mensagem.Msg(this, getString(R.string.mensagem_cadastrar));
+                    }
+                    finish();
+                    startActivity(new Intent(this, terceiraActivity.class));
+                } else {
+                    Mensagem.Msg(this, getString(R.string.mensagem_erro));
+                }
             }
         }
-    }
+
+
+        /* -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- */
+        /*Cadastro Endereço*/
+
+        public void cadastrarEndereco() {
+
+            boolean validacao = true;
+
+            String cidade = spinCidadeT2.getSelectedItem().toString();
+            String estado = spinEstadoT2.getSelectedItem().toString();
+
+            if (validacao) {
+                endereco = new Endereco();
+
+                endereco.setCidade(cidade);
+                endereco.setEstado(estado);
+
+
+                if (idEndereco > 0) {
+                    endereco.setId_endereco(idEndereco);
+                }
+
+                long resultado = enderecoBD.salvarEndereco(endereco);
+
+                if (resultado != -1) {
+                    if (idEndereco > 0) {
+                        Mensagem.Msg(this, getString(R.string.mensagem_atualizar));
+                    } else {
+                        this.cadastrarUsuario();
+                    }
+                    finish();
+                    //startActivity(new Intent(this, quintaActivity.class));
+                } else {
+                    Mensagem.Msg(this, getString(R.string.mensagem_erro));
+                }
+            }
+        }
 
     @Override
     public void onClick(View v) {
-        cadastrarUsuario();
+        this.cadastrarEndereco();
 
     }
 }

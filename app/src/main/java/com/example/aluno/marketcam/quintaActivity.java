@@ -258,7 +258,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-        public void cadastrarUsuario() {
+        /*public void cadastrarUsuario() {
 
             boolean validacao = true;
             String radioSexo = null;
@@ -356,7 +356,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-    public void cadastrarEndereco() {
+    /*public void cadastrarEndereco() {
 
         boolean validacao = true;
 
@@ -397,7 +397,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
                 Mensagem.Msg(this, getString(R.string.mensagem_erro));
             }
         }
-    }
+    }*/
 
 
 
@@ -450,11 +450,11 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
         /*Ação do Botão*/
         if(btnSalvarT5.isPressed()){
-            this.cadastrarEndereco();
-            this.cadastrarUsuario();
+            //this.cadastrarEndereco();
+            //this.cadastrarUsuario();
 
-            Intent intent = new Intent(this, nonaActivity.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, nonaActivity.class);
+            //startActivity(intent);
         }
     }
 }
