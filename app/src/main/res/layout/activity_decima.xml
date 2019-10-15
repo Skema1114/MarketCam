@@ -30,21 +30,27 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btnUsuariosT10"
                     android:layout_weight="1"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/aparencia_botao_login"
+                    android:textColor="#131B2E" />
 
                 <Button
                     android:text="@string/btnProdutosT10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnProdutosT10"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/aparencia_botao_login"
+                    android:textColor="#131B2E" />
 
                 <Button
                     android:text="@string/btnEnderecosT10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/btnEnderecosT10" />
+                    android:id="@+id/btnEnderecosT10"
+                    android:background="@drawable/aparencia_botao_login"
+                    android:textColor="#131B2E" />
 
                 <Button
                     android:text="@string/btnComprasT10"
@@ -52,21 +58,27 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btnComprasT10"
                     android:layout_weight="1"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:background="@drawable/aparencia_botao_todos"
+                    android:textColor="#ffffff" />
 
                 <Button
                     android:text="@string/btnListasComprasT10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnListasComprasT10"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/aparencia_botao_login"
+                    android:textColor="#131B2E" />
 
                 <Button
                     android:text="@string/btnCartõesCreditoT10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnCartõesCreditoT10"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/aparencia_botao_login"
+                    android:textColor="#131B2E" />
             </LinearLayout>
         </HorizontalScrollView>
 

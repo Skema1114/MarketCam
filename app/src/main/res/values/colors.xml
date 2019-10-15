@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3f51b5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- COR VERDE "MARKET" = #25DA7D -->
+    <!-- COR BOTAO = #02AE56 -->
+    <!-- AZUL MAIS ESCURA = #131B2E -->
+    <!-- AZUL MEDIO ESCURA = #19243C -->
+    <!-- AZUL MAIS CLARA ESCURA = #1E2C4B -->
+
+    <!-- REFERENTES AO LOGO "MARKETCAMLOGO1" -->
+    <!-- SOMBRA DA ALÇA DO LOGO INICIAL = #316952 -->
+    <!-- ALÇA DA SACOLA = #4AAA85 -->
+
+    <!-- REFERENTES AO LOGO "LOGIN" -->
+    <!-- COR PRINCIPAL DO CADEADO = #02A489 -->
+    <!-- SOMBRA DO CADEADO = #028970 -->
+    <!-- MEIO DO CADEADO = #3F5164 -->
+
+    <!-- REFERENTES AO LOGO "CRIARLISTA" -->
+    <!-- ICONE DE "V" DA SACOLA = #31A79B -->
+    <!-- COR TIPO BRANCO DA SACOLA = #EEF2F4 -->
+
+    <!-- CORES PADRAO DO APLICATIVO -->
+    <!-- <color name="colorPrimary">#3F51B5</color> -->
+    <!-- <color name="colorPrimaryDark">#303F9F</color> -->
+    <!-- <color name="colorAccent">#FF4081</color> -->
+
+    <color name="colorPrimary">#131b2e</color>
+    <color name="colorPrimaryDark">#19243c</color>
+    <color name="colorAccent">#02A489</color>
+
 </resources>

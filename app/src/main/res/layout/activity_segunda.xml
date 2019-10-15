@@ -214,11 +214,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnCadastrarseT2"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="30dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:background="@drawable/aparencia_botao_login"
+            android:textStyle="normal|bold"
+            android:textColor="#131B2E" />
 
     </LinearLayout>
 </ScrollView>

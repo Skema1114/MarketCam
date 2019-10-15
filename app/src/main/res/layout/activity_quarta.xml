@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_quarta_scroll"
     android:layout_width="match_parent"
@@ -24,15 +25,11 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 android:textStyle="normal|bold" />
 
-        <TextView
-            android:text="AQUI VAI UM LOGO"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textAdicionarProdutoT4"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/textView6"
-            android:layout_marginTop="105dp"
-            android:layout_marginLeft="111dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            app:srcCompat="@drawable/adicionanalista"
+            android:id="@+id/imageView5" />
 
         <TextView
                 android:text="@string/textProdutoT4"
@@ -41,7 +38,7 @@
                 android:id="@+id/textProdutoT4"
                 android:layout_above="@+id/textautocompleteProdutoT4"
                 android:layout_alignParentStart="true"
-            android:layout_marginTop="111dp" />
+            android:layout_marginTop="20dp" />
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
@@ -86,7 +83,10 @@
                 android:layout_above="@+id/btnAdicionarCodigoBarrasT4"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="5dp"
+            android:background="@drawable/aparencia_botao_login"
+            android:textStyle="normal|bold"
+            android:textColor="#131B2E" />
 
         <Button
                 android:text="@string/btnAdicionarCodigoBarrasT4"
@@ -95,7 +95,12 @@
                 android:id="@+id/btnAdicionarCodigoBarrasT4"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+            android:background="@drawable/aparencia_botao_login"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+            android:textStyle="normal|bold"
+            android:textColor="#131B2E" />
 
     </LinearLayout>>
 </ScrollView>
