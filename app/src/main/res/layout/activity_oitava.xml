@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_oitava"
+    android:id="@+id/activity_oitava_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.aluno.marketcam.setimaActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/activity_oitava2"
+        android:id="@+id/activity_oitava_linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -15,12 +15,14 @@
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/activity_oitava_horizontal_scroll">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/activity_oitava_linear_linear">
 
                 <Button
                     android:text="@string/btnUsuariosT8"

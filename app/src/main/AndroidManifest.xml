@@ -32,28 +32,49 @@
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".quartaActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".quintaActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".sextaActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".setimaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".oitavaActivity" />
-        <activity android:name=".nonaActivity" />
-        <activity android:name=".decimaActivity" />
-        <activity android:name=".decimaPrimeiraActivity" />
-        <activity android:name=".decimaSegundaActivity"></activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".oitavaActivity">
+
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".nonaActivity">
+
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".decimaActivity">
+
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".decimaPrimeiraActivity">
+
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".decimaSegundaActivity">
+
+        </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </application>
 
 </manifest>

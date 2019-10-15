@@ -124,6 +124,7 @@
     <string name="btnCartõesCreditoT7">Cartões de Crédito</string>
     <string name="textUsuariosT7">Usuários</string>
 
+    <!-- STRINGS REFERENTES A "activity_oitava / oitavaActivity" -->
     <string name="btnUsuariosT8">Usuários</string>
     <string name="btnProdutosT8">Produtos</string>
     <string name="btnEnderecosT8">Enderecos</string>
@@ -132,6 +133,7 @@
     <string name="btnCartõesCreditoT8">Cartões de Crédito</string>
     <string name="textProdutosT8">Produtos</string>
 
+    <!-- STRINGS REFERENTES A "activity_nona / nonaActivity" -->
     <string name="btnUsuariosT9">Usuários</string>
     <string name="btnProdutosT9">Produtos</string>
     <string name="btnEnderecosT9">Enderecos</string>
@@ -140,6 +142,7 @@
     <string name="btnCartõesCreditoT9">Cartões de Crédito</string>
     <string name="textEnderecosT9">Endereços</string>
 
+    <!-- STRINGS REFERENTES A "activity_decima / decimaActivity" -->
     <string name="btnUsuariosT10">Usuários</string>
     <string name="btnProdutosT10">Produtos</string>
     <string name="btnEnderecosT10">Enderecos</string>
@@ -148,6 +151,7 @@
     <string name="btnCartõesCreditoT10">Cartões de Crédito</string>
     <string name="textComprasT10">Compras</string>
 
+    <!-- STRINGS REFERENTES A "activity_decima_primeira / decimaPrimeiraActivity" -->
     <string name="btnUsuariosT11">Usuários</string>
     <string name="btnProdutosT11">Produtos</string>
     <string name="btnEnderecosT11">Enderecos</string>
@@ -156,6 +160,7 @@
     <string name="btnCartõesCreditoT11">Cartões de Crédito</string>
     <string name="textListasComprasT11">Listas de Compras</string>
 
+    <!-- STRINGS REFERENTES A "activity_qdecima_segunda / decimaSegundaActivity" -->
     <string name="btnUsuariosT12">Usuários</string>
     <string name="btnProdutosT12">Produtos</string>
     <string name="btnEnderecosT12">Enderecos</string>
