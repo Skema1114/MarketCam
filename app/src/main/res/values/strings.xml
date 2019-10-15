@@ -169,9 +169,17 @@
     <string name="btnCartõesCreditoT12">Cartões de Crédito</string>
     <string name="textCartoesCreditoT12">Cartões de Créditos</string>
 
+    <!-- STRINGS REFERENTES AO "C_R_U_D" -->
     <string name="atualizar_usuario">Usuario Attualizado</string>
     <string name="obrigatorio">Obrigatório</string>
     <string name="mensagem_cadastrar">Resgistro Cadastro com Sucesso!</string>
     <string name="mensagem_atualizar">Resgistro Atualizado com Sucesso!</string>
     <string name="mensagem_erro">Erro ao Salvar</string>
+
+    <!-- STRINGS REFERENTES AS XML's -->
+    <string name="textListarProdutos" />
+    <string name="textListarUsuarios" />
+    <string name="textListarCompras" />
+    <string name="textListarListas" />
+    <string name="textListarCartao_Creditos" />
 </resources>

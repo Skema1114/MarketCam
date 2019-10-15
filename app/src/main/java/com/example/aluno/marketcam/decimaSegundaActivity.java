@@ -9,6 +9,14 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
+import Adapter.Cartao_CreditoAdapter;
+import Adapter.ListaAdapter;
+import BD.Cartao_CreditoBD;
+import BD.ListaBD;
+import interacao.Cartao_Credito;
+
 public class decimaSegundaActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnUsuariosT12;
     private Button btnProdutosT12;
@@ -19,6 +27,12 @@ public class decimaSegundaActivity extends AppCompatActivity implements View.OnC
     private Toolbar toolbarT12;
     private TextView textCartoesCreditoT12;
     private ListView listCartoesCreditoT12;
+
+    /*Adapter*/
+    private ListView lista;
+    private List<Cartao_Credito> cartao_creditoList;
+    private Cartao_CreditoAdapter cartao_creditoAdapter;
+    private Cartao_CreditoBD cartao_creditoBD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +69,16 @@ public class decimaSegundaActivity extends AppCompatActivity implements View.OnC
 
         /*setOnClickListener do ListView*/
         //listCartoesCreditoT12.setOnClickListener(this);
+
+
+        /*Adapter*/
+        cartao_creditoBD =  new Cartao_CreditoBD(this);
+        cartao_creditoList = cartao_creditoBD.ListaCartao_Credito();
+        cartao_creditoAdapter = new Cartao_CreditoAdapter(this, cartao_creditoList);
+
+        lista = (ListView) findViewById(R.id.listCartoesCreditoT12);
+        lista.setAdapter(cartao_creditoAdapter);
+        //lista.setOnItemClickListener(this);
     }
 
     @Override

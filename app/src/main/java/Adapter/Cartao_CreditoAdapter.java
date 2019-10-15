@@ -12,19 +12,20 @@ import com.example.aluno.marketcam.R;
 
 import java.util.List;
 
-import interacao.Usuario;
+import interacao.Cartao_Credito;
+import interacao.Lista;
 
 /**
- * Created by Rafael Martins on 07/12/2016.
+ * Created by Rafael Martins on 08/12/2016.
  */
 
-public class UsuarioAdapter extends BaseAdapter{
+public class Cartao_CreditoAdapter extends BaseAdapter {
     private Context context;
-    private List<Usuario> lista;
+    private List<Cartao_Credito> lista;
 
-    public UsuarioAdapter(Context ctx , List<Usuario> usuarios){
+    public Cartao_CreditoAdapter(Context ctx , List<Cartao_Credito> cartao_creditos){
         this.context = ctx;
-        this.lista = usuarios;
+        this.lista = cartao_creditos;
     }
 
     @Override
@@ -44,14 +45,14 @@ public class UsuarioAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Usuario usuario = lista.get(position);
+        Cartao_Credito cartao_credito = lista.get(position);
 
         if (convertView == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
-            convertView = inflater.inflate(R.layout.usuario, null) ;
+            convertView = inflater.inflate(R.layout.cartao_credito, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarUsuarios);
-        textView.setText(usuario.getNome());
+        TextView textView = (TextView) convertView.findViewById(R.id.textListarCartao_Creditos);
+        textView.setText(cartao_credito.getTitular_cartao());
 
         return convertView;
     }

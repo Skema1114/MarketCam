@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/activity_XML_usuarios_linear">
+    android:id="@+id/activity_XML_listas_linear">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textListarUsuarios"
+        android:id="@+id/textListarListas"
         android:layout_weight="1"
-        android:text="@string/textListarUsuarios" />
+        android:text="@string/textListarListas" />
 </LinearLayout>

@@ -9,6 +9,14 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
+import Adapter.CompraAdapter;
+import Adapter.ListaAdapter;
+import BD.CompraBD;
+import BD.ListaBD;
+import interacao.Lista;
+
 public class decimaPrimeiraActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnUsuariosT11;
     private Button btnProdutosT11;
@@ -19,6 +27,13 @@ public class decimaPrimeiraActivity extends AppCompatActivity implements View.On
     private Toolbar toolbarT11;
     private TextView textListasComprasT11;
     private ListView listListasComprasT11;
+
+    /*Adapter*/
+    private ListView lista;
+    private List<Lista> listaList;
+    private ListaAdapter listaAdapter;
+    private ListaBD listaBD;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +70,16 @@ public class decimaPrimeiraActivity extends AppCompatActivity implements View.On
 
         /*setOnClickListener do ListView*/
         //listListasComprasT11.setOnClickListener(this);
+
+
+        /*Adapter*/
+        listaBD =  new ListaBD(this);
+        listaList = listaBD.ListaLista();
+        listaAdapter = new ListaAdapter(this, listaList);
+
+        lista = (ListView) findViewById(R.id.listListasComprasT11);
+        lista.setAdapter(listaAdapter);
+        //lista.setOnItemClickListener(this);
     }
 
     @Override

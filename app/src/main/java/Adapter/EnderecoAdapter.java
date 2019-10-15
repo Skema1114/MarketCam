@@ -12,20 +12,22 @@ import com.example.aluno.marketcam.R;
 
 import java.util.List;
 
-import interacao.Usuario;
+import interacao.Endereco;
+import interacao.Produto;
 
 /**
- * Created by Rafael Martins on 07/12/2016.
+ * Created by Rafael Martins on 08/12/2016.
  */
 
-public class UsuarioAdapter extends BaseAdapter{
+public class EnderecoAdapter extends BaseAdapter {
     private Context context;
-    private List<Usuario> lista;
+    private List<Endereco> lista;
 
-    public UsuarioAdapter(Context ctx , List<Usuario> usuarios){
+    public EnderecoAdapter(Context ctx , List<Endereco> enderecos){
         this.context = ctx;
-        this.lista = usuarios;
+        this.lista = enderecos;
     }
+
 
     @Override
     public int getCount() {
@@ -44,16 +46,15 @@ public class UsuarioAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Usuario usuario = lista.get(position);
+        Endereco endereco = lista.get(position);
 
         if (convertView == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
-            convertView = inflater.inflate(R.layout.usuario, null) ;
+            convertView = inflater.inflate(R.layout.endereco, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarUsuarios);
-        textView.setText(usuario.getNome());
+        TextView textView = (TextView) convertView.findViewById(R.id.textListarEnderecos);
+        textView.setText(endereco.getEstado());
 
         return convertView;
     }
 }
-

@@ -9,6 +9,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
+import Adapter.ProdutoAdapter;
+import Adapter.UsuarioAdapter;
+import BD.ProdutoBD;
+import BD.UsuarioBD;
+import interacao.Produto;
+import interacao.Usuario;
+
 public class oitavaActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnUsuariosT8;
     private Button btnProdutosT8;
@@ -19,6 +28,13 @@ public class oitavaActivity extends AppCompatActivity implements View.OnClickLis
     private Toolbar toolbarT8;
     private TextView textProdutosT8;
     private ListView listProdutosT8;
+
+    /*Adapter*/
+    private ListView lista;
+    private List<Produto> produtoList;
+    private ProdutoAdapter produtoAdapter;
+    private ProdutoBD produtoBD;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +69,18 @@ public class oitavaActivity extends AppCompatActivity implements View.OnClickLis
         btnListasComprasT8.setOnClickListener(this);
         btnCartõesCreditoT8.setOnClickListener(this);
 
-
         /*setOnClickListener do ListView*/
         //listProdutosT8.setOnClickListener(this);
+
+
+        /*Adapter*/
+        produtoBD =  new ProdutoBD(this);
+        produtoList = produtoBD.ListaProduto();
+        produtoAdapter = new ProdutoAdapter(this, produtoList);
+
+        lista = (ListView) findViewById(R.id.listProdutosT8);
+        lista.setAdapter(produtoAdapter);
+        //lista.setOnItemClickListener(this);
     }
 
     @Override

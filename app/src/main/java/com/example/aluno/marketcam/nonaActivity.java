@@ -9,6 +9,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
+import Adapter.EnderecoAdapter;
+import Adapter.ProdutoAdapter;
+import BD.EnderecoBD;
+import BD.ProdutoBD;
+import interacao.Endereco;
+import interacao.Produto;
+
 public class nonaActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnUsuariosT9;
     private Button btnProdutosT9;
@@ -19,6 +28,13 @@ public class nonaActivity extends AppCompatActivity implements View.OnClickListe
     private Toolbar toolbarT9;
     private TextView textEnderecosT9;
     private ListView listEnderecosT9;
+
+    /*Adapter*/
+    private ListView lista;
+    private List<Endereco> enderecoList;
+    private EnderecoAdapter enderecoAdapter;
+    private EnderecoBD enderecoBD;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +71,16 @@ public class nonaActivity extends AppCompatActivity implements View.OnClickListe
 
         /*setOnClickListener do ListView*/
         //listEnderecosT9.setOnClickListener(this);
+
+
+        /*Adapter*/
+        enderecoBD =  new EnderecoBD(this);
+        enderecoList = enderecoBD.ListaEndereco();
+        enderecoAdapter = new EnderecoAdapter(this, enderecoList);
+
+        lista = (ListView) findViewById(R.id.listEnderecosT9);
+        lista.setAdapter(enderecoAdapter);
+        //lista.setOnItemClickListener(this);
     }
 
     @Override

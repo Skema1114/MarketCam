@@ -9,7 +9,7 @@ import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 
 /**
- * Created by Rafael Martins on 29/11/2016 14:54.
+ * Created by Rafael Martins on 29/11/2016 14:54,  edited on 08/12/2016 14:30.
  */
 
 /*PRIMEIRO PASSO FOI CRIAR O BANCO DE DADOS, CRIAR AS TABELAS E JÁ INSERIR DADOS DE ADMINISTRADOR*/
@@ -89,7 +89,7 @@ public class Conecta extends SQLiteOpenHelper{
         /*CODIGO DE CRIAÇÃO DA TABELA "Usuario" NO SQLite*/
         sql = "CREATE TABLE IF NOT EXISTS Usuario (" +
                     "id_usuario INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE," +
-                    "foto_usuario_id INTEGER NOT NULL," +
+                    "foto_usuario_id INTEGER NULL," +
                     "cartao_id INTEGER NULL UNIQUE," +
                     "endereco_id INTEGER NOT NULL," +
                     "nivel_acesso_id INTEGER NOT NULL," +
@@ -102,7 +102,11 @@ public class Conecta extends SQLiteOpenHelper{
                     "criado DATETIME NOT NULL," +
                     "modificado DATETIME NULL," +
                     "perfil_usuario TEXT(13) NOT NULL DEFAULT 'cliente'," +
-                    "status_usuario TEXT(7) NOT NULL DEFAULT 'ativo'" +
+                    "status_usuario TEXT(7) NOT NULL DEFAULT 'ativo'," +
+                    "FOREIGN KEY (foto_usuario_id) REFERENCES Foto_Usuario(id_foto_usuario),"+
+                    "FOREIGN KEY (cartao_id) REFERENCES Cartao_Credito(id_cartao),"+
+                    "FOREIGN KEY (endereco_id) REFERENCES Endereco(id_endereco),"+
+                    "FOREIGN KEY (nivel_acesso_id) REFERENCES Nivel_Acesso(id_nivel_acesso)"+
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Usuario" NO SQLite*/
@@ -131,7 +135,8 @@ public class Conecta extends SQLiteOpenHelper{
                     "nome TEXT(40) NOT NULL," +
                     "valor DOUBLE NOT NULL," +
                     "lote TEXT(10) NULL," +
-                    "descricao TEXT(500) NULL" +
+                    "descricao TEXT(500) NULL," +
+                    "FOREIGN KEY (foto_produto_id) REFERENCES Foto_Produto(id_foto_produto)"+
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Produto" NO SQLite*/
@@ -146,7 +151,9 @@ public class Conecta extends SQLiteOpenHelper{
                     "usuario_id INTEGER NOT NULL," +
                     "produto_id INTEGER NOT NULL," +
                     "quantidade INTEGER NOT NULL," +
-                    "valor_total DOUBLE NULL" +
+                    "valor_total DOUBLE NULL," +
+                    "FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),"+
+                    "FOREIGN KEY (produto_id) REFERENCES Produto(id_produto)"+
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Carrinho" NO SQLite*/
@@ -161,7 +168,8 @@ public class Conecta extends SQLiteOpenHelper{
                     "carrinho_id INTEGER NOT NULL," +
                     "data DATE NOT NULL,hora TIME NOT NULL," +
                     "tag TEXT(20) NULL," +
-                    "valor_total DOUBLE NOT NULL" +
+                    "valor_total DOUBLE NOT NULL," +
+                    "FOREIGN KEY (carrinho_id) REFERENCES Carrinho(id_carrinho)"+
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Foto_Produto" NO SQLite*/
@@ -191,7 +199,10 @@ public class Conecta extends SQLiteOpenHelper{
                     "usuario_id INTEGER NOT NULL," +
                     "lista_id INTEGER NOT NULL," +
                     "quantidade INTEGER NOT NULL," +
-                    "valor_total DOUBLE NULL" +
+                    "valor_total DOUBLE NULL," +
+                    "FOREIGN KEY (produto_id) REFERENCES Produto(id_produto),"+
+                    "FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),"+
+                    "FOREIGN KEY (lista_id) REFERENCES Lista(id_lista)"+
                 ")";
 
         /*EXECUTA O CODIGO E CRIA A TABELA DE "Usuario_Lista_Produto" NO SQLite*/
