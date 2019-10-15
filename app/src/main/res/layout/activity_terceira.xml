@@ -72,7 +72,8 @@
                 android:layout_alignParentEnd="true"
             android:textStyle="normal|bold"
             android:textColor="#131B2E"
-            android:background="@drawable/aparencia_botao_login" />
+            android:background="@drawable/aparencia_botao_login"
+            android:layout_marginTop="5dp" />
 
         <CheckBox
                 android:text="@string/checkManterConectadoT3"

@@ -33,7 +33,8 @@
                     android:layout_marginBottom="5dp"
                     android:textStyle="normal|bold"
                     android:background="@drawable/aparencia_botao_todos"
-                    android:textColor="#ffffff" />
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="3dp" />
 
                 <Button
                     android:text="@string/btnProdutosT7"
@@ -42,7 +43,8 @@
                     android:id="@+id/btnProdutosT7"
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
-                    android:textColor="#131B2E" />
+                    android:textColor="#131B2E"
+                    android:layout_marginRight="3dp" />
 
                 <Button
                     android:text="@string/btnEnderecosT7"
@@ -51,7 +53,8 @@
                     android:id="@+id/btnEnderecosT7"
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
-                    android:textColor="#131B2E" />
+                    android:textColor="#131B2E"
+                    android:layout_marginRight="3dp" />
 
                 <Button
                     android:text="@string/btnComprasT7"
@@ -60,7 +63,8 @@
                     android:id="@+id/btnComprasT7"
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
-                    android:textColor="#131B2E" />
+                    android:textColor="#131B2E"
+                    android:layout_marginRight="3dp" />
 
                 <Button
                     android:text="@string/btnListasComprasT7"
@@ -69,7 +73,8 @@
                     android:id="@+id/btnListasComprasT7"
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
-                    android:textColor="#131B2E" />
+                    android:textColor="#131B2E"
+                    android:layout_marginRight="3dp" />
 
                 <Button
                     android:text="@string/btnCartõesCreditoT7"

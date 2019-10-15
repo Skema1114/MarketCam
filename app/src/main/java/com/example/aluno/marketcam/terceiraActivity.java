@@ -93,7 +93,7 @@ public class terceiraActivity extends AppCompatActivity implements View.OnClickL
             validacao = false;
             editEmailT3.setError(getString(R.string.emailObrigatorioT3));
         }
-        if ((usuario == null) || (usuario.equals(""))) {
+        if ((senha == null) || (senha.equals(""))) {
             validacao = false;
             editSenhaT3.setError(getString(R.string.senhaObrigatoriaT3));
         }

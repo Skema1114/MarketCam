@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MarketCam_V25.iml" filepath="$PROJECT_DIR$/MarketCam_V25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarketCam_V27.iml" filepath="$PROJECT_DIR$/MarketCam_V27.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

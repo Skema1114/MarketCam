@@ -1,10 +1,13 @@
 package com.example.aluno.marketcam;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -14,8 +17,9 @@ import java.util.List;
 import Adapter.UsuarioAdapter;
 import BD.UsuarioBD;
 import interacao.Usuario;
+import util.Mensagem;
 
-public class setimaActivity extends AppCompatActivity implements View.OnClickListener{
+public class setimaActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, DialogInterface.OnClickListener{
     private Button btnUsuariosT7;
     private Button btnProdutosT7;
     private Button btnEnderecosT7;
@@ -25,6 +29,10 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
     private Toolbar toolbarT7;
     private TextView textUsuariosT7;
     private ListView listUsuariosT7;
+    private AlertDialog alertDialog;
+    private AlertDialog  alertConfirmacao;
+    private int idPosicao;
+
 
     /*Adapter*/
     private ListView lista;
@@ -77,7 +85,28 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
         lista = (ListView) findViewById(R.id.listUsuariosT7);
         lista.setAdapter(usuarioAdapter);
         //lista.setOnItemClickListener(this);
+
+
+
+        alertDialog = Mensagem.criarAlertDialog(this);
+        alertConfirmacao = Mensagem.CriarDialogConfirmacao(this, "Sair",
+                "Deseja Realmente Sair?", R.drawable.sair,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+
+        usuarioBD =  new UsuarioBD(this) ;
+        usuarioList = usuarioBD.ListaUsuario() ;
+        usuarioAdapter = new UsuarioAdapter(this , usuarioList) ;
+        lista = (ListView) findViewById(R.id.listUsuariosT7);
+        lista.setAdapter(usuarioAdapter);
+        lista.setOnItemClickListener(this);
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -117,5 +146,42 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
             finish();
         }
 
+    }
+
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        int id = usuarioList.get(idPosicao).getId_usuario();
+
+        switch(which){
+            case 0:
+                Intent intent = new Intent(this, quintaActivity.class);
+                intent.putExtra("ID_USUARIO", id);
+                startActivity(intent);
+                finish();
+                break;
+
+            case 1:
+                alertConfirmacao.show();
+                break;
+
+            case DialogInterface.BUTTON_POSITIVE:
+                usuarioList.remove(idPosicao);
+                usuarioBD.removerUsuario(id);
+                lista.invalidateViews();
+                break;
+
+            case DialogInterface.BUTTON_NEGATIVE:
+                alertConfirmacao.dismiss();
+                break;
+        }
+
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        idPosicao = position;
+        alertDialog.show();
     }
 }
