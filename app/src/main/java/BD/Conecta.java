@@ -271,7 +271,7 @@ public class Conecta extends SQLiteOpenHelper{
 
         /*CODIGO DE INSERÇÃO PARAA TABELA "Usuario"*/
         sql = "INSERT INTO Usuario (id_usuario, foto_usuario_id, cartao_id, endereco_id, nivel_acesso_id, nome, data_nascimento, telefone, sexo, email, senha, criado, modificado, perfil_usuario, status_usuario)" +
-                "VALUES (1, 1, null, 1, 1, 'Rafael Aranda Martins', '1997-04-10', '5591711114', 'M', 'skema1114@hotmail.com', '$ystem@dmin1114', '2016-11-11 16:20:13', null, 'administrador', 'ativo')";
+                "VALUES (1, 1, null, 1, 1, 'Rafael Aranda Martins', '1997-04-10', '5591711114', 'M', 'skema1114@hotmail.com', 'admin', '2016-11-11 16:20:13', null, 'administrador', 'ativo')";
 
         /*ENVIANDO DADOS PARA A TABELA "Usuario" NO SQLite*/
         db.execSQL(sql);

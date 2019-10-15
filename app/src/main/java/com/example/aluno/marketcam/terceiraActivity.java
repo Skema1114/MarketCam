@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import BD.UsuarioBD;
@@ -20,6 +21,7 @@ public class terceiraActivity extends AppCompatActivity implements View.OnClickL
     private Button btnEntrarT3;
     private Button btnEsqueciSenhaT3;
     private CheckBox checkManterConectadoT3;
+    private ImageView imageLogoT3;
 
 
     private static final String MANTER_CONECTADO = "manter conectado";
@@ -46,6 +48,10 @@ public class terceiraActivity extends AppCompatActivity implements View.OnClickL
 
         /*findViewById do CheckBox*/
         checkManterConectadoT3 = (CheckBox) findViewById(R.id.checkManterConectadoT3);
+
+        /*findViewById dos ImageView*/
+        imageLogoT3 = (ImageView) findViewById(R.id.imageLogoT3);
+
 
         /*setOnClickListener*/
         /*setOnClickListener dos Button*/

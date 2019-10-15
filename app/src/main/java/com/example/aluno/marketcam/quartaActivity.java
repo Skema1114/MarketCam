@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class quartaActivity extends AppCompatActivity implements View.OnClickListener{
@@ -16,6 +17,8 @@ public class quartaActivity extends AppCompatActivity implements View.OnClickLis
     private EditText editQuantidadeT4;
     private Button btnAdicionarProdutoT4;
     private Button btnAdicionarCodigoBarrasT4;
+    private ImageView imageLogoT4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class quartaActivity extends AppCompatActivity implements View.OnClickLis
         /*findViewById dos Button*/
         btnAdicionarProdutoT4 = (Button) findViewById(R.id.btnAdicionarProdutoT4);
         btnAdicionarCodigoBarrasT4 = (Button) findViewById(R.id.btnAdicionarCodigoBarrasT4);
+
+        /*findViewById dos ImageView*/
+        imageLogoT4 = (ImageView) findViewById(R.id.imageLogoT4);
 
 
         /*setOnClickListener*/

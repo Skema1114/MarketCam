@@ -1,7 +1,11 @@
 package com.example.aluno.marketcam;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -13,16 +17,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import interacao.Usuario;
 
-public class decimaTerceiraActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class decimaTerceiraActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private TextView textEmailT13;
     private TextView textNomeT13;
+    private Button btnCapturaCodigoT13;
+    private ImageView imageLogoT13;
 
-
+    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +39,8 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
 
         textEmailT13 = (TextView) findViewById(R.id.textEmailT13);
         textNomeT13 = (TextView) findViewById(R.id.textNomeT13);
+        btnCapturaCodigoT13 = (Button) findViewById(R.id.btnCapturaCodigoT13);
+        imageLogoT13 = (ImageView) findViewById(R.id.imageLogoT13);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -52,7 +62,27 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
+
+    /* PARTE RETIRADA DO YOUTUBE */
+    public void dispatchTakePictureIntent(View view){
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(takePictureIntent.resolveActivity(getPackageManager()) != null){
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imageLogoT13.setImageBitmap(imageBitmap);
+        }
+    }
+    /* */
+
 
     @Override
     public void onBackPressed() {
@@ -95,7 +125,8 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
         int id = item.getItemId();
 
         if (id == R.id.CodigoBarrasMenu) {
-
+            Intent intent = new Intent(this, decimaTerceiraActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.MeuCarrinhoMenu) {
             Intent intent = new Intent(this, decimaQuartaActivity.class);
@@ -120,8 +151,14 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
             startActivity(intent);
 
         } else if (id == R.id.SairMenu) {
+            SharedPreferences preferences = getSharedPreferences("LoginActivityPreferences", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.clear();
+            editor.commit();
+
             Intent intent = new Intent(this, primeiraActivity.class);
             startActivity(intent);
+            finish();
 
         } else if (id == R.id.ReportarErroMenu) {
             Intent intent = new Intent(this, decimaQuintaActivity.class);
@@ -132,5 +169,12 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(btnCapturaCodigoT13.isPressed()){
+
+        }
     }
 }

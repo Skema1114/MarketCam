@@ -3,16 +3,29 @@
 
     <!-- <group android:checkableBehavior="single"> -->
 
+
+    <!-- IMAGENS RETIRADAS, EM ORDEM -->
+    <!-- android:icon="@drawable/ic_menu_camera"
+    android:icon="@drawable/ic_menu_camera"
+    android:icon="@drawable/"
+    android:icon="@drawable/"
+    android:icon="@drawable/ic_menu_share"
+    android:icon="@drawable/ic_menu_send"
+    android:icon="@drawable/ic_menu_manage"
+    android:icon="@drawable/ic_menu_send"
+    android:icon="@drawable/ic_menu_manage" -->
+
+
     <item android:title="Funções">
         <menu>
             <item
                 android:id="@+id/CodigoBarrasMenu"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Leitor de Codigo de Barras" />
 
             <item
                 android:id="@+id/MeuCarrinhoMenu"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Meu Carrinho" />
 
             </menu>
@@ -24,7 +37,7 @@
         <menu>
             <item
                 android:id="@+id/AdministradorMenu"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Visualizar/Gerenciar" />
 
         </menu>
@@ -34,12 +47,12 @@
         <menu>
             <item
                 android:id="@+id/CriarListasComprasMenu"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Criar Nova Lista" />
 
             <item
                 android:id="@+id/MinhasListasMenu"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Minhas Listas" />
 
         </menu>
@@ -54,7 +67,7 @@
 
             <item
                 android:id="@+id/EditarCadastroMenu"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Editar Cadastro" />
 
             <item
@@ -68,7 +81,7 @@
         <menu>
             <item
                 android:id="@+id/ReportarErroMenu"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Reportar Erro" />
 
         </menu>

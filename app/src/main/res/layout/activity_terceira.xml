@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="247dp"
             app:srcCompat="@drawable/login"
-            android:id="@+id/imageView3"
+            android:id="@+id/imageLogoT3"
             android:layout_marginTop="5dp" />
 
         <EditText

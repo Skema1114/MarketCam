@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -14,6 +15,8 @@ public class sextaActivity extends AppCompatActivity implements View.OnClickList
     private EditText editNomeListaT6;
     private Switch switchFavoritoT6;
     private Button btnCriarT6;
+    private ImageView imageLogoT6;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class sextaActivity extends AppCompatActivity implements View.OnClickList
 
         /*findViewById do Button*/
         btnCriarT6 = (Button) findViewById(R.id.btnCriarT6);
+
+        /*findViewById dos ImageView*/
+        imageLogoT6 = (ImageView) findViewById(R.id.imageLogoT6);
 
 
 

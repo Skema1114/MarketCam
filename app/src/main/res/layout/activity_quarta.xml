@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="247dp"
             app:srcCompat="@drawable/adicionanalista"
-            android:id="@+id/imageView5" />
+            android:id="@+id/imageLogoT4" />
 
         <TextView
                 android:text="@string/textProdutoT4"

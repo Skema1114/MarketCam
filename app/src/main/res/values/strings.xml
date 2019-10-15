@@ -48,12 +48,12 @@
     <string name="textQuantidadeT4">Quantidade</string>
     <string name="editQuantidadeT4" />
     <string name="btnAdicionarProdutoT4">ADICIONAR PRODUTO</string>
-    <string name="btnAdicionarCodigoBarrasT4">ADICIONAR PRODUTO PELO CODIGO DE BARRAS</string>
+    <string name="btnAdicionarCodigoBarrasT4">ADICIONAR PRODUTO PELO CÓDIGO DE BARRAS</string>
 
 
     <!-- STRINGS REFERENTES A "activity_quinta / quintaActivity" -->
     <string name="textEditarCadastroT5">EDITAR CADASTRO</string>
-    <string name="textUsuarioT5">USUARIO</string>
+    <string name="textUsuarioT5">USUÁRIO</string>
     <string name="textNomeT5">Nome</string>
     <string name="editNomeT5" />
     <string name="textTelefoneT5">Telefone</string>
@@ -63,7 +63,7 @@
     <string name="radioFemininoT5">Feminino</string>
     <string name="textDataNascimentoT5">Data de Nascimento</string>
     <string name="editDataNascimentoT5">Informe Sua Data de Nascimento</string>
-    <string name="textTipoUsuarioT5">Tipo de Usuario</string>
+    <string name="textTipoUsuarioT5">Tipo de Usuário</string>
     <string name="radioClienteT5">Cliente</string>
     <string name="radioMercadoT5">Mercado</string>
     <string name="textEmailT5">E-mail</string>
@@ -122,7 +122,7 @@
     <!-- STRINGS REFERENTES A "activity_oitava / oitavaActivity" -->
     <string name="btnUsuariosT8">Usuários</string>
     <string name="btnProdutosT8">Produtos</string>
-    <string name="btnEnderecosT8">Enderecos</string>
+    <string name="btnEnderecosT8">Endereços</string>
     <string name="btnListasComprasT8">Listas de Compras</string>
     <string name="btnComprasT8">Compras</string>
     <string name="btnCartõesCreditoT8">Cartões de Crédito</string>
@@ -132,7 +132,7 @@
     <!-- STRINGS REFERENTES A "activity_nona / nonaActivity" -->
     <string name="btnUsuariosT9">Usuários</string>
     <string name="btnProdutosT9">Produtos</string>
-    <string name="btnEnderecosT9">Enderecos</string>
+    <string name="btnEnderecosT9">Endereços</string>
     <string name="btnListasComprasT9">Listas de Compras</string>
     <string name="btnComprasT9">Compras</string>
     <string name="btnCartõesCreditoT9">Cartões de Crédito</string>
@@ -152,7 +152,7 @@
     <!-- STRINGS REFERENTES A "activity_decima_primeira / decimaPrimeiraActivity" -->
     <string name="btnUsuariosT11">Usuários</string>
     <string name="btnProdutosT11">Produtos</string>
-    <string name="btnEnderecosT11">Enderecos</string>
+    <string name="btnEnderecosT11">Endereços</string>
     <string name="btnListasComprasT11">Listas de Compras</string>
     <string name="btnComprasT11">Compras</string>
     <string name="btnCartõesCreditoT11">Cartões de Crédito</string>
@@ -162,7 +162,7 @@
     <!-- STRINGS REFERENTES A "activity_decima_segunda / decimaSegundaActivity" -->
     <string name="btnUsuariosT12">Usuários</string>
     <string name="btnProdutosT12">Produtos</string>
-    <string name="btnEnderecosT12">Enderecos</string>
+    <string name="btnEnderecosT12">Endereços</string>
     <string name="btnListasComprasT12">Listas de Compras</string>
     <string name="btnComprasT12">Compras</string>
     <string name="btnCartõesCreditoT12">Cartões de Crédito</string>
@@ -170,13 +170,13 @@
 
 
     <!-- STRINGS REFERENTES AO "C_R_U_D" -->
-    <string name="atualizar_usuario">Usuario Attualizado</string>
+    <string name="atualizar_usuario">Usuario Atualizado</string>
     <string name="obrigatorio">Obrigatório</string>
-    <string name="mensagem_cadastrar">Resgistro Cadastro com Sucesso!</string>
-    <string name="mensagem_atualizar">Resgistro Atualizado com Sucesso!</string>
+    <string name="mensagem_cadastrar">Registro Cadastrado com Sucesso</string>
+    <string name="mensagem_atualizar">Resgistro Atualizado com Sucesso</string>
     <string name="mensagem_erro">Erro ao Salvar</string>
     <!-- STRINGS PARA MENSAGENS DE ERRO -->
-    <string name="emailObrigatorioT3">O campo EMAIL não pode ser vazio!</string>
+    <string name="emailObrigatorioT3">O campo E-MAIL não pode ser vazio</string>
     <string name="senhaObrigatoriaT3">O campo SENHA não pode estar vazio</string>
     <string name="loginincorretoT3">Login Incorreto</string>
 
@@ -201,6 +201,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+    <!-- STRINGS SETADAS MANUALMENTE REFERENTES A "activity_decima_terceita / decimaTerceiraActivity" -->
+    <string name="textEmailT13">exemplo@exemplo.com</string>
+    <string name="textNomeT13">Exemplo</string>
+    <string name="btnCapturaCodigoT13">CAPTURAR CÓDIGO</string>
 
 
     <!-- STRINGS REFERENTES A "activity_decima_quarta / decimaQuartaActivity" -->
@@ -223,7 +227,5 @@
     <string name="textDescricaoT15">DESCRIÇÃO</string>
     <string name="editMultiDescricaoT15" />
     <string name="btnEnviarT15">Enviar</string>
-    <string name="textEmailT13">exemplo@exemplo.com</string>
-    <string name="textNomeT13">Exemplo</string>
 
 </resources>
