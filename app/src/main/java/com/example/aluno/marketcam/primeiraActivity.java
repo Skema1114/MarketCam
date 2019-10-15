@@ -37,6 +37,8 @@ public class primeiraActivity extends AppCompatActivity implements View.OnClickL
         if (btnNCadastroT1.isPressed()) {
             Intent intent = new Intent(this, segundaActivity.class);
             startActivity(intent);
+
+
         }
     }
 }

@@ -110,7 +110,7 @@ public class decimaTerceiraActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.ReportarErroMenu) {
-
+            startActivity(new Intent(decimaTerceiraActivity.this, PopUpPrimeiro.class));
 
         }
 

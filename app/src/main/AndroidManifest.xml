@@ -104,6 +104,10 @@
 
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <activity android:name=".PopUpPrimeiro"
+            android:theme="@style/AppTheme.CustomTheme">
+
+        </activity>
     </application>
 
 </manifest>
