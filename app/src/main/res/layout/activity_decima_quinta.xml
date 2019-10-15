@@ -4,7 +4,8 @@
     android:id="@+id/activity_decima_quinta_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aluno.marketcam.decimaQuartaActivity">
+    tools:context="com.example.aluno.marketcam.decimaQuartaActivity"
+    android:padding="15dp">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/activity_decima_quinta_linear"
@@ -44,7 +45,10 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:id="@+id/activity_decima_quinta_horizontal_scroll">
+            android:id="@+id/activity_decima_quinta_horizontal_scroll"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
 
             <LinearLayout
                 android:orientation="horizontal"

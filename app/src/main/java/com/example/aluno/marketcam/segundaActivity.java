@@ -247,6 +247,29 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
             String cidade = spinCidadeT2.getSelectedItem().toString();
             String estado = spinEstadoT2.getSelectedItem().toString();
 
+            String val_nome = editNomeT2.getText().toString();
+            String val_email = editEmailT2.getText().toString();
+            String val_senha = editSenhaT2.getText().toString();
+            String val_conf_senha = editConfirmarSenhaT2.getText().toString();
+            if ((val_nome == null) || (val_nome.equals(""))) {
+                validacao = false;
+                editNomeT2.setError(getString(R.string.nomeObrigatorioT2));
+            }
+            if ((val_email == null) || (val_email.equals(""))) {
+                validacao = false;
+                editEmailT2.setError(getString(R.string.emailObrigatorioT3));
+            }
+            if ((val_senha == null) || (val_senha.equals(""))) {
+                validacao = false;
+                editSenhaT2.setError(getString(R.string.senhaObrigatoriaT3));
+            }
+            if ((val_conf_senha == null) || (val_conf_senha.equals(""))) {
+                validacao = false;
+                editConfirmarSenhaT2.setError(getString(R.string.confirmar_senhaObrigatoriaT3));
+            }
+
+
+
             if (validacao) {
                 endereco = new Endereco();
 
@@ -272,6 +295,7 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
                     Mensagem.Msg(this, getString(R.string.mensagem_erro));
                 }
             }
+
         }
 
     @Override

@@ -31,6 +31,7 @@
     <string-array name="estadoSpinT2">
         <item>RS</item>
     </string-array>
+    <string name="nomeObrigatorioT2">O campo NOME não pode ser vazio</string>
 
 
     <!-- STRINGS REFERENTES A "activity_terceira / terceiraActivity" -->
@@ -40,6 +41,8 @@
     <string name="checkManterConectadoT3">Mantenha-me Conectado</string>
     <string name="btnEsqueciSenhaT3">Esqueci Minha Senha</string>
     <string name="textEfetuarLoginT3">EFETUE O SEU LOGIN</string>
+    <string name="duassenhasObrigatoriaT3">As Senhas Não Correspondem</string>
+    <string name="confirmar_senhaObrigatoriaT3">O campo CONFIRMAR SENHA não pode ser vazio</string>
 
 
     <!-- STRINGS REFERENTES A "activity_quarta / quartaActivity" -->
@@ -202,9 +205,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
     <!-- STRINGS SETADAS MANUALMENTE REFERENTES A "activity_decima_terceita / decimaTerceiraActivity" -->
-    <string name="textEmailT13">exemplo@exemplo.com</string>
-    <string name="textNomeT13">Exemplo</string>
+    <string name="textEmailT13">usuario@marketcam.com</string>
+    <string name="textNomeT13">Usuario</string>
     <string name="btnCapturaCodigoT13">CAPTURAR CÓDIGO</string>
+    <string name="btnLimparT13">LIMPAR</string>
 
 
     <!-- STRINGS REFERENTES A "activity_decima_quarta / decimaQuartaActivity" -->

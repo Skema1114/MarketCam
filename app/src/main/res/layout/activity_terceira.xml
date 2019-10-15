@@ -95,7 +95,7 @@
             android:textStyle="normal|bold"
             android:textColor="#131B2E"
             android:background="@drawable/aparencia_botao_login"
-            android:layout_marginBottom="25dp" />
+            android:layout_marginBottom="20dp" />
 
     </LinearLayout>
 </ScrollView>

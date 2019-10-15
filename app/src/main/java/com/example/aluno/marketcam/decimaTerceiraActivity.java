@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import interacao.Usuario;
 
@@ -29,6 +30,7 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
     private TextView textNomeT13;
     private Button btnCapturaCodigoT13;
     private ImageView imageLogoT13;
+    private Button btnLimparT13;
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -41,6 +43,12 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
         textNomeT13 = (TextView) findViewById(R.id.textNomeT13);
         btnCapturaCodigoT13 = (Button) findViewById(R.id.btnCapturaCodigoT13);
         imageLogoT13 = (ImageView) findViewById(R.id.imageLogoT13);
+        btnLimparT13 = (Button) findViewById(R.id.btnLimparT13);
+
+        btnCapturaCodigoT13.setOnClickListener(this);
+        btnLimparT13.setOnClickListener(this);
+
+        btnLimparT13.setVisibility(View.INVISIBLE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -72,6 +80,7 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
         if(takePictureIntent.resolveActivity(getPackageManager()) != null){
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+       // btnVoltarT13.setVisibility(View.VISIBLE);
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
@@ -79,7 +88,10 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imageLogoT13.setImageBitmap(imageBitmap);
+            btnLimparT13.setVisibility(View.VISIBLE);
+
         }
+
     }
     /* */
 
@@ -173,8 +185,14 @@ public class decimaTerceiraActivity extends AppCompatActivity implements Navigat
 
     @Override
     public void onClick(View v) {
-        if(btnCapturaCodigoT13.isPressed()){
+        if(v.getId()==R.id.btnCapturaCodigoT13){
+            //Toast.makeText(this, "Ok", Toast.LENGTH_SHORT).show();
+            dispatchTakePictureIntent(v);
+        }
 
+        if(btnLimparT13.isPressed()){
+            imageLogoT13.setImageResource(R.drawable.codigo_barras);
+            btnLimparT13.setVisibility(View.INVISIBLE);
         }
     }
 }
