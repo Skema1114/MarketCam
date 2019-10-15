@@ -5,9 +5,18 @@
     android:id="@+id/activity_XML_produtos_linear">
 
     <TextView
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textListarProdutosEsquerda"
+        android:text="@string/textListarProdutosEsquerda"
+        android:textAlignment="viewEnd"
+        android:textStyle="normal|bold" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textListarProdutos"
+        android:id="@+id/textListarProdutosDireita"
         android:layout_weight="1"
-        android:text="@string/textListarProdutos" />
+        android:text="@string/textListarProdutosDireita"
+        android:textAlignment="viewStart" />
 </LinearLayout>

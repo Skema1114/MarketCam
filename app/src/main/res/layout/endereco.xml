@@ -5,8 +5,18 @@
     android:id="@+id/activity_XML_enderecos_linear">
 
     <TextView
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textListarEnderecosEsquerda"
+        android:text="@string/textListarEnderecosEsquerda"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewEnd" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textListarEnderecos"
-        android:layout_weight="1" />
+        android:id="@+id/textListarEnderecosDireita"
+        android:layout_weight="1"
+        android:text="@string/textListarEnderecosDireita"
+        android:textAlignment="viewStart" />
 </LinearLayout>

@@ -52,8 +52,28 @@ public class EnderecoAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
             convertView = inflater.inflate(R.layout.endereco, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarEnderecos);
-        textView.setText(endereco.getEstado());
+        TextView textViewEsquerda = (TextView) convertView.findViewById(R.id.textListarEnderecosEsquerda);
+        textViewEsquerda.setText("\n"+
+                "(ID):  "+
+                "\nCIDADE:  "+
+                "\nESTADO:  "+
+                "\nBAIRRO:  "+
+                "\nRUA:  "+
+                "\nNUMERO:  "+
+                "\nCEP:  "+
+                "\n");
+
+
+        TextView textViewDireita = (TextView) convertView.findViewById(R.id.textListarEnderecosDireita);
+        textViewDireita.setText("\n"+
+                ""+endereco.getId_endereco()+
+                "\n"+endereco.getCidade()+
+                "\n"+endereco.getEstado()+
+                "\n"+endereco.getBairro()+
+                "\n"+endereco.getRua()+
+                "\n"+endereco.getNumero()+
+                "\n"+endereco.getCep()+
+                "\n");
 
         return convertView;
     }

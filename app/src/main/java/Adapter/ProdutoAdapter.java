@@ -51,8 +51,28 @@ public class ProdutoAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
             convertView = inflater.inflate(R.layout.produto, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarProdutos);
-        textView.setText(produto.getNome());
+        TextView textViewEsquerda = (TextView) convertView.findViewById(R.id.textListarProdutosEsquerda);
+        textViewEsquerda.setText("\n"+
+                "(ID):  "+
+                "\n(ID)FOTO:  "+
+                "\nCODIGO DE BARRAS:  "+
+                "\nNOME:  "+
+                "\nVALOR:  "+
+                "\nLOTE:  "+
+                "\nDESCRICAO:  "+
+                "\n");
+
+
+        TextView textViewDireita = (TextView) convertView.findViewById(R.id.textListarProdutosDireita);
+        textViewDireita.setText("\n"+
+                ""+produto.getId_produto()+
+                "\n"+produto.getFoto_produto_id()+
+                "\n"+produto.getCodigo_barras()+
+                "\n"+produto.getNome()+
+                "\n"+produto.getValor()+
+                "\n"+produto.getLote()+
+                "\n"+produto.getDescricao()+
+                "\n");
 
         return convertView;
     }

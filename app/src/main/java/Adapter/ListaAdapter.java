@@ -45,14 +45,28 @@ public class ListaAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Lista listaa = lista.get(position);
+        Lista list = lista.get(position);
 
         if (convertView == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
             convertView = inflater.inflate(R.layout.lista, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarListas);
-        textView.setText(listaa.getNome());
+        TextView textViewEsquerda = (TextView) convertView.findViewById(R.id.textListarListasEsquerda);
+        textViewEsquerda.setText("\n"+
+                "(ID):  "+
+                "\nNOME:  "+
+                "\nDATA E HORA:  "+
+                "\nVALOR_TOTAL:  "+
+                "\n");
+
+
+        TextView textViewDireita = (TextView) convertView.findViewById(R.id.textListarListasDireita);
+        textViewDireita.setText("\n"+
+                ""+list.getId_lista()+
+                "\n"+list.getNome()+
+                "\n"+list.getData_hora()+
+                "\n"+list.getValor_total()+
+                "\n");
 
         return convertView;
     }

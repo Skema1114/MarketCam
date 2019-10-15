@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
+    <!-- <group android:checkableBehavior="single"> -->
 
-    <item android:title="Communicate">
+    <item android:title="Funções">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Lista de Compras" />
+                android:id="@+id/CodigoBarrasMenu"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Leitor de Codigo de Barras" />
+
+            </menu>
+    </item>
+
+    <!-- </group> -->
+
+    <item android:title="Administrador">
+        <menu>
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/AdministradorMenu"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Visualizar/Gerenciar" />
+
+        </menu>
+    </item>
+
+    <item android:title="Listas de Compras">
+        <menu>
+            <item
+                android:id="@+id/ListaComprasMenu"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Criar Nova Lista" />
+
+            <item
+                android:id="@+id/MinhasListasMenu"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Minhas Listas" />
+
+        </menu>
+    </item>
+
+    <item android:title="Conta">
+        <menu>
+            <item
+                android:id="@+id/HistoricoMenu"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Meu Historico" />
+
+            <item
+                android:id="@+id/EditarCadastroMenu"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Editar Cadastro" />
+
+            <item
+                android:id="@+id/SairMenu"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Sair" />
         </menu>

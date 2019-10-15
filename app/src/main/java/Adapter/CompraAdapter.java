@@ -52,8 +52,26 @@ public class CompraAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
             convertView = inflater.inflate(R.layout.compra, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarCompras);
-        textView.setText(compra.getTag());
+        TextView textViewEsquerda = (TextView) convertView.findViewById(R.id.textListarComprasEsquerda);
+        textViewEsquerda.setText("\n"+
+                "(ID):  "+
+                "\n(ID)CARRINHO:  "+
+                "\nDATA:  "+
+                "\nHORA:  "+
+                "\nTAG:  "+
+                "\nVALOR TOTAL:  "+
+                "\n");
+
+
+        TextView textViewDireita = (TextView) convertView.findViewById(R.id.textListarComprasDireita);
+        textViewDireita.setText("\n"+
+                ""+compra.getId_compra()+
+                "\n"+compra.getCarrinho_id()+
+                "\n"+compra.getData()+
+                "\n"+compra.getHora()+
+                "\n"+compra.getTag()+
+                "\n"+compra.getValor_total()+
+                "\n");
 
         return convertView;
     }

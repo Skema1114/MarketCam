@@ -5,9 +5,18 @@
     android:id="@+id/activity_XML_cartao_creditos_linear">
 
     <TextView
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textListarCartao_CreditosEsquerda"
+        android:text="@string/textListarCartao_CreditosEsquerda"
+        android:textAlignment="viewEnd"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="@string/textListarCartao_CreditosDireita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textListarCartao_Creditos"
+        android:id="@+id/textListarCartao_CreditosDireita"
         android:layout_weight="1"
-        android:text="@string/textListarCartao_Creditos" />
+        android:textAlignment="viewStart" />
 </LinearLayout>

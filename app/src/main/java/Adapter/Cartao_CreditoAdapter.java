@@ -51,8 +51,26 @@ public class Cartao_CreditoAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE) ;
             convertView = inflater.inflate(R.layout.cartao_credito, null) ;
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textListarCartao_Creditos);
-        textView.setText(cartao_credito.getTitular_cartao());
+        TextView textViewEsquerda = (TextView) convertView.findViewById(R.id.textListarCartao_CreditosEsquerda);
+        textViewEsquerda.setText("\n"+
+                "(ID):  "+
+                "\nTITULAR:  "+
+                "\nNUMERO:  "+
+                "\nVALIDADE:  "+
+                "\nSALVAR O CODIGO:  "+
+                "\nCODIGO:  "+
+                "\n");
+
+
+        TextView textViewDireita = (TextView) convertView.findViewById(R.id.textListarCartao_CreditosDireita);
+        textViewDireita.setText("\n"+
+                ""+cartao_credito.getId_cartao()+
+                "\n"+cartao_credito.getTitular_cartao()+
+                "\n"+cartao_credito.getNumero_cartao()+
+                "\n"+cartao_credito.getValidade_cartao()+
+                "\n"+cartao_credito.getSalvar_codigo_cartao()+
+                "\n"+cartao_credito.getCodigo_cartao()+
+                "\n");
 
         return convertView;
     }

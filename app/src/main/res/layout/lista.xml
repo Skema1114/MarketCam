@@ -5,9 +5,18 @@
     android:id="@+id/activity_XML_listas_linear">
 
     <TextView
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textListarListasEsquerda"
+        android:text="@string/textListarListasEsquerda"
+        android:textAlignment="viewEnd"
+        android:textStyle="normal|bold" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textListarListas"
+        android:id="@+id/textListarListasDireita"
         android:layout_weight="1"
-        android:text="@string/textListarListas" />
+        android:text="@string/textListarListasDireita"
+        android:textAlignment="viewStart" />
 </LinearLayout>

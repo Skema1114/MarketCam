@@ -177,15 +177,22 @@
     <string name="mensagem_erro">Erro ao Salvar</string>
 
     <!-- STRINGS REFERENTES AS XML's -->
-    <string name="textListarProdutos" />
-    <string name="textListarUsuarios" />
-    <string name="textListarCompras" />
-    <string name="textListarListas" />
-    <string name="textListarCartao_Creditos" />
+    <string name="textListarProdutosEsquerda" />
+    <string name="textListarUsuariosEsquerda" />
+    <string name="textListarComprasEsquerda" />
+    <string name="textListarListasEsquerda" />
+    <string name="textListarCartao_CreditosEsquerda" />
     <string name="title_activity_decima_terceira">decimaTerceiraActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="textListarUsuariosDireita" />
+    <string name="textListarProdutosDireita" />
+    <string name="textListarEnderecosEsquerda" />
+    <string name="textListarEnderecosDireita" />
+    <string name="textListarComprasDireita" />
+    <string name="textListarListasDireita" />
+    <string name="textListarCartao_CreditosDireita" />
 </resources>

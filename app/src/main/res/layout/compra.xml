@@ -5,9 +5,18 @@
     android:id="@+id/activity_XML_compras_linear">
 
     <TextView
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textListarComprasEsquerda"
+        android:text="@string/textListarComprasEsquerda"
+        android:textAlignment="viewEnd"
+        android:textStyle="normal|bold" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textListarCompras"
+        android:id="@+id/textListarComprasDireita"
         android:layout_weight="1"
-        android:text="@string/textListarCompras" />
+        android:text="@string/textListarComprasDireita"
+        android:textAlignment="viewStart" />
 </LinearLayout>
