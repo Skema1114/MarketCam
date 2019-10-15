@@ -85,7 +85,8 @@ public class decimaTerceiraActivity extends AppCompatActivity
 
 
         } else if (id == R.id.MeuCarrinhoMenu) {
-
+            Intent intent = new Intent(this, decimaQuartaActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.AdministradorMenu) {
             Intent intent = new Intent(this, setimaActivity.class);
@@ -110,7 +111,8 @@ public class decimaTerceiraActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.ReportarErroMenu) {
-            startActivity(new Intent(decimaTerceiraActivity.this, PopUpPrimeiro.class));
+            Intent intent = new Intent(this, decimaQuintaActivity.class);
+            startActivity(intent);
 
         }
 

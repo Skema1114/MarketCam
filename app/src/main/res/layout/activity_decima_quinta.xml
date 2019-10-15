@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_decima_quinta_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aluno.marketcam.decimaQuartaActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_decima_quinta_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/textContatoT15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textContatoT15"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editMeuEmailT15"
+            android:hint="skema1114@hotmail.com"
+            android:textAlignment="viewEnd"
+            android:text="@string/editMeuEmailT15"
+            android:textStyle="normal|italic" />
+
+        <TextView
+            android:text="@string/textEscolhaAcaoT15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEscolhaAcaoT15"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:id="@+id/activity_decima_quinta_horizontal_scroll">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/activity_decima_quinta_linear_layout">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioAcaoT15">
+
+                    <RadioButton
+                        android:text="@string/radioReclamacaoT15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioReclamacaoT15"
+                        android:layout_weight="103.96"
+                        android:textAlignment="viewStart" />
+
+                    <RadioButton
+                        android:text="@string/radioReportarErroT15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioReportarErroT15"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="@string/radioDuvidaT15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioDuvidaT15"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="@string/radioMelhoriaT15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioMelhoriaT15"
+                        android:layout_weight="1" />
+                </RadioGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:text="@string/textDescricaoT15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDescricaoT15"
+            android:layout_marginTop="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editMultiDescricaoT15"
+            android:text="@string/editMultiDescricaoT15"
+            android:textStyle="normal|italic" />
+
+        <Button
+            android:text="@string/btnEnviarT15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEnviarT15"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

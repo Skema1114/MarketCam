@@ -195,4 +195,20 @@
     <string name="textListarComprasDireita" />
     <string name="textListarListasDireita" />
     <string name="textListarCartao_CreditosDireita" />
+    <string name="textMeuCarrinhoT14">MEU CARRINHO</string>
+    <string name="btnAdicionarT14">ADICIONAR MAIS PRODUTOS</string>
+    <string name="btnRemoverT14">REMOVER</string>
+    <string name="textValorTotalT14">VALOR TOTAL:</string>
+    <string name="textRecebeValorTotalT14" />
+    <string name="btnFinalizarPedidoT14">FINALIZAR PEDIDO</string>
+    <string name="textContatoT15">CONTATO COM O DESENVOLVEDOR</string>
+    <string name="editMeuEmailT15" />
+    <string name="textEscolhaAcaoT15">ESCOLHA UMA AÇÃO</string>
+    <string name="radioReclamacaoT15">Reclamação</string>
+    <string name="radioReportarErroT15">Reportar Erro</string>
+    <string name="radioDuvidaT15">Dúvida</string>
+    <string name="radioMelhoriaT15">Melhoria</string>
+    <string name="textDescricaoT15">DESCRIÇÃO</string>
+    <string name="editMultiDescricaoT15" />
+    <string name="btnEnviarT15">Enviar</string>
 </resources>
