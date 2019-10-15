@@ -1,5 +1,6 @@
 package com.example.aluno.marketcam;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import BD.UsuarioBD;
+import interacao.Usuario;
+import util.Mensagem;
 
 public class segundaActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView textTipoContaT2;
@@ -34,11 +39,18 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
     private DatePicker dateDataT2;
     private Button btnCadastrarseT2;
 
+    private Usuario usuario ;
+    private UsuarioBD usuarioBD ;
+    private int idUsuario ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
+
+        /*Cadastro Usuario*/
+        usuarioBD = new UsuarioBD(this);
 
         /*findViewById*/
         /*findViewById dos TextView*/
@@ -76,10 +88,10 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
 
         /*setOnClickListener*/
         /*setOnClickListener dos RadioButton*/
-        radioFemininoT2.setOnClickListener(this);
-        radioMasculinoT2.setOnClickListener(this);
-        radioMercadoT2.setOnClickListener(this);
-        radioClienteT2.setOnClickListener(this);
+        //radioFemininoT2.setOnClickListener(this);
+        //radioMasculinoT2.setOnClickListener(this);
+        //radioMercadoT2.setOnClickListener(this);
+        //radioClienteT2.setOnClickListener(this);
 
         /*setOnClickListener do Button*/
         btnCadastrarseT2.setOnClickListener(this);
@@ -99,13 +111,118 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         spinCidadeT2.setAdapter(adapter_cidade);
 
 
+        /*Cadastro Usuario*/
+        idUsuario = getIntent().getIntExtra("ID_USUARIO", 0);
+
+        if(idUsuario > 0){
+            Usuario model = usuarioBD.buscarUsuario(idUsuario);
+
+            editNomeT2.setText(model.getNome());
+            if(radioClienteT2.isChecked()){
+                radioClienteT2.setText("Cliente");
+                radioClienteT2.setText(model.getPerfil_usuario());
+            }else if(radioMercadoT2.isChecked()){
+                radioMercadoT2.setText("Mercado");
+                radioMercadoT2.setText(model.getPerfil_usuario());
+            }
+            if(radioMasculinoT2.isChecked()){
+                radioMasculinoT2.setText("M");
+                radioMasculinoT2.setText(model.getSexo());
+            }else if(radioFemininoT2.isChecked()){
+                radioFemininoT2.setText("F");
+                radioFemininoT2.setText(model.getSexo());
+            }
+            /*dateDataT2.setText(model.getData_nascimento());*/
+            spinCidadeT2.getSelectedItem().toString();
+            spinEstadoT2.getSelectedItem().toString();
+            editEmailT2.setText(model.getEmail());
+            if((editSenhaT2==editConfirmarSenhaT2)&&(editConfirmarSenhaT2==editSenhaT2)){
+                editSenhaT2.setText(model.getSenha());
+            }else{
+                //editSenhaT2.setError("Não deu");
+            }
+            setTitle(R.string.atualizar_usuario);
+        }
+    }
 
 
+
+    protected void onDestoy(){
+        usuarioBD.fechar();
+        super.onDestroy();
+    }
+
+    public void cadastrarUsuario(){
+
+        boolean validacao = true ;
+
+        String nome = editNomeT2.getText().toString();
+        if(radioClienteT2.isChecked()){
+            radioClienteT2.setText("Cliente");
+            String tipo_usuario = radioClienteT2.getText().toString();
+        }else if (radioMercadoT2.isChecked()){
+            radioMercadoT2.setText("Mercado");
+            String tipo_usuario = radioMercadoT2.getText().toString();
+        }
+        if(radioMasculinoT2.isChecked()){
+            radioMasculinoT2.setText("M");
+            String tipo_usuario = radioMasculinoT2.getText().toString();
+        }else if (radioFemininoT2.isChecked()){
+            radioFemininoT2.setText("F");
+            String tipo_usuario = radioFemininoT2.getText().toString();
+        }
+        spinCidadeT2.getSelectedItem().toString();
+        spinEstadoT2.getSelectedItem().toString();
+        String email = editEmailT2.getText().toString();
+        String senha = editSenhaT2.getText().toString();
+
+
+        if((nome == null) || (nome.equals(""))){
+            validacao = false ;
+            editNomeT2.setError(getString(R.string.obrigatorio));
+        }
+
+        if((email == null) || (email.equals(""))){
+            validacao = false ;
+            editEmailT2.setError(getString(R.string.obrigatorio));
+        }
+
+        if((senha == null) || (senha.equals(""))){
+            validacao = false ;
+            editSenhaT2.setError(getString(R.string.obrigatorio));
+
+        }
+
+        if(validacao){
+            usuario = new Usuario();
+            usuario.setNome(nome);
+            usuario.setEmail(email);
+            usuario.setSenha(senha);
+
+
+            if(idUsuario >0){
+                usuario.setId_usuario(idUsuario);
+            }
+
+            long resultado = usuarioBD.salvarUsuario(usuario) ;
+
+            if(resultado != -1){
+                if(idUsuario >0){
+                    Mensagem.Msg(this ,getString(R.string.mensagem_atualizar));
+                }else{
+                    Mensagem.Msg(this , getString(R.string.mensagem_cadastrar));
+                }
+                finish();
+                startActivity(new Intent(this , quintaActivity.class));
+            }else{
+                Mensagem.Msg(this , getString(R.string.mensagem_erro));
+            }
+        }
     }
 
     @Override
     public void onClick(View v) {
-
+        cadastrarUsuario();
 
     }
 }

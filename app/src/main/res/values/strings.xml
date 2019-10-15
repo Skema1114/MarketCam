@@ -169,4 +169,9 @@
     <string name="btnCartõesCreditoT12">Cartões de Crédito</string>
     <string name="textCartoesCreditoT12">Cartões de Créditos</string>
 
+    <string name="atualizar_usuario">Usuario Attualizado</string>
+    <string name="obrigatorio">Obrigatório</string>
+    <string name="mensagem_cadastrar">Resgistro Cadastro com Sucesso!</string>
+    <string name="mensagem_atualizar">Resgistro Atualizado com Sucesso!</string>
+    <string name="mensagem_erro">Erro ao Salvar</string>
 </resources>

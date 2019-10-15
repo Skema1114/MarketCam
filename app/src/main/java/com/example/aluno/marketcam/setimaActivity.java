@@ -9,6 +9,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
+import Adapter.UsuarioAdapter;
+import BD.UsuarioBD;
+import interacao.Usuario;
+
 public class setimaActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnUsuariosT7;
     private Button btnProdutosT7;
@@ -19,6 +25,12 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
     private Toolbar toolbarT7;
     private TextView textUsuariosT7;
     private ListView listUsuariosT7;
+
+    /*Adapter*/
+    private ListView lista;
+    private List<Usuario> usuarioList;
+    private UsuarioAdapter usuarioAdapter;
+    private UsuarioBD usuarioBD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +67,16 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
 
         /*setOnClickListener do ListView*/
         //listUsuariosT7.setOnClickListener(this);
+
+
+        /*Adapter*/
+        usuarioBD =  new UsuarioBD(this);
+        usuarioList = usuarioBD.ListaUsuario();
+        usuarioAdapter = new UsuarioAdapter(this, usuarioList);
+
+        lista = (ListView) findViewById(R.id.listUsuariosT7);
+        lista.setAdapter(usuarioAdapter);
+        //lista.setOnItemClickListener(this);
     }
 
     @Override

@@ -24,7 +24,7 @@ public class Usuario {
     private String status_usuario;
 
 
-    private Usuario(){
+    public Usuario(){
 
     }
 

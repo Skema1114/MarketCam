@@ -11,7 +11,7 @@ public class Foto_Usuario {
     private String foto;                     //a mesma coisa de "Foto_Produto", ou seja, a foto ta em String para pegar o caminho do banco de dados
 
 
-    private Foto_Usuario(){
+    public Foto_Usuario(){
 
     }
 

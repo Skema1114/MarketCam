@@ -54,7 +54,7 @@ public class UsuarioBD {
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.SENHA)),
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.CRIADO)),         //ESSES ERA DO TIPO DATE
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.MODIFICADO)),     //ESSES ERA DO TIPO DATE
-                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.PERFIL_USUARIO)), //ESSES ERA DO TIPO DATE
+                cursor.getString(cursor.getColumnIndex(Conecta.Usuario.PERFIL_USUARIO)),
                 cursor.getString(cursor.getColumnIndex(Conecta.Usuario.STATUS_USUARIO)));
 
 

@@ -15,7 +15,7 @@ public class Produto {
     private String lote;
     private String descricao;
 
-    private Produto(){
+    public Produto(){
 
     }
 

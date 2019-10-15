@@ -11,7 +11,7 @@ public class Nivel_Acesso {
     private String modificado;
 
 
-    private Nivel_Acesso(){
+    public Nivel_Acesso(){
 
     }
 
