@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
+
+import com.example.aluno.marketcam.decimaTerceiraActivity;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,6 +21,7 @@ import interacao.Usuario;
 public class UsuarioBD {
     private Conecta dataBaseHelper;
     private SQLiteDatabase sqLiteDatabase;
+    decimaTerceiraActivity decimaTerceiraActivity;
 
 
     public UsuarioBD(Context context) {

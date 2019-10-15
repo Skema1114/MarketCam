@@ -38,8 +38,8 @@ public class Mensagem {
     public static AlertDialog CriarDialogConfirmacao (Activity activity, String sair, String s, int i, DialogInterface.OnClickListener onClickListener){
         AlertDialog.Builder dlg = new AlertDialog.Builder(activity);
         dlg.setMessage("Deseja Realmente Excluir?");
-        dlg.setPositiveButton("Sim", (DialogInterface.OnClickListener) activity);
         dlg.setNegativeButton("Não", (DialogInterface.OnClickListener) activity);
+        dlg.setPositiveButton("Sim", (DialogInterface.OnClickListener) activity);
 
         return dlg.create();
     }
@@ -49,8 +49,8 @@ public class Mensagem {
         dlg.setTitle(titulo);
         dlg.setMessage(mensagem);
         dlg.setIcon(icone);
-        dlg.setPositiveButton("Sim", listener);
         dlg.setNegativeButton("Não", null);
+        dlg.setPositiveButton("Sim", listener);
         dlg.show();
     }
 }

@@ -82,6 +82,10 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
     EnderecoBD enderecoBD;
     private int idEndereco;
 
+    String radioTipo = null;
+    String radioSexo = null;
+    int nivelAcesso = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,58 +213,41 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
         editConfirmarNovaSenhaT5.setEnabled(false);
 
         /*Bloqueando o campo do Email*/
-        //editEmailT5.setEnabled(false);
+        editEmailT5.setEnabled(false);
 
 
 
-        /* -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- */
-        /*Cadastro Usuario*/
-        /*idUsuario = getIntent().getIntExtra("ID_USUARIO", 0);
+        idUsuario = getIntent().getIntExtra("ID_USUARIO", 0);
 
-        if (idUsuario > 0) {
+        if(idUsuario > 0){
             Usuario model = usuarioBD.buscarUsuario(idUsuario);
+            Endereco model2 = enderecoBD.buscarEndereco(idEndereco);
 
             editNomeT5.setText(model.getNome());
-
-            editTelefoneT5.setText(model.getEmail());
-
-            radioMasculinoT5.setText(model.getSexo());
-
-            radioFemininoT5.setText(model.getSexo());
-
-            dateDataNascimentoT5
-
-            if (radioClienteT2.isChecked()) {
-                radioClienteT2.setText("Cliente");
-                radioClienteT2.setText(model.getPerfil_usuario());
-            } else if (radioMercadoT2.isChecked()) {
-                radioMercadoT2.setText("Mercado");
-                radioMercadoT2.setText(model.getPerfil_usuario());
+            /*if((radioTipo = model.getNome()) == "cliente"){
+                radioClienteT5.setChecked(true);
+                nivelAcesso = 3;
+            }else if ((radioTipo = model.getNome()) == "mercado"){
+                radioMercadoT5.setChecked(true);
+                nivelAcesso = 2;
             }
-
-            editEmailT5
-
-            if ((editSenhaT2 == editConfirmarSenhaT2) && (editConfirmarSenhaT2 == editSenhaT2)) {
-                editSenhaT2.setText(model.getSenha());
-            } else {
-                //editSenhaT2.setError("Não deu");
-            }
-
-            setTitle(R.string.atualizar_usuario);*/
+            if ((radioSexo = model.getNome()) == "M"){
+                radioMasculinoT5.setChecked(true);
+            }else if ((radioSexo = model.getNome()) == "F"){
+                radioFemininoT5.setChecked(true);
+            }*/
+            //aqui vai a data do date piker
+            editEmailT5.setText(model.getEmail());
 
 
+            //setTitle(R.string.atualizar_usuario);
         }
 
-
-
-        /*protected void onDestoyUsuario() {
-            usuarioBD.fechar();
-            super.onDestroy();
-        }*/
+    }
 
 
 
-        /*public void cadastrarUsuario() {
+        public void cadastrarUsuario() {
 
             boolean validacao = true;
             String radioSexo = null;
@@ -314,7 +301,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
                         Mensagem.Msg(this, getString(R.string.mensagem_cadastrar));
                     }
                     finish();
-                    startActivity(new Intent(this, quintaActivity.class));
+                    startActivity(new Intent(this, decimaTerceiraActivity.class));
                 } else {
                     Mensagem.Msg(this, getString(R.string.mensagem_erro));
                 }
@@ -323,42 +310,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-        /* -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- -/- */
-        /*Cadastro Endereço*/
-        /*idEndereco = getIntent().getIntExtra("ID_ENDERECO", 0);
-
-        if (idEndereco > 0) {
-            Endereco model = enderecoBD.buscarEndereco(idEndereco);
-
-
-            /*dateDataT2.setText(model.getData_nascimento());
-            String en= spinCidadeT2.getSelectedItem().toString();
-
-            spinEstadoT2.getSelectedItem().toString();
-
-            cep
-
-            rua
-
-            numero da rua
-
-            bairero
-
-            setTitle(R.string.atualizar_usuario);
-
-        }
-    }*/
-
-
-
-   /* protected void onDestoyEndereco() {
-        enderecoBD.fechar();
-        super.onDestroy();
-    }*/
-
-
-
-    /*public void cadastrarEndereco() {
+    public void cadastrarEndereco() {
 
         boolean validacao = true;
 
@@ -394,12 +346,12 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
                   this.cadastrarUsuario();
                 }
                 finish();
-                startActivity(new Intent(this, quintaActivity.class));
+                startActivity(new Intent(this, decimaTerceiraActivity.class));
             } else {
                 Mensagem.Msg(this, getString(R.string.mensagem_erro));
             }
         }
-    }*/
+    }
 
 
 
@@ -452,7 +404,7 @@ public class quintaActivity extends AppCompatActivity implements View.OnClickLis
 
         /*Ação do Botão*/
         if(btnSalvarT5.isPressed()){
-            //this.cadastrarEndereco();
+            this.cadastrarEndereco();
             //this.cadastrarUsuario();
 
             //Intent intent = new Intent(this, nonaActivity.class);

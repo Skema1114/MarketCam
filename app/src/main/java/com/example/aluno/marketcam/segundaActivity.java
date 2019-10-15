@@ -120,6 +120,60 @@ public class segundaActivity extends AppCompatActivity implements View.OnClickLi
         adapter_cidade.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinCidadeT2.setAdapter(adapter_cidade);
 
+
+
+        idUsuario = getIntent().getIntExtra("ID_USUARIO", 0);
+
+        if(idUsuario > 0){
+            Usuario model = usuarioBD.buscarUsuario(idUsuario);
+            //Endereco model2 = enderecoBD.buscarEndereco(idEndereco);
+
+            editNomeT2.setText(model.getNome());
+            /*if((radioTipo = model.getNome()) == "cliente"){
+                radioClienteT5.setChecked(true);
+                nivelAcesso = 3;
+            }else if ((radioTipo = model.getNome()) == "mercado"){
+                radioMercadoT2.setChecked(true);
+                nivelAcesso = 2;
+            }
+            if ((radioSexo = model.getNome()) == "M"){
+                radioMasculinoT5.setChecked(true);
+            }else if ((radioSexo = model.getNome()) == "F"){
+                radioFemininoT5.setChecked(true);
+            }*/
+            //aqui vai a data do date piker
+            editEmailT2.setText(model.getEmail());
+
+
+            //setTitle(R.string.atualizar_usuario);
+        }
+
+        idEndereco = getIntent().getIntExtra("ID_ENDERECO", 0);
+
+        if(idEndereco > 0){
+            Endereco model2 = enderecoBD.buscarEndereco(idEndereco);
+
+
+           // editNomeT2.setText(model.getNome());
+            /*if((radioTipo = model.getNome()) == "cliente"){
+                radioClienteT5.setChecked(true);
+                nivelAcesso = 3;
+            }else if ((radioTipo = model.getNome()) == "mercado"){
+                radioMercadoT2.setChecked(true);
+                nivelAcesso = 2;
+            }
+            if ((radioSexo = model.getNome()) == "M"){
+                radioMasculinoT5.setChecked(true);
+            }else if ((radioSexo = model.getNome()) == "F"){
+                radioFemininoT5.setChecked(true);
+            }*/
+            //aqui vai a data do date piker
+            //editEmailT2.setText(model2.getBairro());
+
+
+            //setTitle(R.string.atualizar_usuario);
+        }
+
     }
 
 

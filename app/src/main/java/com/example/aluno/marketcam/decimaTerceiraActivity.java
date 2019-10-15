@@ -13,25 +13,36 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class decimaTerceiraActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import interacao.Usuario;
+
+public class decimaTerceiraActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private TextView textEmailT13;
+    private TextView textNomeT13;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_decima_terceira);
+
+        textEmailT13 = (TextView) findViewById(R.id.textEmailT13);
+        textNomeT13 = (TextView) findViewById(R.id.textNomeT13);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -58,6 +69,8 @@ public class decimaTerceiraActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.decima_terceira, menu);
         return true;
+
+
     }
 
     @Override
@@ -93,7 +106,7 @@ public class decimaTerceiraActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.CriarListasComprasMenu) {
-            Intent intent = new Intent(this, quartaActivity.class);
+            Intent intent = new Intent(this, sextaActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.MinhasListasMenu) {

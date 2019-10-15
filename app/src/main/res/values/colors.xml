@@ -19,6 +19,11 @@
     <!-- ICONE DE "V" DA SACOLA = #31A79B -->
     <!-- COR TIPO BRANCO DA SACOLA = #EEF2F4 -->
 
+    <!-- REFERENTES AO FUNDO NA "ACTIVITY NUCLEO" DE DESLIZAR -->
+    <!-- centerColor = #02A489 -->
+    <!-- endColor = #31A79B -->
+    <!-- startColor = #25DA7D -->
+
     <!-- CORES PADRAO DO APLICATIVO -->
     <!-- <color name="colorPrimary">#3F51B5</color> -->
     <!-- <color name="colorPrimaryDark">#303F9F</color> -->

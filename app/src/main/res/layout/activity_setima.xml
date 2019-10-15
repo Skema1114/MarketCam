@@ -22,7 +22,8 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/activity_setima_linear_linear">
+                android:id="@+id/activity_setima_linear_linear"
+                android:layout_marginTop="5dp">
 
                 <Button
                     android:text="@string/btnUsuariosT7"
@@ -44,7 +45,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnEnderecosT7"
@@ -54,7 +56,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnComprasT7"
@@ -64,7 +67,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnListasComprasT7"
@@ -74,7 +78,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnCartõesCreditoT7"
@@ -83,7 +88,8 @@
                     android:id="@+id/btnCartõesCreditoT7"
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
-                    android:textColor="#131B2E" />
+                    android:textColor="#131B2E"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
         </HorizontalScrollView>
 

@@ -22,7 +22,8 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/activity_decima_primeira_linear_linear">
+                android:id="@+id/activity_decima_primeira_linear_linear"
+                android:layout_marginTop="5dp">
 
                 <Button
                     android:text="@string/btnUsuariosT11"
@@ -33,7 +34,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnProdutosT11"
@@ -43,7 +45,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnEnderecosT11"
@@ -53,7 +56,8 @@
                     android:id="@+id/btnEnderecosT11"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnComprasT11"
@@ -63,7 +67,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
                     android:textColor="#131B2E"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginRight="3dp"
+                    android:textStyle="normal|bold" />
 
                 <Button
                     android:text="@string/btnListasComprasT11"
@@ -83,7 +88,8 @@
                     android:id="@+id/btnCartõesCreditoT11"
                     android:layout_weight="1"
                     android:background="@drawable/aparencia_botao_login"
-                    android:textColor="#131B2E" />
+                    android:textColor="#131B2E"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
         </HorizontalScrollView>
 

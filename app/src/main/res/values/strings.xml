@@ -26,18 +26,10 @@
     <!-- SPINNER CIDADE-->
     <string-array name="cidadeSpinT2">
         <item>São Borja</item>
-        <item>Bagé</item>
-        <item>Porto Alegre</item>
-        <item>Torres</item>
-        <item>Gramado</item>
     </string-array>
     <!-- SPINNER ESTADO-->
     <string-array name="estadoSpinT2">
         <item>RS</item>
-        <item>RJ</item>
-        <item>AC</item>
-        <item>MG</item>
-        <item>SP</item>
     </string-array>
 
 
@@ -231,5 +223,7 @@
     <string name="textDescricaoT15">DESCRIÇÃO</string>
     <string name="editMultiDescricaoT15" />
     <string name="btnEnviarT15">Enviar</string>
+    <string name="textEmailT13">exemplo@exemplo.com</string>
+    <string name="textNomeT13">Exemplo</string>
 
 </resources>

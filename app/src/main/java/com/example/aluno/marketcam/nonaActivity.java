@@ -1,10 +1,13 @@
 package com.example.aluno.marketcam;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,8 +20,9 @@ import BD.EnderecoBD;
 import BD.ProdutoBD;
 import interacao.Endereco;
 import interacao.Produto;
+import util.Mensagem;
 
-public class nonaActivity extends AppCompatActivity implements View.OnClickListener{
+public class nonaActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, DialogInterface.OnClickListener{
     private Button btnUsuariosT9;
     private Button btnProdutosT9;
     private Button btnEnderecosT9;
@@ -34,6 +38,11 @@ public class nonaActivity extends AppCompatActivity implements View.OnClickListe
     private List<Endereco> enderecoList;
     private EnderecoAdapter enderecoAdapter;
     private EnderecoBD enderecoBD;
+
+    /*REFERENTE AO "MENU", EDITAR, EXCLUIR*/
+    private AlertDialog alertDialog;
+    private AlertDialog  alertConfirmacao;
+    private int idPosicao;
 
 
     @Override
@@ -81,7 +90,27 @@ public class nonaActivity extends AppCompatActivity implements View.OnClickListe
         lista = (ListView) findViewById(R.id.listEnderecosT9);
         lista.setAdapter(enderecoAdapter);
         //lista.setOnItemClickListener(this);
+
+
+        /*REFERENTE AO "MENU", EDITAR, EXCLUIR*/
+        alertDialog = Mensagem.criarAlertDialog(this);
+        alertConfirmacao = Mensagem.CriarDialogConfirmacao(this, "Sair",
+                "Deseja Realmente Sair?", R.drawable.sair,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+
+        enderecoBD =  new EnderecoBD(this) ;
+        enderecoList = enderecoBD.ListaEndereco() ;
+        enderecoAdapter = new EnderecoAdapter(this , enderecoList) ;
+        lista = (ListView) findViewById(R.id.listEnderecosT9);
+        lista.setAdapter(enderecoAdapter);
+        lista.setOnItemClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -121,5 +150,39 @@ public class nonaActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         }
 
+    }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        int id = enderecoList.get(idPosicao).getId_endereco();
+
+        switch(which){
+            case 0:
+                Intent intent = new Intent(this, quintaActivity.class);
+                intent.putExtra("ID_ENDERECO", id);
+                startActivity(intent);
+                finish();
+                break;
+
+            case 1:
+                alertConfirmacao.show();
+                break;
+
+            case DialogInterface.BUTTON_POSITIVE:
+                enderecoList.remove(idPosicao);
+                enderecoBD.removerEndereco(id);
+                lista.invalidateViews();
+                break;
+
+            case DialogInterface.BUTTON_NEGATIVE:
+                alertConfirmacao.dismiss();
+                break;
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        idPosicao = position;
+        alertDialog.show();
     }
 }

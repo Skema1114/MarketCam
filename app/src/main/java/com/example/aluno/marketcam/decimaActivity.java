@@ -1,10 +1,13 @@
 package com.example.aluno.marketcam;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,8 +20,9 @@ import BD.CompraBD;
 import BD.EnderecoBD;
 import interacao.Compra;
 import interacao.Endereco;
+import util.Mensagem;
 
-public class decimaActivity extends AppCompatActivity implements View.OnClickListener{
+public class decimaActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, DialogInterface.OnClickListener{
     private Button btnUsuariosT10;
     private Button btnProdutosT10;
     private Button btnEnderecosT10;
@@ -34,6 +38,11 @@ public class decimaActivity extends AppCompatActivity implements View.OnClickLis
     private List<Compra> compraList;
     private CompraAdapter compraAdapter;
     private CompraBD compraBD;
+
+    /*REFERENTE AO "MENU", EDITAR, EXCLUIR*/
+    private AlertDialog alertDialog;
+    private AlertDialog  alertConfirmacao;
+    private int idPosicao;
 
 
     @Override
@@ -81,6 +90,25 @@ public class decimaActivity extends AppCompatActivity implements View.OnClickLis
         lista = (ListView) findViewById(R.id.listComprasT10);
         lista.setAdapter(compraAdapter);
         //lista.setOnItemClickListener(this);
+
+
+        /*REFERENTE AO "MENU", EDITAR, EXCLUIR*/
+        alertDialog = Mensagem.criarAlertDialog(this);
+        alertConfirmacao = Mensagem.CriarDialogConfirmacao(this, "Sair",
+                "Deseja Realmente Sair?", R.drawable.sair,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+
+        compraBD =  new CompraBD(this) ;
+        compraList = compraBD.ListaCompra() ;
+        compraAdapter = new CompraAdapter(this , compraList) ;
+        lista = (ListView) findViewById(R.id.listComprasT10);
+        lista.setAdapter(compraAdapter);
+        lista.setOnItemClickListener(this);
     }
 
     @Override
@@ -121,5 +149,39 @@ public class decimaActivity extends AppCompatActivity implements View.OnClickLis
             finish();
         }
 
+    }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        int id = compraList.get(idPosicao).getId_compra();
+
+        switch(which){
+            case 0:
+                Intent intent = new Intent(this, quintaActivity.class);
+                intent.putExtra("ID_COMPRA", id);
+                startActivity(intent);
+                finish();
+                break;
+
+            case 1:
+                alertConfirmacao.show();
+                break;
+
+            case DialogInterface.BUTTON_POSITIVE:
+                compraList.remove(idPosicao);
+                compraBD.removerCompra(id);
+                lista.invalidateViews();
+                break;
+
+            case DialogInterface.BUTTON_NEGATIVE:
+                alertConfirmacao.dismiss();
+                break;
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        idPosicao = position;
+        alertDialog.show();
     }
 }

@@ -29,16 +29,18 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
     private Toolbar toolbarT7;
     private TextView textUsuariosT7;
     private ListView listUsuariosT7;
-    private AlertDialog alertDialog;
-    private AlertDialog  alertConfirmacao;
-    private int idPosicao;
-
 
     /*Adapter*/
     private ListView lista;
     private List<Usuario> usuarioList;
     private UsuarioAdapter usuarioAdapter;
     private UsuarioBD usuarioBD;
+
+    /*REFERENTE AO "MENU", EDITAR, EXCLUIR*/
+    private AlertDialog alertDialog;
+    private AlertDialog  alertConfirmacao;
+    private int idPosicao;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +89,7 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
         //lista.setOnItemClickListener(this);
 
 
-
+        /*REFERENTE AO "MENU", EDITAR, EXCLUIR*/
         alertDialog = Mensagem.criarAlertDialog(this);
         alertConfirmacao = Mensagem.CriarDialogConfirmacao(this, "Sair",
                 "Deseja Realmente Sair?", R.drawable.sair,
@@ -104,6 +106,7 @@ public class setimaActivity extends AppCompatActivity implements View.OnClickLis
         lista = (ListView) findViewById(R.id.listUsuariosT7);
         lista.setAdapter(usuarioAdapter);
         lista.setOnItemClickListener(this);
+
     }
 
 
