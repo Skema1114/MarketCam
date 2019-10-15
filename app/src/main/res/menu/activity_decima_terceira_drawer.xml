@@ -10,6 +10,11 @@
                 android:icon="@drawable/ic_menu_camera"
                 android:title="Leitor de Codigo de Barras" />
 
+            <item
+                android:id="@+id/MeuCarrinhoMenu"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Meu Carrinho" />
+
             </menu>
     </item>
 
@@ -28,7 +33,7 @@
     <item android:title="Listas de Compras">
         <menu>
             <item
-                android:id="@+id/ListaComprasMenu"
+                android:id="@+id/CriarListasComprasMenu"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Criar Nova Lista" />
 
@@ -56,6 +61,16 @@
                 android:id="@+id/SairMenu"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Sair" />
+        </menu>
+    </item>
+
+    <item android:title="Suporte">
+        <menu>
+            <item
+                android:id="@+id/ReportarErroMenu"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Reportar Erro" />
+
         </menu>
     </item>
 

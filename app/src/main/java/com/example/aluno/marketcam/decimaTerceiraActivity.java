@@ -82,24 +82,35 @@ public class decimaTerceiraActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.CodigoBarrasMenu) {
-            // Handle the camera action
-        //} else if (id == R.id.nav_gallery) {
 
-        //} else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.EditarCadastroMenu) {
-            Intent intent = new Intent(this, quintaActivity.class);
+        } else if (id == R.id.MeuCarrinhoMenu) {
+
+
+        } else if (id == R.id.AdministradorMenu) {
+            Intent intent = new Intent(this, setimaActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.ListaComprasMenu) {
+        } else if (id == R.id.CriarListasComprasMenu) {
             Intent intent = new Intent(this, quartaActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.MinhasListasMenu) {
 
 
+        } else if (id == R.id.HistoricoMenu) {
+
+
+        } else if (id == R.id.EditarCadastroMenu) {
+            Intent intent = new Intent(this, quintaActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.SairMenu) {
-            finish();
+            Intent intent = new Intent(this, primeiraActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.ReportarErroMenu) {
+
 
         }
 

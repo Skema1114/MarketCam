@@ -1,5 +1,6 @@
 package com.example.aluno.marketcam;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -47,6 +48,10 @@ public class terceiraActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
+        if(btnEntrarT3.isPressed()){
+            Intent intent = new Intent(this, decimaTerceiraActivity.class);
+            startActivity(intent);
+        }
 
     }
 }

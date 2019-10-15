@@ -12,7 +12,12 @@
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".primeiraActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".segundaActivity"
@@ -34,54 +39,71 @@
         <activity
             android:name=".quartaActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
 
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".quintaActivity"
             android:screenOrientation="portrait">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".sextaActivity"
             android:screenOrientation="portrait">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".setimaActivity">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".oitavaActivity">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".nonaActivity">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".decimaActivity">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".decimaPrimeiraActivity">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity android:name=".decimaSegundaActivity">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".decimaTerceiraActivity" />
         </activity>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <activity
             android:name=".decimaTerceiraActivity"
-            android:label="@string/title_activity_decima_terceira"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </application>
 
 </manifest>
